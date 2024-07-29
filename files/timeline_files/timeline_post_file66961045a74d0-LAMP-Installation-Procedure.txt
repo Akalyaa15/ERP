@@ -1,0 +1,201 @@
+OS Version : 20.04 LTS Dated : 14/Dec/2022
+
+User SSH login:
+username : plenome
+password : Password@1234
+
+CMD Terminal Login Username: plenome
+
+$ sudo bash
+
+LAMP INSTALLATION:
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
+
+sudo apt install mysql-server
+
+mysql -u root -p
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'gc::cloud*a2z#cyberData@#';
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'gc::cloud*a2z#cyberData@#';
+
+MYSQL ROOT PASSWD - gc::cloud*a2z#cyberData@#
+Port : 3306
+
+https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql
+
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+bind-address            = 0.0.0.0
+
+sudo systemctl restart mysql
+
+mysql -u root -p
+MYSQL ROOT PASSWD - gc::cloud*a2z#cyberData@#
+
+CREATE USER 'root'@'%' IDENTIFIED BY 'gc::cloud*a2z#cyberData@#';
+CREATE USER 'plenome'@'%' IDENTIFIED BY 'gc::cloud*a2z#cyberData@#';
+
+Final: version 8.0
+
+grant all privileges on *.* to 'root'@'localhost'; (for local database access) 
+grant all privileges on *.* to 'root'@'%'; (for remote database access)
+grant all privileges on *.* to 'plenome'@'localhost'; (for local database access) 
+grant all privileges on *.* to 'plenome'@'%'; (for remote database access)
+
+exit
+
+mysql -u plenome -h localhost -p
+
+password : gc::cloud*a2z#cyberData@#
+
+Restart the mysql server, by type this command   
+sudo /etc/init.d/mysql restart
+
+
+User SSH login:
+username : root
+password : Password@1234
+
+Apache Server configutaion:
+
+cd /etc/apache2/sites-available
+nano 000.default.conf
+
+modify DocumentRoot /var/www/html from DocumentRoot /var/www
+
+1. sudo a2enmod rewrite
+2. nano  /etc/apache2/sites-available/000-default
+
+#       DocumentRoot /var/www/html
+        DocumentRoot /var/www
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride All
+        </Directory>
+        <Directory /var/www/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+3. sudo service apache2 restart
+
+Extension cURL Installation:
+
+sudo apt-get install php-curl
+
+sudo apt install php libapache2-mod-php php-mysql
+
+sudo service apache2 restart
+
+apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
+
+sudo service apache2 restart
+
+Install Timezone:
+
+#sudo nano /etc/php/7.4/apache2/php.ini
+
+/etc/php/7.4/apache2# nano php.ini
+
+under this [date] line have to add below line
+
+date.timezone = "Asia/Kolkata"
+
+# /etc/init.d/apache2 restart
+
+Install Mysql Workbench:
+
+sudo apt-get remove  libpcrecpp0v5
+
+sudo dpkg -i mysql-workbench-community_8.0.29-1ubuntu20.04_amd64.deb 
+
+sudo apt install openssl php-common php-curl php-json php-mbstring php-mysql php-xml php-zip
+
+sudo apt install php7.4-common php7.4-bcmath openssl php7.4-json php7.4-mbstring
+
+sudo nano /etc/apache2/sites-available/ehospitos.conf
+
+<VirtualHost *:80>
+    ServerName ehospitos
+    ServerAlias www.ehospitos
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/ehospitos
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+sudo a2ensite ehospitos
+sudo a2dissite 000-default
+sudo apache2ctl configtest
+sudo systemctl reload apache2
+
+nano /var/www/ehospitos/index.html
+
+<html>
+  <head>
+    <title>your_domain website</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+
+    <p>This is the landing page of <strong>your_domain</strong>.</p>
+  </body>
+</html>
+
+sudo a2dissite ehospitos
+sudo a2ensite 000-default
+sudo apache2ctl configtest
+sudo systemctl reload apache2
+
+
+sudo nano /etc/apache2/mods-enabled/dir.conf
+
+<IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+
+sudo systemctl reload apache2
+
+nano /var/www/your_domain/info.php
+
+<?php
+phpinfo();
+
+###########################################################
+eHospitOS Installation Procedure:
+
+http://localhost/ehospitos/documentation/
+
+http://localhost/ehospitos/smart_hospital_src/install/start
+
+Edit do_install.php file
+
+remove //validate purchase code function
+
+By using mysql workbench tool:
+
+CREATE SCHEMA `plenome_HMS` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+
+Database Configuration:
+
+Database Host 	: localhost
+Database Name	: plenome_HMS
+Database User 	: root
+Password 	: gc::cloud*a2z#cyberData@#
+
+Account details:
+
+First Name		: Vijay
+Last name 		: Raja
+Email			: vr@plenome.com
+Password		: admin@Plenome
+Confirm Password	: admin@Plenome
+
+Please note that in Smart Hospital there are two login panels -
+
+http://localhost/ehospitos/smart_hospital_src/site/login Admin Panel : this panel is used for staff like superadmin, admin, doctor, pharmacist, pathologist, radiologist, accountant, receptionist, nurse login.
+http://localhost/ehospitos/smart_hospital_src/site/userlogin User Panel : this panel is used for patient login.
