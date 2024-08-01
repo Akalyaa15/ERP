@@ -2,9 +2,7 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
-class Companys extends MY_Controller {
-
+   class Companys extends MY_Controller {
     function __construct() {
         parent::__construct();
 
@@ -16,10 +14,9 @@ class Companys extends MY_Controller {
         $this->load->library('excel');
         $this->load->model('Companys_model');
     }
-
-    /* load clients list view */
-
-    function index() {
+   /* load clients list view */
+   
+   function index() {
         $this->access_only_allowed_members();
         //$this->check_module_availability("module_master_data");
 
@@ -51,13 +48,12 @@ class Companys extends MY_Controller {
         $this->template->rander("companys/index", $view_data);
     }
 
-        /*$view_data['groups_dropdown'] = json_encode($this->_get_groups_dropdown_select2_data(true));
+    /*$view_data['groups_dropdown'] = json_encode($this->_get_groups_dropdown_select2_data(true));
 
         $this->template->rander("Companys/index", $view_data);*/
     }
 
     /* load client add/edit modal */
-
     function modal_form() {
         $this->access_only_allowed_members();
 

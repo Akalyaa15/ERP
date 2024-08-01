@@ -98,28 +98,30 @@ class Items extends MY_Controller {
         return $unit_type_dropdown;
     }
 
-    function assoc_details(){
-        
-         $rate=$this->input->post("item_name");
+    function assoc_details() {
+        $rate = $this->input->post("item_name");
         $group_list = "";
+        
         if ($rate) {
             $groups = explode(",", $rate);
             foreach ($groups as $group) {
                 if ($group) {
-                     $options = array("id" => $group);
-                    $list_group = $this->Part_no_generation_model->get_details($options)->row(); 
-                    $group_list += $list_group->rate;
+                    $options = array("id" => $group);
+                    $list_group = $this->Part_no_generation_model->get_details($options)->row();
+                    
+                    // Use . for string concatenation
+                    $group_list .= $list_group->rate;
                 }
             }
         }
-
+    
         if ($group_list) {
             echo json_encode(array("success" => true, "assoc_rate" => $group_list));
         } else {
             echo json_encode(array("success" => false));
         }
-    
     }
+    
 
     /* add or edit an item */
 
@@ -154,13 +156,7 @@ class Items extends MY_Controller {
         $installation_rate*$installation_profit_percentage/100;
         $installation_actual_value = $installation_rate+$installation_profit; 
          $installation_profit_value = $installation_profit; */
-        
-
-
-
-
-
-        $item_data = array(
+          $item_data = array(
             "title" => $this->input->post('title'),
             "category" => $this->input->post('category'),
             "make" => $this->input->post('make'),

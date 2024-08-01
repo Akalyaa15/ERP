@@ -1115,10 +1115,7 @@ if($ss=="yes" && $with_inclusive=="yes"){
         } else {
             echo json_encode(array("success" => false));
         }
-    }
-
-
-}
+    }}
 
 /* End of file estimates.php */
 /* Location: ./application/controllers/estimates.php */

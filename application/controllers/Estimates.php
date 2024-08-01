@@ -619,16 +619,12 @@ $estimate_prefix = get_estimate_id($estimate_no_last_id);
    $installation_new_rate = $this->input->post('installation_new_rate');
    $installation_profit_percentage = $this->input->post('installation_profit_percentage');
    $installation_profit_rate_percentage = $installation_new_rate*$installation_profit_percentage/100;
-    $installation_actual_rate=$installation_profit_rate_percentage+$installation_new_rate;
+   $installation_actual_rate=$installation_profit_rate_percentage+$installation_new_rate;
    $installation_actual_rate_total=$installation_actual_rate*$quantity;
-   
-
-
-
    $installation_rate = $this->input->post('installation_rate');
    $installation_total =  $installation_rate*$quantity;
-    $supply_total =$total?$total:$totals;
-    $installtion_and_supply_subtotal=$supply_total+$installation_total;
+   $supply_total =$total?$total:$totals;
+   $installtion_and_supply_subtotal=$supply_total+$installation_total;
 
        
 

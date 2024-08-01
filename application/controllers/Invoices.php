@@ -487,45 +487,38 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
 
     /* return a row of invoice list table */
 
-    private function _row_data($id) {
-        $custom_fields = $this->Custom_fields_model->get_available_fields_for_table("invoices", $this->login_user->is_admin, $this->login_user->user_type);
-
-        $options = array("id" => $id, "custom_fields" => $custom_fields);
-        $data = $this->Invoices_model->get_details($options)->row();
-        return $this->_make_row($data, $custom_fields);
-    }
-
-    /* prepare a row of invoice list table */
-
     private function _make_row($data, $custom_fields) {
-        /*$invoice_url = "";
-        if ($this->login_user->user_type == "staff") {
-            $invoice_url = anchor(get_uri("invoices/view/" . $data->id), get_invoice_id($data->id));
-        } else {
-            $invoice_url = anchor(get_uri("invoices/preview/" . $data->id), get_invoice_id($data->id));
-        }*/
-         $invoice_no_value = $data->invoice_no ? $data->invoice_no: get_invoice_id($data->id);
+        // Initialize $warranty_expiry_date
+        $warranty_expiry_date = "-"; // Default value if no date is available
+    
+        // Process invoice number URL
+        $invoice_no_value = $data->invoice_no ? $data->invoice_no : get_invoice_id($data->id);
         $invoice_no_url = "";
         if ($this->login_user->user_type == "staff") {
-             $invoice_no_url = anchor(get_uri("invoices/view/" . $data->id), $invoice_no_value);
+            $invoice_no_url = anchor(get_uri("invoices/view/" . $data->id), $invoice_no_value);
         } else {
-             $invoice_no_url = anchor(get_uri("invoices/preview/" . $data->id), $invoice_no_value);
+            $invoice_no_url = anchor(get_uri("invoices/preview/" . $data->id), $invoice_no_value);
         }
-
+    
+        // Calculate due value
         $due = 0;
         if ($data->invoice_value) {
             $due = ignor_minor_value($data->invoice_value - $data->payment_received);
         }
-        $warranty=format_to_date($data->warranty_expiry_date, false);
-if (is_date_exists($warranty)) {
-            if ( get_my_local_time("Y-m-d") > $warranty) {
-                $warranty_expiry_date = "<span class='text-danger mr5'>" . $warranty . "</span> ";
+    
+        // Process warranty expiry date
+        $warranty = format_to_date($data->warranty_expiry_date, false);
+        if (is_date_exists($warranty)) {
+            if (get_my_local_time("Y-m-d") > $warranty) {
+                $warranty_expiry_date = "<span class='text-danger mr5'>" . $warranty . "</span>";
             } else if (get_my_local_time("Y-m-d") == $warranty) {
-                $warranty_expiry_date = "<span class='text-warning mr5'>" . $warranty . "</span> ";
-            }else{
-               $warranty_expiry_date = $warranty; 
+                $warranty_expiry_date = "<span class='text-warning mr5'>" . $warranty . "</span>";
+            } else {
+                $warranty_expiry_date = $warranty;
             }
         }
+    
+        // Prepare row data
         $row_data = array(
             //$invoice_url,
             $data->id,
@@ -536,14 +529,15 @@ if (is_date_exists($warranty)) {
             format_to_date($data->bill_date, false),
             $data->due_date,
             format_to_date($data->due_date, false),
-            $warranty_expiry_date?$warranty_expiry_date:"-",
+            $warranty_expiry_date,
             to_currency($data->invoice_value, $data->currency_symbol),
-             to_currency($data->profit_value, $data->currency_symbol),
+            to_currency($data->profit_value, $data->currency_symbol),
             to_currency($data->payment_received, $data->currency_symbol),
             to_currency($due, $data->currency_symbol),
             $this->_get_invoice_status_label($data)
         );
-
+    
+    
         foreach ($custom_fields as $field) {
             $cf_id = "cfv_" . $field->id;
             $row_data[] = $this->load->view("custom_fields/output_" . $field->field_type, array("value" => $data->$cf_id), true);
@@ -764,138 +758,113 @@ if (is_date_exists($warranty)) {
 
     function save_item() {
         $this->access_only_allowed_members();
-
+    
         validate_submitted_data(array(
             "id" => "numeric",
             "invoice_id" => "required|numeric"
         ));
-$invoice_type =$this->input->post('invoice_type');
- if($invoice_type == 0){
-        $invoice_id = $this->input->post('invoice_id');
-        $client_profit_margin = $this->input->post('client_profit_margin');
-
-
-        $id = $this->input->post('id');
-        $rate = unformat_currency($this->input->post('invoice_item_rate'));
-
-        $quantity = unformat_currency($this->input->post('invoice_item_quantity'));
-        $gst = unformat_currency($this->input->post('invoice_item_gst'));
-        $installation_gst_percentage = unformat_currency($this->input->post('installation_gst'));
-
-$profit_percentage = $this->input->post('profit_percentage');
-$profitrate= $rate*$quantity;
-$profit_supply_buyer_profit = $profit_percentage+$client_profit_margin;
-$profitadd = $profitrate/($profit_supply_buyer_profit+100);
-$profit = $profitadd*100;
-$profitvalue = $profit*$profit_supply_buyer_profit/100;
-       //$profit = $rate*$profit_percentage/100;
-        //$actual_value = $rate+$profit; 
-        //$gst = $this->input->post('gst');
-        //$mrp = $actual_value*$gst/100;
-        //$mrp_value =$mrp+$actual_value;
-        
-        $part_no = $this->input->post('associated_with_part_no');
-        $group_list = "";
-        if ($part_no) {
-            $groups = explode(",", $part_no);
-            foreach ($groups as $group) {
-                if ($group) {
-                     $options = array("id" => $group);
-                    $list_group = $this->Part_no_generation_model->get_details($options)->row(); 
-                    $group_list += $list_group->rate;
+    
+        $invoice_type = (int)$this->input->post('invoice_type');
+    
+        if ($invoice_type == 0) {
+            $invoice_id = (int)$this->input->post('invoice_id');
+            $client_profit_margin = (float)$this->input->post('client_profit_margin');
+    
+            $id = (int)$this->input->post('id');
+            $rate = (float)unformat_currency($this->input->post('invoice_item_rate'));
+            $quantity = (float)unformat_currency($this->input->post('invoice_item_quantity'));
+            $gst = (float)unformat_currency($this->input->post('invoice_item_gst'));
+            $installation_gst_percentage = (float)unformat_currency($this->input->post('installation_gst'));
+            $profit_percentage = (float)$this->input->post('profit_percentage');
+    
+            $profitrate = $rate * $quantity;
+            $profit_supply_buyer_profit = $profit_percentage + $client_profit_margin;
+            $profitadd = $profitrate / ($profit_supply_buyer_profit + 100);
+            $profit = $profitadd * 100;
+            $profitvalue = $profit * $profit_supply_buyer_profit / 100;
+    
+            $part_no = $this->input->post('associated_with_part_no');
+            $group_list = 0.0; // Initialize as numeric
+    
+            if ($part_no) {
+                $groups = explode(",", $part_no);
+                foreach ($groups as $group) {
+                    if ($group) {
+                        $options = array("id" => $group);
+                        $list_group = $this->Part_no_generation_model->get_details($options)->row();
+                        if (isset($list_group->rate)) {
+                            $group_list += (float)$list_group->rate; // Ensure $list_group->rate is treated as a float
+                        }
+                    }
                 }
             }
-        }
-        //$sum = array_sum( explode( ',', $part_no ));
-        $sum = $group_list;
-
-
-        $profits = $sum*$profit_percentage/100;
-        $profit_and_sum = $sum+$profits;
-        $buyer_type_percentage=$profit_and_sum*$client_profit_margin/100;
-        $actual_values =$profit_and_sum+$buyer_type_percentage; 
-        //$gst = $this->input->post('gst');
-        $mrps = $actual_values*$gst/100;
-        $mrp_values =$mrps+$actual_values;
-
-        $profitrates = $sum*$quantity;
-        $profitvalues = $profitrates*$profit_percentage/100;
-
-
-
-
- $discount_percentage = unformat_currency($this->input->post('discount_percentage'));
-
-
-
- //installation 
-   
-   $installation_new_rate = $this->input->post('installation_new_rate');
-   $installation_profit_percentage = $this->input->post('installation_profit_percentage');
-   $installation_profit_rate_percentage = $installation_new_rate*$installation_profit_percentage/100;
-    $installation_actual_rate=$installation_profit_rate_percentage+$installation_new_rate;
-   $installation_actual_rate_total=$installation_actual_rate*$quantity;
-   
-
-
-
-   $installation_rate = $this->input->post('installation_rate');
-   $installation_total =  $installation_rate*$quantity;
-    $supply_total =$total?$total:$totals;
-    $installtion_and_supply_subtotal=$supply_total+$installation_total;
-
-       
-
-        $totals = $actual_values* $quantity;
-        $discount_amounts = $totals*$discount_percentage/100;
-        $discounts = $totals-$discount_amounts;
-        $taxs =$discounts*$gst/100;
-        //install
-        //$supply_installation_totals=$discounts + $installation_actual_rate_total;
-        $supply_installation_totals=$discounts;
-
-
-$installation_taxs = $installation_actual_rate_total*$installation_gst_percentage/100;
-
-$installation_net_totals =$installation_taxs+$installation_actual_rate_total;
-
-
-$supply_net_totals = $discounts+$taxs;
-$supply_net_total_installation_totals = $supply_net_totals+$installation_actual_rate_total;  
-$installation_supply_net_totals =$supply_net_totals+$installation_net_totals;
-        
-
-if($rate) {
-       $total=$rate * $quantity;
-       $discount_amount = $total*$discount_percentage/100;
-       $discount = $total-$discount_amount;
-
-       $tax=$discount*$gst/100;
-      // $supply_installation_total=$discount+$installation_total;
-       $supply_installation_total=$discount;
-
-       $supply_net_total = $discount+$tax;
-       $installation_tax = $installation_total*$installation_gst_percentage/100;
-
-      $installation_net_total =$installation_tax+$installation_total;
-       $supply_net_total_installation_total = $supply_net_total+$installation_total;
-       $installation_supply_net_total = $supply_net_total+$installation_net_total;
-
-
-      
-
-       $totalss=$rate * $quantity;
-       $discount_amountss = $totalss*$discount_percentage/100;
-       $discountss = $totalss-$discount_amountss;
-       //$tax=$discount*$gst/100;
-       //$supply_installation_totalss=$discountss+$installation_total;
-       $supply_installation_totalss=$discountss;
-       $supply_net_totalss = $discountss;
-       $supply_net_total_installation_totalss = $supply_net_totalss+$installation_total;
-       $supply_and_installation_net_totalss = $supply_net_totalss+$installation_net_total;
-
-  }     
-
+    
+            $sum = $group_list;
+    
+            $profits = $sum * $profit_percentage / 100;
+            $profit_and_sum = $sum + $profits;
+            $buyer_type_percentage = $profit_and_sum * $client_profit_margin / 100;
+            $actual_values = $profit_and_sum + $buyer_type_percentage;
+    
+            $mrps = $actual_values * $gst / 100;
+            $mrp_values = $mrps + $actual_values;
+    
+            $profitrates = $sum * $quantity;
+            $profitvalues = $profitrates * $profit_percentage / 100;
+    
+            $discount_percentage = (float)unformat_currency($this->input->post('discount_percentage'));
+    
+            // Installation calculations
+            $installation_new_rate = (float)$this->input->post('installation_new_rate');
+            $installation_profit_percentage = (float)$this->input->post('installation_profit_percentage');
+            $installation_profit_rate_percentage = $installation_new_rate * $installation_profit_percentage / 100;
+            $installation_actual_rate = $installation_profit_rate_percentage + $installation_new_rate;
+            $installation_actual_rate_total = $installation_actual_rate * $quantity;
+    
+            $installation_rate = (float)$this->input->post('installation_rate');
+            $installation_total = $installation_rate * $quantity;
+    
+            $supply_total = isset($total) ? (float)$total : (float)$totals;
+            $installtion_and_supply_subtotal = $supply_total + $installation_total;
+    
+            $totals = $actual_values * $quantity;
+            $discount_amounts = $totals * $discount_percentage / 100;
+            $discounts = $totals - $discount_amounts;
+            $taxs = $discounts * $gst / 100;
+    
+            $supply_installation_totals = $discounts;
+    
+            $installation_taxs = $installation_actual_rate_total * $installation_gst_percentage / 100;
+            $installation_net_totals = $installation_taxs + $installation_actual_rate_total;
+    
+            $supply_net_totals = $discounts + $taxs;
+            $supply_net_total_installation_totals = $supply_net_totals + $installation_actual_rate_total;
+            $installation_supply_net_totals = $supply_net_totals + $installation_net_totals;
+    
+            if ($rate) {
+                $total = $rate * $quantity;
+                $discount_amount = $total * $discount_percentage / 100;
+                $discount = $total - $discount_amount;
+    
+                $tax = $discount * $gst / 100;
+                $supply_installation_total = $discount;
+    
+                $supply_net_total = $discount + $tax;
+                $installation_tax = $installation_total * $installation_gst_percentage / 100;
+    
+                $installation_net_total = $installation_tax + $installation_total;
+                $supply_net_total_installation_total = $supply_net_total + $installation_total;
+                $installation_supply_net_total = $supply_net_total + $installation_net_total;
+    
+                $totalss = $rate * $quantity;
+                $discount_amountss = $totalss * $discount_percentage / 100;
+                $discountss = $totalss - $discount_amountss;
+    
+                $supply_installation_totalss = $discountss;
+                $supply_net_totalss = $discountss;
+                $supply_net_total_installation_totalss = $supply_net_totalss + $installation_total;
+                $supply_and_installation_net_totalss = $supply_net_totalss + $installation_net_total;
+            }
        
        $totalsss= $actual_values* $quantity;
        $discount_amountsss = $totalsss*$discount_percentage/100;

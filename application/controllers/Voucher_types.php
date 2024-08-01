@@ -2,33 +2,27 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
 class Voucher_types extends MY_Controller {
 
     function __construct() {
         parent::__construct();
         $this->access_only_admin();
     }
-
-    //load expense categories list view
+  //load expense categories list view
     function index() {
         $this->template->rander("voucher_types/index");
-    }
-
-    //load expense category add/edit modal form
+    } 
+//load expense category add/edit modal form
     function modal_form() {
         validate_submitted_data(array(
             "id" => "numeric"
         ));
-        
         $view_data['model_info'] = $this->Voucher_types_model->get_one($this->input->post('id'));
         $this->load->view('voucher_types/modal_form', $view_data);
     }
-
-    //save expense category
+//save expense category
     function save() {
-
-        validate_submitted_data(array(
+       validate_submitted_data(array(
             "id" => "numeric",
             "title" => "required"
         ));
@@ -46,9 +40,8 @@ class Voucher_types extends MY_Controller {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
         }
     }
-
-    //delete/undo an expense category
-    function delete() {
+//delete/undo an expense category
+function delete() {
         validate_submitted_data(array(
             "id" => "required|numeric"
         ));
@@ -68,9 +61,8 @@ class Voucher_types extends MY_Controller {
             }
         }
     }
-
-    //get data for expenses category list
-    function list_data() {
+//get data for expenses category list
+function list_data() {
         $list_data = $this->Voucher_types_model->get_details()->result();
         $result = array();
         foreach ($list_data as $data) {
@@ -78,8 +70,7 @@ class Voucher_types extends MY_Controller {
         }
         echo json_encode(array("data" => $result));
     }
-
-    //get an expnese category list row
+//get an expnese category list row
     private function _row_data($id) {
         $options = array("id" => $id);
         $data = $this->Voucher_types_model->get_details($options)->row();
@@ -94,9 +85,6 @@ class Voucher_types extends MY_Controller {
             modal_anchor(get_uri("voucher_types/modal_form"), "<i class='fa fa-pencil'></i>", array("class" => "edit", "title" => lang('edit_voucher_type'), "data-post-id" => $data->id))
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("voucher_types/delete"), "data-action" => "delete-confirmation"))
         );
-    }
-
-}
-
+    }}
 /* End of file expense_categories.php */
-/* Location: ./application/controllers/expense_categories.php */
+/* Location: ./application/controllers/expense_categories.php */voucher

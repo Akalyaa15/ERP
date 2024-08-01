@@ -18,41 +18,29 @@ class Companys_model extends Crud_model {
     
         // Use the loaded database instance
         $db = $CI->db;
-        
+    
         $clients_table = $db->dbprefix('companys');
-        $projects_table = $db->dbprefix('projects');
         $users_table = $db->dbprefix('users');
-        $invoices_table = $db->dbprefix('invoices');
-        $invoice_payments_table = $db->dbprefix('invoice_payments');
-        $invoice_items_table = $db->dbprefix('invoice_items');
-        $branches_table = $db->dbprefix('branches');
-        $country_table = $db->dbprefix('country');
         $client_groups_table = $db->dbprefix('company_groups');
     
         $where = " WHERE `$clients_table`.deleted = 0";
-        $id = $options['id'] ?? null;
-        if ($id) {
-            $where .= " AND `$clients_table`.id = " . $db->escape($id);
+        
+        if (!empty($options['id'])) {
+            $where .= " AND `$clients_table`.id = " . $db->escape($options['id']);
         }
-        $cr_id = $options['cr_id'] ?? null;
-        if ($cr_id) {
-            $where .= " AND `$clients_table`.cr_id = " . $db->escape($cr_id);
+    
+        if (!empty($options['cr_id'])) {
+            $where .= " AND `$clients_table`.cr_id = " . $db->escape($options['cr_id']);
         }
-        $group_id = $options['group_id'] ?? null;
-        if ($group_id) {
-            $where .= " AND FIND_IN_SET(" . $db->escape($group_id) . ", `$clients_table`.group_ids)";
+    
+        if (!empty($options['group_id'])) {
+            $where .= " AND FIND_IN_SET(" . $db->escape($options['group_id']) . ", `$clients_table`.group_ids)";
         }
     
         $custom_fields = $options['custom_fields'] ?? [];
         $custom_field_query_info = $this->prepare_custom_field_query_string('companys', $custom_fields, $clients_table);
         $select_custom_fields = $custom_field_query_info['select_string'] ?? '';
         $join_custom_fields = $custom_field_query_info['join_string'] ?? '';
-    
-        $freight_amount = "IFNULL(`$invoices_table`.freight_amount, 0)";
-    
-        $invoice_value_calculation_query = "ROUND(
-            SUM(IFNULL(`items_table`.invoice_value, 0) + $freight_amount)
-        )";
     
         // Ensure SQL_BIG_SELECTS is enabled
         $db->query('SET SQL_BIG_SELECTS=1');
@@ -65,6 +53,7 @@ class Companys_model extends Crud_model {
                      FROM `$client_groups_table` 
                      WHERE FIND_IN_SET(`$client_groups_table`.id, `$clients_table`.group_ids) 
                      AND `$clients_table`.partner_id IS NULL) AS `groups`
+                $select_custom_fields
                 FROM `$clients_table`
                 LEFT JOIN `$users_table` 
                     ON `$users_table`.company_id = `$clients_table`.cr_id 
@@ -76,6 +65,7 @@ class Companys_model extends Crud_model {
         $query = $db->query($sql);
         return $query->result_array();
     }
+    
     function get_c_details($options = array()) {
         $clients_table = $this->db->dbprefix('companys');
         
@@ -110,7 +100,6 @@ class Companys_model extends Crud_model {
             }
         }
     }
-
     function add_remove_star($project_id, $user_id, $type = "add") {
         $clients_table = $this->db->dbprefix('companys');
 

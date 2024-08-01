@@ -1,4 +1,3 @@
-
 <div id="page-content" class="clearfix">
     <div style="max-width: 1000px; margin: auto;">
         <div class="page-title clearfix mt15">
@@ -9,10 +8,10 @@
                         <i class='fa fa-cogs'></i> <?php echo lang('actions'); ?>
                         <span class="caret"></span>
                     </button> 
-                 <?php 
-$options = array("estimate_id" => $estimate_info->id);
-$list_data = $this->Voucher_expenses_model->get_details($options)->result();
-?>
+                  <?php 
+                  $options = array("estimate_id" => $estimate_info->id);
+                  $list_data = $this->Voucher_expenses_model->get_details($options)->result();
+                      ?>
                     <ul class="dropdown-menu" role="menu">
                     <?php if($estimate_status=="accepted"||$estimate_status=="paid"||$estimate_status=="approved_by_accounts"||$estimate_status=="payment_in_progress"||$estimate_status=="payment_hold"||$estimate_status=="payment_done"||$estimate_status=="payment_received"||$estimate_status=="closed") {?>
                         <li role="presentation"><?php echo anchor(get_uri("voucher/download_pdf/" . $estimate_info->id), "<i class='fa fa-download'></i> " . lang('download_pdf'), array("title" => lang('download_pdf'))); ?> </li> <?php } ?>

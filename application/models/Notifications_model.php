@@ -8,7 +8,6 @@ class Notifications_model extends Crud_model {
         $this->table = 'notifications';
         parent::__construct($this->table);
     }
-
     function create_notification($event, $user_id, $options = array()) {
         $notification_settings_table = $this->db->dbprefix('notification_settings');
         $users_table = $this->db->dbprefix('users');
@@ -626,68 +625,68 @@ $tab=$this->Voucher_model->get_one($voucher_id);
         $clients_table = $this->db->dbprefix('clients');
         $events_table = $this->db->dbprefix('events');
         $announcements_table = $this->db->dbprefix('announcements');
-         $payslip_table = $this->db->dbprefix('payslip');
-         
-         $delivery_table = $this->db->dbprefix('delivery');
-         $voucher_expenses_table = $this->db->dbprefix(' voucher_expenses');
-         $purchase_orders_table = $this->db->dbprefix('purchase_orders');
-         $group_comments_table = $this->db->dbprefix('group_comments');
+        $payslip_table = $this->db->dbprefix('payslip');
+        $delivery_table = $this->db->dbprefix('delivery');
+        $voucher_expenses_table = $this->db->dbprefix('voucher_expenses');
+        $purchase_orders_table = $this->db->dbprefix('purchase_orders');
+        $group_comments_table = $this->db->dbprefix('group_comments');
         $groups_table = $this->db->dbprefix('groups');
-         $voucher_table = $this->db->dbprefix(' voucher');
-
-
+        $voucher_table = $this->db->dbprefix('voucher');
+    
         $sql = "SELECT SQL_CALC_FOUND_ROWS $notifications_table.*, CONCAT($users_table.first_name, ' ', $users_table.last_name) AS user_name, $users_table.image AS user_image,
-                 $projects_table.title AS project_title,
-                 $project_comments_table.description AS project_comment_title,
-                 $project_files_table.file_name AS project_file_title,
-                 $tasks_table.title AS task_title,
-                 $events_table.title AS event_title,    
-                 $tickets_table.title AS ticket_title,
-                 $ticket_comments_table.description AS ticket_comment_description,
-                 $posts_table.description AS posts_title,
-                 $announcements_table.title AS announcement_title,
-                 $activity_logs_table.changes AS activity_log_changes, $activity_logs_table.log_type AS activity_log_type,
-                 $leave_applications_table.start_date AS leave_start_date, $leave_applications_table.end_date AS leave_end_date,
-                 $payslip_table.payslip_date AS payslip_start_date,
-             
-                 $delivery_table.estimate_date AS delivery_estimate_date,
-               $voucher_expenses_table.expense_date AS voucher_expense_date,   
-               $voucher_table.voucher_no AS voucher_no,
-               (SELECT CONCAT($users_table.first_name, ' ', $users_table.last_name) FROM $users_table WHERE $users_table.id=$voucher_table.created_user_id) AS voucher_user_name,  $groups_table.title AS group_title,
-               $group_comments_table.description AS group_comment_title,   
-                 $invoice_payments_table.invoice_id AS payment_invoice_id, $invoice_payments_table.amount AS payment_amount, (SELECT currency_symbol FROM $clients_table WHERE $clients_table.id=$invoices_table.client_id) AS client_currency_symbol,
-                 (SELECT CONCAT($users_table.first_name, ' ', $users_table.last_name) FROM $users_table WHERE $users_table.id=$notifications_table.to_user_id) AS to_user_name,
-                 FIND_IN_SET($user_id, $notifications_table.read_by) as is_read    
-        FROM $notifications_table
-        LEFT JOIN $projects_table ON $projects_table.id=$notifications_table.project_id
-        LEFT JOIN $project_comments_table ON $project_comments_table.id=$notifications_table.project_comment_id
-        LEFT JOIN $project_files_table ON $project_files_table.id=$notifications_table.project_file_id
-        LEFT JOIN $tasks_table ON $tasks_table.id=$notifications_table.task_id
-        LEFT JOIN $leave_applications_table ON $leave_applications_table.id=$notifications_table.leave_id
-        LEFT JOIN $payslip_table ON $payslip_table.id=$notifications_table.payslip_id
-        LEFT JOIN $delivery_table ON $delivery_table.id=$notifications_table.dc_id 
-       LEFT JOIN $voucher_expenses_table ON $voucher_expenses_table.estimate_id=$notifications_table.voucher_id  
-       LEFT JOIN $voucher_table ON $voucher_table.id=$notifications_table.voucher_id  
-        LEFT JOIN $tickets_table ON $tickets_table.id=$notifications_table.ticket_id
-        LEFT JOIN $ticket_comments_table ON $ticket_comments_table.id=$notifications_table.ticket_comment_id
-        LEFT JOIN $posts_table ON $posts_table.id=$notifications_table.post_id
-        LEFT JOIN $users_table ON $users_table.id=$notifications_table.user_id
-        LEFT JOIN $activity_logs_table ON $activity_logs_table.id=$notifications_table.activity_log_id
-        LEFT JOIN $invoice_payments_table ON $invoice_payments_table.id=$notifications_table.invoice_payment_id  
-        LEFT JOIN $invoices_table ON $invoices_table.id=$notifications_table.invoice_id
-        LEFT JOIN $events_table ON $events_table.id=$notifications_table.event_id
-        LEFT JOIN $announcements_table ON $announcements_table.id=$notifications_table.announcement_id
-        LEFT JOIN $purchase_orders_table ON $purchase_orders_table.id=$notifications_table.purchase_order_id
-                LEFT JOIN $groups_table ON $groups_table.id=$notifications_table.group_id
-        LEFT JOIN $group_comments_table ON $group_comments_table.id=$notifications_table.group_comment_id
-        WHERE $notifications_table.deleted=0 AND FIND_IN_SET($user_id, $notifications_table.notify_to) != 0
-        ORDER BY $notifications_table.id DESC LIMIT $offset, $limit";
-
+                $projects_table.title AS project_title,
+                $project_comments_table.description AS project_comment_title,
+                $project_files_table.file_name AS project_file_title,
+                $tasks_table.title AS task_title,
+                $events_table.title AS event_title,    
+                $tickets_table.title AS ticket_title,
+                $ticket_comments_table.description AS ticket_comment_description,
+                $posts_table.description AS posts_title,
+                $announcements_table.title AS announcement_title,
+                $activity_logs_table.changes AS activity_log_changes, $activity_logs_table.log_type AS activity_log_type,
+                $leave_applications_table.start_date AS leave_start_date, $leave_applications_table.end_date AS leave_end_date,
+                $payslip_table.payslip_date AS payslip_start_date,
+                $delivery_table.estimate_date AS delivery_estimate_date,
+                $voucher_expenses_table.expense_date AS voucher_expense_date,   
+                $voucher_table.voucher_no AS voucher_no,
+                (SELECT CONCAT($users_table.first_name, ' ', $users_table.last_name) FROM $users_table WHERE $users_table.id=$voucher_table.created_user_id) AS voucher_user_name,  
+                $groups_table.title AS group_title,
+                $group_comments_table.description AS group_comment_title,   
+                $invoice_payments_table.invoice_id AS payment_invoice_id, $invoice_payments_table.amount AS payment_amount, 
+                (SELECT currency_symbol FROM $clients_table WHERE $clients_table.id=$invoices_table.client_id) AS client_currency_symbol,
+                (SELECT CONCAT($users_table.first_name, ' ', $users_table.last_name) FROM $users_table WHERE $users_table.id=$notifications_table.to_user_id) AS to_user_name,
+                FIND_IN_SET($user_id, $notifications_table.read_by) as is_read    
+                FROM $notifications_table
+                LEFT JOIN $projects_table ON $projects_table.id=$notifications_table.project_id
+                LEFT JOIN $project_comments_table ON $project_comments_table.id=$notifications_table.project_comment_id
+                LEFT JOIN $project_files_table ON $project_files_table.id=$notifications_table.project_file_id
+                LEFT JOIN $tasks_table ON $tasks_table.id=$notifications_table.task_id
+                LEFT JOIN $leave_applications_table ON $leave_applications_table.id=$notifications_table.leave_id
+                LEFT JOIN $payslip_table ON $payslip_table.id=$notifications_table.payslip_id
+                LEFT JOIN $delivery_table ON $delivery_table.id=$notifications_table.dc_id 
+                LEFT JOIN $voucher_expenses_table ON $voucher_expenses_table.estimate_id=$notifications_table.voucher_id  
+                LEFT JOIN $voucher_table ON $voucher_table.id=$notifications_table.voucher_id  
+                LEFT JOIN $tickets_table ON $tickets_table.id=$notifications_table.ticket_id
+                LEFT JOIN $ticket_comments_table ON $ticket_comments_table.id=$notifications_table.ticket_comment_id
+                LEFT JOIN $posts_table ON $posts_table.id=$notifications_table.post_id
+                LEFT JOIN $users_table ON $users_table.id=$notifications_table.user_id
+                LEFT JOIN $activity_logs_table ON $activity_logs_table.id=$notifications_table.activity_log_id
+                LEFT JOIN $invoice_payments_table ON $invoice_payments_table.id=$notifications_table.invoice_payment_id  
+                LEFT JOIN $invoices_table ON $invoices_table.id=$notifications_table.invoice_id
+                LEFT JOIN $events_table ON $events_table.id=$notifications_table.event_id
+                LEFT JOIN $announcements_table ON $announcements_table.id=$notifications_table.announcement_id
+                LEFT JOIN $purchase_orders_table ON $purchase_orders_table.id=$notifications_table.purchase_order_id
+                LEFT JOIN `$groups_table` ON $groups_table.id=$notifications_table.group_id
+                LEFT JOIN `$group_comments_table` ON $group_comments_table.id=$notifications_table.group_comment_id
+                WHERE $notifications_table.deleted=0 AND FIND_IN_SET($user_id, $notifications_table.notify_to) != 0
+                ORDER BY $notifications_table.id DESC LIMIT $offset, $limit";
+    
         $data = new stdClass();
         $data->result = $this->db->query($sql)->result();
         $data->found_rows = $this->db->query("SELECT FOUND_ROWS() as found_rows")->row()->found_rows;
         return $data;
     }
+    
 
     function get_email_notification($notification_id) {
         $notifications_table = $this->db->dbprefix('notifications');

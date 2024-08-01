@@ -675,8 +675,17 @@ $voucher_type = $this->Voucher_types_model->get_all_where(array("deleted" => 0,"
             </div> 
         </div>
 
-        <?php $this->load->view("custom_fields/form/prepare_context_fields", array("custom_fields" => $custom_fields, "label_column" => "col-md-3", "field_column" => " col-md-9")); ?> 
-
+        <?php 
+if (isset($custom_fields) && is_array($custom_fields)) {
+    $this->load->view("custom_fields/form/prepare_context_fields", array(
+        "custom_fields" => $custom_fields, 
+        "label_column" => "col-md-3", 
+        "field_column" => " col-md-9"
+    ));
+} else {
+    echo "Custom fields data is not set or not an array.";
+}
+?>
         <?php $this->load->view("includes/dropzone_preview"); ?>    
         <div class="modal-footer">
             <div class="row">

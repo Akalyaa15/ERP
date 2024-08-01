@@ -497,9 +497,8 @@ $("#member_type").select2("destroy").val("tm");
             
         </div>
         <?php echo form_close(); ?>
-   
-<script type="text/javascript">
-    $(document).ready(function () {
+       <script type="text/javascript">
+       $(document).ready(function () {
 
         //make the checklist items sortable
         var $selector = $(".checklist-items");

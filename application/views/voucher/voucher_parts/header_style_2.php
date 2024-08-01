@@ -4,8 +4,7 @@
             $data = array(
                 "estimate_items" => $estimate_items,
                 "color" => $color,
-                "estimate_info" => $estimate_info
-            );
+                "estimate_info" => $estimate_info);
             $this->load->view('voucher/voucher_parts/voucher_info', $data);
             ?>
         </td>

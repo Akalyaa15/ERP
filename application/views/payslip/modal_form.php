@@ -265,7 +265,7 @@ var payslip =$("#pay").val();
                 "id" => "payslip_status_attendance",
                 "name" => "payslip_created_status",
                 "data-msg-required" => lang("field_required"),
-                    ), "create_attendance", ($model_info->payslip_created_status === "create_attendance") ? true : ($model_info->payslip_created_status !== "create_timesheets") ? true : false);
+                    ), "create_attendance", ($model_info->payslip_created_status === "create_attendance") ? true : (($model_info->payslip_created_status !== "create_timesheets") ? true : false));
             ?>
             <label for="status_active" class="mr15"><?php echo lang('attendance'); ?></label>
             <?php

@@ -19,9 +19,7 @@
     }
     ?>
 </div>
-
 <?php $users=$this->Users_model->get_one($estimate_info->accounts_handler);
-
 $manager=$this->Users_model->get_one($estimate_info->line_manager);
  ?>
 <?php
@@ -29,7 +27,6 @@ $manager=$this->Users_model->get_one($estimate_info->line_manager);
         ?>
 <h1 style="text-align: center; text-decoration: underline;color: #4baae3"><b>VOUCHER</b></h1>
 <br><br>
-
 <!--span style="font-size: 18px;">VOUCHER NUMBER : <?php echo $item->id; ?></span-->  <br>
 <span style="font-size: 16px;">DATE  : <?php echo $item->expense_date; ?></span> <br><br><br>
 <!--div style="line-height: 160%;font-size: 20px;">&nbsp &nbsp &nbsp &nbsp Paid to <b style="text-decoration: underline;"> &nbsp&nbsp<?php echo $item->paid_to; ?>&nbsp&nbsp</b> BY Cash / Cheque Number<b style="text-decoration: underline;"> &nbsp&nbsp<?php echo $item->cheque_no; ?>&nbsp&nbsp</b> Drawn On<b style="text-decoration: underline;"> &nbsp<?php echo $item->drawn_on; ?>&nbsp</b >a sum of Rs. <b style="text-decoration: underline;"> &nbsp&nbsp<?php echo $item->amount; ?>&nbsp&nbsp</b> only towards Salary/Truck Exp/Unloading Chargers/Advance/.........</div-->
@@ -69,7 +66,9 @@ echo $item->r_f_name." ".$item->r_l_name;
         } }?></b><span style="font-size: 18px;color:#3c3e42;line-height: 32px !important"> through</span> <b style="border-bottom: 1px dashed #999;
           text-decoration: underline;color: #0e0e0f;font-size: 20px "> <?php echo $estimate_info->title; ?> </b ><span style="font-size: 18px;color:#3c3e42;line-height: 32px !important">,a sum of     <?php echo $item->currency; ?>
  </span><b style="border-bottom: 1px dashed #999;
-          text-decoration: underline;color: #0e0e0f;font-size: 20px "><?php function convertToIndianCurrency($number) {
+          text-decoration: underline;color: #0e0e0f;font-size: 20px ">
+          <?php 
+    function convertToIndianCurrency($number) {
     $no = round($number);
     $decimal = round($number - ($no = floor($number)), 2) * 100;    
     $digits_length = strlen($no);    
@@ -117,7 +116,6 @@ echo $item->r_f_name." ".$item->r_l_name;
             $str [] = null;
         }  
     }
-    
     $Rupees = implode(' ', array_reverse($str));
     $paise = ($decimal) ? "And Paise " . ($words[$decimal - $decimal%10]) ." " .($words[$decimal%10])  : '';
     return ($Rupees ?   $Rupees : '') . $paise . " ";
@@ -145,37 +143,113 @@ echo $item->f_name." ".$item->l_name;
         echo $item->i_rep;
         } ?></b></span><br>
   
-<span style="font-size: 17px;">Signature :<?php if(($item->member_type=='om'||$item->member_type=='tm')&&$item->signature) {?><img style="width: 130px; height: 50px; background-color:white;" src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/".$item->signature); ?>" > <?php }elseif (($item->member_type=='clients'||$item->member_type=='vendors')&&$item->i_rep_signature) {?>
-<img style="width: 130px; height: 50px; background-color:white;" src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/".$item->i_rep_signature); ?>" >       <?php  } ?></span></td>
-<td style="width:50%;font-size:16px;text-align:right;padding-top:10px;"><span style="font-size: 17px;">Manager :<b><?php echo $manager->first_name." ".$manager->last_name; ?> </b></span><br>
-<span style="font-size: 17px;">Signature :<img style="width: 130px; height: 50px; background-color:white;" src="<?php if($users->signature) { echo get_file_uri(get_setting("profile_image_path") . "signature/".$manager->signature);} ?>" alt=""></span></td></tr> 
+<span style="font-size: 17px;">Manager :<b><?php echo $manager->first_name." ".$manager->lastconvertToIndianCurrency_name; ?> </b></span><br>
+<span style="font-size: 17px;">Signature :
+<?php 
+if(isset($manager->signature) && $manager->signature) { 
+    echo '<img style="width: 130px; height: 50px; background-color:white;" src="' . get_file_uri(get_setting("profile_image_path") . "signature/".$manager->signature) . '" alt="">';
+} else {
+    echo 'No signature available';
+}
+?>
+</span></td></tr>ss
 <br><br> -->
- <tr><td style="width:50%;font-size:16px;
-text-align: left;height:35px;padding-top:10px; "><p style="color:black ;">Issuer's Name:<b><?php if($item->member_type=='om'||$item->member_type=='tm') {echo $item->linked_user_name;}elseif($item->member_type=='others'){
-echo $item->f_name." ".$item->l_name;
-    }elseif ($item->member_type=='clients'||$item->member_type=='vendors') {
-        echo $item->i_rep;
-        } ?></b></p><p><?php if(($item->member_type=='om'||$item->member_type=='tm')&&$item->signature) {?><img style="width: 130px; height: 50px; background-color:white;" src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/".$item->signature); ?>" > <?php }elseif (($item->member_type=='clients'||$item->member_type=='vendors')&&$item->i_rep_signature) {?>
-<img style="width: 130px; height: 50px; background-color:white;" src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/".$item->i_rep_signature); ?>" >       <?php  } ?></p></td>
-<td style="width:50%;font-size:16px;text-align:right;padding-top:10px;"><p style="color:black ;">&nbsp;Manager :<b><?php echo $manager->first_name." ".$manager->last_name; ?> </b></p><p><img style="width: 130px; height: 50px; background-color:white;" src="<?php if($manager->signature) { echo get_file_uri(get_setting("profile_image_path") . "signature/".$manager->signature);} ?>" alt=""></p></td></tr>
-<tr><td style="width:50%;font-size:16px;
-text-align: left;height:35px;padding-top:10px; "><p style="color:black ;">Signature</p></td>
+<tr>
+<td style="width:50%; font-size:16px; text-align: left; height:35px; padding-top:10px;">
+    <p style="color:black;">Issuer's Name:
+        <b>
+            <?php
+            if ($item->member_type == 'om' || $item->member_type == 'tm') {
+                echo $item->linked_user_name;
+            } elseif ($item->member_type == 'others') {
+                echo $item->f_name . " " . $item->l_name;
+            } elseif ($item->member_type == 'clients' || $item->member_type == 'vendors') {
+                echo $item->i_rep;
+            }
+            ?>
+        </b>
+    </p>
+    <p>
+        <?php if (($item->member_type == 'om' || $item->member_type == 'tm') && isset($item->signature) && $item->signature): ?>
+            <img style="width: 130px; height: 50px; background-color:white;"
+                 src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/" . $item->signature); ?>"
+                 alt="Signature">
+        <?php elseif (($item->member_type == 'clients' || $item->member_type == 'vendors') && isset($item->i_rep_signature) && $item->i_rep_signature): ?>
+            <img style="width: 130px; height: 50px; background-color:white;"
+                 src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/" . $item->i_rep_signature); ?>"
+                 alt="Signature">
+        <?php endif; ?>
+    </p>
+</td>
 
-<td style="width:50%;font-size:16px;text-align:right;padding-top:10px;"><p style="color:black ;">&nbsp;Authorised Signature</p></td></tr> 
-<tr><td style="width:50%;font-size:16px;
-text-align: left;height:35px;padding-top:10px; "><p style="color:black ;">Receiver's Name:<b><?php if($item->r_member_type=='om'||$item->r_member_type=='tm') {echo $item->receiver_name;}
-          elseif($item->r_member_type=='others'){
-echo $item->r_f_name." ".$item->r_l_name;
-    }elseif ($item->r_member_type=='clients'||$item->r_member_type=='vendors') {
-        echo $item->r_rep;
-        } ?></b></p><p><?php if(($item->r_member_type=='om'||$item->r_member_type=='tm')&&$item->r_signature) {?><img style="width: 130px; height: 50px; background-color:white;" src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/".$item->r_signature); ?>" > <?php }elseif (($item->r_member_type=='clients'||$item->r_member_type=='vendors')&&$item->r_signature) {?>
-<img style="width: 130px; height: 50px; background-color:white;" src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/".$item->r_rep_signature); ?>" >       <?php  } ?></p></td>
-<td style="width:50%;font-size:16px;text-align:right;padding-top:10px;"><p style="color:black ;">&nbsp;For Gemicates Technologies Pvt Ltd</p><p><img style="width: 130px; height: 50px; background-color:white;" src="<?php if($users->signature) { echo get_file_uri(get_setting("profile_image_path") . "signature/".$users->signature);} ?>" alt=""></p></td></tr>
-<tr><td style="width:50%;font-size:16px;
-text-align: left;height:35px;padding-top:10px; "><p style="color:black ;">Signature</p></td>
+    <td style="width:50%; font-size:16px; text-align:right; padding-top:10px;">
+        <p style="color:black;">Manager: <b><?php echo $manager->first_name . " " . $manager->last_name; ?></b></p>
+        <p>
+            <img style="width: 130px; height: 50px; background-color:white;"
+                 src="<?php echo $manager->signature ? get_file_uri(get_setting("profile_image_path") . "signature/" . $manager->signature) : ''; ?>"
+                 alt="">
+        </p>
+    </td>
+</tr>
+<tr>
+    <td style="width:50%; font-size:16px; text-align: left; height:35px; padding-top:10px;">
+        <p style="color:black;">Signature</p>
+    </td>
+    <td style="width:50%; font-size:16px; text-align:right; padding-top:10px;">
+        <p style="color:black;">Authorised Signature</p>
+    </td>
+</tr>
+<tr>
+    <td style="width:50%; font-size:16px; text-align: left; height:35px; padding-top:10px;">
+    <p style="color:black;">Receiver's Name:
+            <b>
+                <?php
+                if ($item->r_member_type == 'om' || $item->r_member_type == 'tm') {
+                    echo $item->receiver_name;
+                } elseif ($item->r_member_type == 'others') {
+                    echo $item->r_f_name . " " . $item->r_l_name;
+                } elseif ($item->r_member_type == 'clients' || $item->r_member_type == 'vendors') {
+                    echo $item->r_rep;
+                }
+                ?>
+            </b>
+        </p>
+        <p>
+    <?php if (($item->r_member_type == 'om' || $item->r_member_type == 'tm') && isset($item->r_signature) && $item->r_signature): ?>
+        <img style="width: 130px; height: 50px; background-color:white;"
+             src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/" . $item->r_signature); ?>"
+             alt="Signature">
+    <?php elseif (($item->r_member_type == 'clients' || $item->r_member_type == 'vendors') && isset($item->r_rep_signature) && $item->r_rep_signature): ?>
+        <img style="width: 130px; height: 50px; background-color:white;"
+             src="<?php echo get_file_uri(get_setting("profile_image_path") . "signature/" . $item->r_rep_signature); ?>"
+             alt="Signature">
+    <?php endif; ?>
+</p>
 
-<td style="width:50%;font-size:16px;text-align:right;padding-top:10px;"><p style="color:black ;">&nbsp;Authorised Signature</p></td></tr></tbody></table><!--h4>GEMICATES TECHNOLOGIES</h4-->
- <?php } ?><br><br>
+    </td>
+    <td style="width:50%; font-size:16px; text-align:right; padding-top:10px;">
+        <p style="color:black;">For Gemicates Technologies Pvt Ltd</p>
+        <p>
+            <img style="width: 130px; height: 50px; background-color:white;"
+                 src="<?php echo $users->signature ? get_file_uri(get_setting("profile_image_path") . "signature/" . $users->signature) : ''; ?>"
+                 alt="">
+        </p>
+    </td>
+</tr>
+<tr>
+    <td style="width:50%; font-size:16px; text-align: left; height:35px; padding-top:10px;">
+        <p style="color:black;">Signature</p>
+    </td>
+    <td style="width:50%; font-size:16px; text-align:right; padding-top:10px;">
+        <p style="color:black;">Authorised Signature</p>
+    </td>
+</tr>
+</tbody>
+</table>
+<!--h4>GEMICATES TECHNOLOGIES</h4-->
+<?php } ?>
+<br><br>
+
 <!--p style="text-align:center;color:#2371bd;font-size: 15px">Registered Office : Gemicates Technologies Private Limited<br>CIN:U29253TN2014PTC098558&nbsp;<br>11/6,Sundareshwarer Koil Street,Saidapet, Chennai-600015.<br>Phone No:044-48534375/044-48527269 | www.gemicates.com | info@gemicates.com</p-->
 <!--table style="width: 100%; color: #444;">            
     <tr style="font-weight: bold; background-color: <?php echo $color; ?>; color: #fff;  ">
@@ -195,12 +269,7 @@ text-align: left;height:35px;padding-top:10px; "><p style="color:black ;">Signat
            
         </tr>
     <?php } ?>
-    
-    
-    
-</table-->
-
-
+    </table-->
 <!--div style="border-top: 2px solid #f2f2f2; color:#444;">
     <div><?php echo nl2br($estimate_info->note); ?></div>
 </div-->
@@ -235,7 +304,6 @@ text-align: left;height:35px;padding-top:10px; "><p style="color:black ;">Signat
         ?>
 <h1 style="text-align: center; text-decoration: underline;color: #4baae3">VOUCHER</h1>
 <br><br>
-
 <!--span style="font-size: 18px;">VOUCHER NUMBER : <?php echo $item->id; ?></span-->  <br>
 <span style="font-size: 16px;">DATE  : <?php echo $item->expense_date; ?></span> <br><br><br>
 <!--div style="line-height: 160%;font-size: 20px;">&nbsp &nbsp &nbsp &nbsp Paid to <b style="text-decoration: underline;"> &nbsp&nbsp<?php echo $item->paid_to; ?>&nbsp&nbsp</b> BY Cash / Cheque Number<b style="text-decoration: underline;"> &nbsp&nbsp<?php echo $item->cheque_no; ?>&nbsp&nbsp</b> Drawn On<b style="text-decoration: underline;"> &nbsp<?php echo $item->drawn_on; ?>&nbsp</b >a sum of Rs. <b style="text-decoration: underline;"> &nbsp&nbsp<?php echo $item->amount; ?>&nbsp&nbsp</b> only towards Salary/Truck Exp/Unloading Chargers/Advance/.........</div-->
@@ -259,8 +327,6 @@ echo $item->f_name." ".$item->l_name;
 echo $item->f_name." ".$item->l_name;
     } ?></b><span><br>
 person</h4>  
-
-
 <table style="width:115%;padding-top: 250px !important;">
   <tr>
     <th style="font-size: 18px">Receiver's Signature</th>
@@ -289,12 +355,7 @@ person</h4>
            
         </tr>
     <?php } ?>
-    
-    
-    
-</table-->
-
-
+    </table-->
 <!--div style="border-top: 2px solid #f2f2f2; color:#444;">
     <div><?php echo nl2br($estimate_info->note); ?></div>
 </div-->
@@ -302,5 +363,4 @@ person</h4>
 <!--div style="margin-top: 15px;">
     <?php echo get_setting("estimate_footer"); ?>
 </div-->
-
- */ ?>
+*/ ?>

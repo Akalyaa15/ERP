@@ -847,27 +847,32 @@ class Vendors extends MY_Controller {
 
     /* load contact's company info tab view */
 
-    function company_info_tab($vendor_id = 0) {
+     function company_info_tab($vendor_id = 0) {
         if ($vendor_id) {
             $this->access_only_allowed_members_or_vendor_contact($vendor_id);
 
             $view_data['model_info'] = $this->Vendors_model->get_one($vendor_id);
             $view_data['groups_dropdown'] = $this->_get_groups_dropdown_select2_data();
             $view_data['gst_code_dropdown'] = $this->_get_gst_code_dropdown_select2_data();
-           // $view_data['state_dropdown'] = $this->_get_state_dropdown_select2_data();
-            $country_get_code = $this->Countries_model->get_one($view_data['model_info']->country);
-         $state_categories = $this->States_model->get_dropdown_list(array("title"), "id", array("country_code" => $country_get_code->numberCode));
-        
-        $state_categories_suggestion = array(array("id" => "", "text" => "-"));
-        foreach ($state_categories as $key => $value) {
-            $state_categories_suggestion[] = array("id" => $key, "text" => $value);
-        }
 
-        $view_data['state_dropdown'] = $state_categories_suggestion;
+            // Fetch country code
+            $country_get_code = $this->Countries_model->get_one($view_data['model_info']->country);
+            if ($country_get_code) {
+                $state_categories = $this->States_model->get_dropdown_list(array("title"), "id", array("country_code" => $country_get_code->numberCode));
+            } else {
+                $state_categories = [];
+            }
+
+            $state_categories_suggestion = array(array("id" => "", "text" => "-"));
+            foreach ($state_categories as $key => $value) {
+                $state_categories_suggestion[] = array("id" => $key, "text" => $value);
+            }
+            $view_data['state_dropdown'] = $state_categories_suggestion;
 
             $view_data['buyer_types_dropdown'] = $this->_get_buyer_types_dropdown_select2_data();
 
-            $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("clients", $client_id, $this->login_user->is_admin, $this->login_user->user_type)->result();
+            // Retrieve custom fields
+            $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("clients", $vendor_id, $this->login_user->is_admin, $this->login_user->user_type)->result();
 
             $view_data['label_column'] = "col-md-2";
             $view_data['field_column'] = "col-md-10";
@@ -883,14 +888,13 @@ class Vendors extends MY_Controller {
             $view_data['groups_dropdown'] = $this->_get_groups_dropdown_select2_data();
             $view_data['gst_code_dropdown'] = $this->_get_gst_code_dropdown_select2_data();
 
-            $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("clients", $client_id, $this->login_user->is_admin, $this->login_user->user_type)->result();
+            $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("clients", $vendor_id, $this->login_user->is_admin, $this->login_user->user_type)->result();
 
             $view_data['label_column'] = "col-md-2";
             $view_data['field_column'] = "col-md-10";
             $this->load->view('vendors/bank_info/bank_info', $view_data);
         }
     }
-
     function save_bank_info($vendor_id) {
         
      $this->access_only_allowed_members_or_vendor_contact($vendor_id);

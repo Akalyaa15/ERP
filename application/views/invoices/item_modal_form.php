@@ -1,40 +1,41 @@
 <?php 
 if($buyer_type){
-$options = array(
-            "id" => $buyer_type,
-                   );
-        $list_data = $this->Buyer_types_model->get_details($options)->row();
-    }
-        ?>
+    $options = array(
+        "id" => $buyer_type,
+    );
+    $list_data = $this->Buyer_types_model->get_details($options)->row();
+}
+?>
 
-<?php if($model_info->with_gst=="no") { ?>
+<?php if($model_info->with_gst == "no") { ?>
 <style>
-      #s,#y,#z,#service_s,#service_y,#service_z{
-        display:none;
-      }
+    #s, #y, #z, #service_s, #service_y, #service_z {
+        display: none;
+    }
 </style>
 <?php } ?>
-<?php if($model_info->with_installation =="no") { ?>
+<?php if($model_info->with_installation == "no") { ?>
 <style>
-      #installation_part{
-        display:none;
-      }
+    #installation_part {
+        display: none;
+    }
 </style>
 <?php } ?>
-<?php if($model_info->with_installation_gst =="no") { ?>
+<?php if($model_info->with_installation_gst == "no") { ?>
 <style>
-      #ss,#yy,#zz{
-        display:none;
-      }
-      
+    #ss, #yy, #zz {
+        display: none;
+    }
 </style>
 <?php } ?>
-<?php /*  $buyer_type; */?>
 <?php 
-$client_buyer_type_profit = $list_data->profit_margin;
-$client_buyer_type_name = $list_data->buyer_type;
-//echo $client_buyer_type_name;
- ?>
+if (isset($list_data)) {
+    $client_buyer_type_profit = $list_data->profit_margin;
+    $client_buyer_type_name = $list_data->buyer_type;
+    //echo $client_buyer_type_name;
+}
+?>
+
 <br>
 <div class="form-group">
         <label for="discount" class="col-md-3"></label>
@@ -477,22 +478,25 @@ $client_buyer_type_name = $list_data->buyer_type;
             ?>
         </div>
     </div>
+
+
     <div class="form-group" id="zz">
-        <label for="installation_hsn_description" class="col-md-3"><?php echo lang('hsn_description'); ?></label>
-        <div class=" col-md-9">
-            <?php
-            echo form_textarea(array(
-             "id" => "installation_hsn_code_description",
+    <label for="installation_hsn_description" class="col-md-3"><?php echo lang('hsn_description'); ?></label>
+    <div class="col-md-9">
+        <?php
+        echo form_textarea(array(
+            "id" => "installation_hsn_code_description",
             "name" => "installation_hsn_code_description",
-             "value" => $model_info->installation_hsn_description ? $model_info->installation_hsn_description : "",
-                "class" => "form-control",
-                "placeholder" => lang('installation_hsn_description'),
-                "readonly"=>"true",
-            ));
-            ?> 
-        </div>
+            "value" => isset($model_info->installation_hsn_description) ? $model_info->installation_hsn_description : "",
+            "class" => "form-control",
+            "placeholder" => lang('installation_hsn_description'),
+            "readonly" => true, // Use boolean true
+        ));
+        ?> 
     </div>
-    </div>
+</div>
+
+ </div>
     </div>
 <!-- end invoice supply type  -->
 <!-- invoice service type  -->

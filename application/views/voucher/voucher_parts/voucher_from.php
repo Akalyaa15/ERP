@@ -13,7 +13,7 @@ $company_website = get_setting("company_website");
     if ($company_address) {
         echo $company_address;
     }
-    ?>
+  ?>
     <?php if ($company_phone) { ?>
         <!--div style="line-height: 1px;"> </div-->
         <br /><?php echo lang("phone") . ": " . $company_phone; ?>

@@ -7,7 +7,6 @@
 
     <div class="invoice-preview">
         <?php
-        
         if ($show_close_preview)
             echo "<div class='text-center'>" . anchor("voucher/view/" . $estimate_info->id, lang("close_preview"), array("class" => "btn btn-default round")) . "</div>"
             ?>

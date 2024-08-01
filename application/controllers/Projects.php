@@ -4147,39 +4147,50 @@ setcookie($cookie_name, $cookie_value, time() + 75, "/");
     
     //project ot handler module
 
- private function _get_members_dropdown_list_for_filter() {
-
-        //prepare the dropdown list of members
-        //don't show none allowed members in dropdown
-
-
-                $where = array("user_type" => "staff", "where_in" => array("id" => $allowed_members));
-          
-
+    private function _get_members_dropdown_list_for_filter() {
+        // Assuming $allowed_members is defined somewhere in your code.
+        if (!isset($allowed_members) || !is_array($allowed_members)) {
+            // Handle the case where $allowed_members is not defined or not an array.
+            return array(array("id" => "", "text" => "- " . lang("member") . " -"));
+        }
+    
+        // Prepare the dropdown list of members, ensuring no unauthorized members are shown in the dropdown.
+        $where = array(
+            "user_type" => "staff",
+            "where_in" => array("id" => $allowed_members)
+        );
+    
+        // Ensure the get_dropdown_list method can handle the where_in condition.
         $members = $this->Users_model->get_dropdown_list(array("first_name", "last_name"), "id", $where);
-
+    
+        // Prepare the members dropdown list.
         $members_dropdown = array(array("id" => "", "text" => "- " . lang("member") . " -"));
         foreach ($members as $id => $name) {
             $members_dropdown[] = array("id" => $id, "text" => $name);
         }
+    
         return $members_dropdown;
     }
-private function _get_rm_members_dropdown_list_for_filter() {
-
-        //prepare the dropdown list of members
-        //don't show none allowed members in dropdown
-
-        
-
-                $where = array("user_type" => "staff", "where_in" => array("id" => $allowed_members));
-          
-
+    private function _get_rm_members_dropdown_list_for_filter() {
+        // Ensure $allowed_members is defined and an array
+        if (!isset($allowed_members) || !is_array($allowed_members)) {
+            return array(array("id" => "", "text" => "- " . lang("outsource_member") . " -"));
+        }
+    
+        // Prepare the dropdown list of members, ensuring no unauthorized members are shown
+        $where = array(
+            "user_type" => "staff",
+            "where_in" => array("id" => $allowed_members)
+        );
+    
         $members = $this->Users_model->get_dropdown_list(array("first_name", "last_name"), "id", $where);
-
+    
+        // Prepare the dropdown options
         $members_dropdowns = array(array("id" => "", "text" => "- " . lang("outsource_member") . " -"));
         foreach ($members as $id => $name) {
             $members_dropdowns[] = array("id" => $id, "text" => $name);
         }
+    
         return $members_dropdowns;
     }
     

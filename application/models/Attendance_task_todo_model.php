@@ -1,6 +1,5 @@
 <?php
 class Attendance_task_todo_model extends Crud_model {
-
     private $table = null;
 
     function __construct() {
@@ -21,12 +20,11 @@ class Attendance_task_todo_model extends Crud_model {
         if ($todo_id) {
             $where .= " AND $todo_table.todo_id=$todo_id";
         }
- $start_date=get_array_value($options, "start_date");
+       $start_date=get_array_value($options, "start_date");
    if ($start_date) {
             $where .= " AND $todo_table.start_date= '$start_date' ";
         }      
-
-     $user_id = get_array_value($options, "user_id");
+       $user_id = get_array_value($options, "user_id");
         if ($created_by) {
             $where .= " AND $todo_table.user_id=$user_id";
         }  
