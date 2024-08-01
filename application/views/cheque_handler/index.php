@@ -32,7 +32,8 @@
                 {name: "client_id", class: "w160", options: <?php echo $clients_dropdown; ?>},
                 {name: "vendor_id", class: "w160", options: <?php echo $vendors_dropdown; ?>},
                 {name: "other_id", class: "w160", options: <?php 
-                     echo $others_dropdown; ?>},   ],
+                     echo $others_dropdown; ?>},
+   ],
             columns: [
                 {title: '<?php echo lang("id"); ?>'},
                 {title: '<?php echo lang("description"); ?>'},

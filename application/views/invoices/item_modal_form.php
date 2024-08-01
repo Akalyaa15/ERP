@@ -492,7 +492,7 @@ if (isset($list_data)) {
             "placeholder" => lang('installation_hsn_description'),
             "readonly" => true, // Use boolean true
         ));
-        ?> 
+        ?> [
     </div>
 </div>
 

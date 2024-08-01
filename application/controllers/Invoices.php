@@ -815,39 +815,31 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
             $discount_percentage = (float)unformat_currency($this->input->post('discount_percentage'));
     
             // Installation calculations
-    // Assuming these variables are set from the input or previous calculations
-$quantity = (float)$this->input->post('quantity'); // Add this if quantity is from input
-$discount_percentage = (float)$this->input->post('discount_percentage'); // Add this if discount_percentage is from input
-$gst = (float)$this->input->post('gst'); // Add this if gst is from input
-$installation_gst_percentage = (float)$this->input->post('installation_gst_percentage'); // Add this if installation_gst_percentage is from input
-$actual_values = (float)$this->input->post('actual_values'); // Add this if actual_values is from input
-
-$installation_new_rate = (float)$this->input->post('installation_new_rate');
-$installation_profit_percentage = (float)$this->input->post('installation_profit_percentage');
-$installation_profit_rate_percentage = $installation_new_rate * $installation_profit_percentage / 100;
-$installation_actual_rate = $installation_profit_rate_percentage + $installation_new_rate;
-$installation_actual_rate_total = $installation_actual_rate * $quantity;
-
-$installation_rate = (float)$this->input->post('installation_rate');
-$installation_total = $installation_rate * $quantity;
-
-$supply_total = isset($total) ? (float)$total : (float)$totals; // Ensure $total or $totals is defined earlier
-$installtion_and_supply_subtotal = $supply_total + $installation_total;
-
-$totals = $actual_values * $quantity;
-$discount_amounts = $totals * $discount_percentage / 100;
-$discounts = $totals - $discount_amounts;
-$taxs = $discounts * $gst / 100;
-
-$supply_installation_totals = $discounts;
-
-$installation_taxs = $installation_actual_rate_total * $installation_gst_percentage / 100;
-$installation_net_totals = $installation_taxs + $installation_actual_rate_total;
-
-$supply_net_totals = $discounts + $taxs;
-$supply_net_total_installation_totals = $supply_net_totals + $installation_actual_rate_total;
-$installation_supply_net_totals = $supply_net_totals + $installation_net_totals;
-
+            $installation_new_rate = (float)$this->input->post('installation_new_rate');
+            $installation_profit_percentage = (float)$this->input->post('installation_profit_percentage');
+            $installation_profit_rate_percentage = $installation_new_rate * $installation_profit_percentage / 100;
+            $installation_actual_rate = $installation_profit_rate_percentage + $installation_new_rate;
+            $installation_actual_rate_total = $installation_actual_rate * $quantity;
+    
+            $installation_rate = (float)$this->input->post('installation_rate');
+            $installation_total = $installation_rate * $quantity;
+    
+            $supply_total = isset($total) ? (float)$total : (float)$totals;
+            $installtion_and_supply_subtotal = $supply_total + $installation_total;
+    
+            $totals = $actual_values * $quantity;
+            $discount_amounts = $totals * $discount_percentage / 100;
+            $discounts = $totals - $discount_amounts;
+            $taxs = $discounts * $gst / 100;
+    
+            $supply_installation_totals = $discounts;
+    
+            $installation_taxs = $installation_actual_rate_total * $installation_gst_percentage / 100;
+            $installation_net_totals = $installation_taxs + $installation_actual_rate_total;
+    
+            $supply_net_totals = $discounts + $taxs;
+            $supply_net_total_installation_totals = $supply_net_totals + $installation_actual_rate_total;
+            $installation_supply_net_totals = $supply_net_totals + $installation_net_totals;
     
             if ($rate) {
                 $total = $rate * $quantity;
