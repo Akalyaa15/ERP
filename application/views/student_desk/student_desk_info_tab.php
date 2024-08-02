@@ -228,7 +228,7 @@
             <?php $this->load->view("student_desk/student_desk_fields"); ?>
         </div>
         <div class="panel-footer">
-            <button  id="savebutton" type="submit" class="btn btn-primary"><span class="fa fa-check-circle"></span> <?php echo lang('save'); ?></button>
+            <button id="savebutton" type="submit" class="btn btn-primary"><span class="fa fa-check-circle"></span> <?php echo lang('save'); ?></button>
         </div>
     </div>
     <?php echo form_close(); ?>
@@ -239,19 +239,15 @@
             isModal: false,
             onSuccess: function (result) {
                 appAlert.success(result.message, {duration: 10000});
-               /* setTimeout(function () {
+                <?php if (isset($user_info) && $user_info): ?>
+                setTimeout(function () {
                     window.location.href = "<?php echo get_uri("student_desk/view/" . $user_info->id); ?>" + "/general";
-                }, 500); */
+                }, 500);
+                <?php endif; ?>
             }
         });
         setDatePicker("#start_date, #end_date,#date,#dob");
         setTimePicker("#start_time, #end_time"); 
         $("#student_desk-info-form .select2").select2();
-       //setDatePicker("#date");
-        //setDatePicker("#dob");
-        
-
     });
-    
-
 </script>   

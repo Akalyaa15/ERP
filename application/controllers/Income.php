@@ -416,12 +416,14 @@ $company_gstin_number_first_two_digits= get_setting("company_gstin_number_first_
 
         );
    }else{
-$amount = unformat_currency($this->input->post('amount'));
-  $gst = $this->input->post('income_item_gst');
-  $tax = $amount/(100+$gst);
-  $tax_orignal=$tax*100;
-  $tax_value = $amount-$tax_orignal;
-        $data = array(
+    $amount = floatval(unformat_currency($this->input->post('amount')));
+    $gst = floatval($this->input->post('income_item_gst'));
+    
+    // Calculate tax
+    $tax = $amount / (100 + $gst);
+    $tax_original = $tax * 100;
+    $tax_value = $amount - $tax_original;
+    $data = array(
             "income_date" => $this->input->post('income_date'),
             "title" => $this->input->post('title'),
             "description" => $this->input->post('description'),

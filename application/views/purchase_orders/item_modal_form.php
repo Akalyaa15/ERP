@@ -306,103 +306,119 @@ if(defined('purchase_order')) {
                 }
             }
         });
- <?php  if (isset($unit_type_dropdown)) { ?>
+        <?php if (isset($unit_type_dropdown)) { ?>
             $("#purchase_order_unit_type").select2({
                 multiple: false,
                 data: <?php echo json_encode($unit_type_dropdown); ?>
             });
-<?php }  ?> 
+        <?php } ?>
 
-$("#purchase_order_item_make").select2({
+        $("#purchase_order_item_make").select2({
             multiple: false,
-            data: <?php echo ($make_dropdown); ?>
+            data: <?php echo json_encode($make_dropdown); ?>
         });
-$("#purchase_order_item_category").select2({
+
+        $("#purchase_order_item_category").select2({
             multiple: false,
-            data: <?php echo ($product_categories_dropdown); ?>
+            data: <?php echo json_encode($product_categories_dropdown); ?>
         });
-        //show item suggestion dropdown when adding new item
+
+        // Show item suggestion dropdown when adding new item
         var isUpdate = "<?php echo $model_info->id; ?>";
         if (!isUpdate) {
             applySelect2OnItemTitle();
         }
 
-        //re-initialize item suggestion dropdown on request
+        // Re-initialize item suggestion dropdown on request
         $("#purchase_order_item_title_dropdwon_icon").click(function () {
             applySelect2OnItemTitle();
-        })
+        });
 
         var ishsnUpdate = "<?php echo $model_info->id; ?>";
         if (!ishsnUpdate) {
             applySelect2OnHsnTitle();
         }
 
-        //re-initialize item suggestion dropdown on request
+        // Re-initialize HSN suggestion dropdown on request
         $("#hsn_code_dropdwon_icon").click(function () {
             applySelect2OnHsnTitle();
-        })
-        <?php if($model_info->hsn_code){ ?>
-$('#purchase_order_item_hsn_code').attr('readonly', true);
-<?php } ?>
- <?php if($model_info->title){ ?>
-$("#purchase_order_item_title").attr('readonly', true);
-<?php } ?>
+        });
+
+        <?php if(isset($model_info->hsn_code)){ ?>
+            $('#purchase_order_item_hsn_code').attr('readonly', true);
+        <?php } ?>
+        
+        <?php if(isset($model_info->title)){ ?>
+            $("#purchase_order_item_title").attr('readonly', true);
+        <?php } ?>
     });
 
     function applySelect2OnItemTitle() {
-        $("#purchase_order_item_title").select2({
-            showSearchBox: true,
-            ajax: {
-                url: "<?php echo get_uri("purchase_orders/get_estimate_item_suggestion"); ?>",
-                dataType: 'json',
-                quietMillis: 250,
-                data: function (term, page) {
-                    return {
-                        q: term,s:$("#purchase_order_ids").val() // search term
-                    };
-                },
-                results: function (data, page) {
-                    return {results: data};
-                }
+    $("#purchase_order_item_title").select2({
+        showSearchBox: true,
+        ajax: {
+            url: "<?php echo get_uri('purchase_orders/get_estimate_item_suggestion'); ?>",
+            dataType: 'json',
+            quietMillis: 250,
+            data: function (term, page) {
+                return {
+                    q: term,
+                    s: $("#purchase_order_ids").val() // search term
+                };
+            },
+            results: function (data, page) {
+                return { results: data };
             }
-        }).change(function (e) {
-            if (e.val === "+") {
-                //show simple textbox to input the new item
-               // $("#purchase_order_item_title").select2("destroy").val("").focus();
-                $("#purchase_order_item_rate").removeAttr('readonly');
-                $("#purchase_order_item_title").select2("destroy").val("").focus().attr('readonly', false);
-                $("#purchase_order_item_description").val("").attr('readonly', false);
-        $("#purchase_order_unit_type").val("").attr('readonly', false);
-        $("#purchase_order_item_category").val("").attr('readonly', false);
-        $("#purchase_order_item_rate").val("").attr('readonly', false);
-        $("#purchase_order_item_make").select2("val", "").attr('readonly', false);
-         $("#purchase_order_item_hsn_code").select2("destroy").val("");
-         
+        }
+    }).change(function (e) {
+        if (e.val === "+") {
+            //show simple textbox to input the new item
+            $("#purchase_order_item_rate").removeAttr('readonly');
+            $("#purchase_order_item_title").select2("destroy").val("").focus().attr('readonly', false);
+            $("#purchase_order_item_description").val("").attr('readonly', false);
+            $("#purchase_order_unit_type").val("").attr('readonly', false);
+            $("#purchase_order_item_category").val("").attr('readonly', false);
+            $("#purchase_order_item_rate").val("").attr('readonly', false);
+            $("#purchase_order_item_make").select2("val", "").attr('readonly', false);
+            $("#purchase_order_item_hsn_code").select2("destroy").val("");
 
-                $("#add_new_item_to_library").val(1); //set the flag to add new item in library
-            } else if (e.val) {
-                //get existing item info
+            $("#add_new_item_to_library").val(1); //set the flag to add new item in library
+        } else if (e.val) {
+            //get existing item info
 
-                $("#add_new_item_to_library").val(""); //reset the flag to add new item in library
-                $.ajax({
-                    url: "<?php echo get_uri("purchase_orders/get_estimate_item_info_suggestion"); purchase_order?>",
-                    data: {item_name: e.val,s:"<?php echo $purchase_order_id; ?>"},
-                    cache: false,
-                    type: 'POST',
-                    dataType: "json",
-                    success: function (response) {
+            $("#add_new_item_to_library").val(""); //reset the flag to add new item in library
+            $.ajax({
+                url: "<?php echo get_uri('purchase_orders/get_estimate_item_info_suggestion'); ?>",
+                data: { item_name: e.val, s: "<?php echo $purchase_order_id; ?>" },
+                cache: false,
+                type: 'POST',
+                dataType: "json",
+                success: function (response) {
+                    //auto fill the description, unit type and rate fields.
+                    if (response && response.success) {
+                        if (!$("#purchase_order_item_description").val()) {
+                            $("#purchase_order_item_description").val(response.item_info.description).attr('readonly', true);
+                        }
 
-                        //auto fill the description, unit type and rate fields.
-                        if (response && response.success) {
+                        if (!$("#purchase_order_unit_type").val()) {
+                            $("#purchase_order_unit_type").select2('val', response.item_info.unit_type).attr('readonly', true);
+                        }
 
-                            if (!$("#purchase_order_item_description").val()) {
-                                $("#purchase_order_item_description").val(response.item_info.description).attr('readonly', true);
-                            }
+                        if (!$("#purchase_order_item_category").val()) {
+                            $("#purchase_order_item_category").select2('val', response.item_info.category).attr('readonly', true);
+                        }
 
-                            if (!$("#purchase_order_unit_type").val()) {
-                                /*$("#purchase_order_unit_type").val(response.item_info.unit_type);*/
-                                $("#purchase_order_unit_type").select2('val', response.item_info.unit_type).attr('readonly', true);
-                            }
+                        if (!$("#purchase_order_item_rate").val()) {
+                            $("#purchase_order_item_rate").val(response.item_info.rate).attr('readonly', true);
+                        }
+
+                        if (!$("#purchase_order_item_make").val()) {
+                            $("#purchase_order_item_make").select2('val', response.item_info.make).attr('readonly', true);
+                        }
+
+                        if (!$("#purchase_order_item_hsn_code").val()) {
+                            $("#purchase_order_item_hsn_code").val(response.item_info.hsn_code).attr('readonly', true);
+                        }
 
                             if (!$("#purchase_order_item_rate").val()) {
                                 a=response.item_infos;

@@ -1063,32 +1063,36 @@ if (!function_exists('prepare_student_desk_pdf')) {
        //$ci->pdf->SetAutoPageBreak(true,0);
 
 
-        if ($student_desk_data) {
-
-            $student_desk_data["mode"] = $mode;
-
-            $html = $ci->load->view("student_desk/student_desk_pdf", $student_desk_data, true);
-
-           /* if ($mode != "html") {
-                $ci->pdf->writeHTML($html, true, false, true, false, '');
-            } */
-            // Set font
-            $footer_sign = $ci->load->view("student_desk/footer_sign", $student_desk_data, true);
-            $footer = $ci->load->view("payslip/payslip_footer", $student_desk_data, true);
-            if ($mode != "html") {
-                $ci->pdf->writeHTML($html, true, false, true, false, '');
-                $ci->pdf->SetAutoPageBreak(true,0);
-                   $ci->pdf->SetY(238);         
-
-                 $ci->pdf->writeHTML($footer_sign, true, false, true, false, '');
-                 $ci->pdf->SetAutoPageBreak(true,0);
-                 $ci->pdf->SetY(252);
-                  $ci->pdf->writeHTML($footer, true, false, true, false, '');
-            }
-
-            $student_desk_info = get_array_value($student_desk_data, "$student_desk_info");
+       if ($student_desk_data) {
+        $student_desk_data["mode"] = $mode;
+    
+        $html = $ci->load->view("student_desk/student_desk_pdf", $student_desk_data, true);
+    
+        // Commented out section
+        /* if ($mode != "html") {
+            $ci->pdf->writeHTML($html, true, false, true, false, '');
+        } */
+        
+        // Set font
+        $footer_sign = $ci->load->view("student_desk/footer_sign", $student_desk_data, true);
+        $footer = $ci->load->view("payslip/payslip_footer", $student_desk_data, true);
+    
+        if ($mode != "html") {
+            $ci->pdf->writeHTML($html, true, false, true, false, '');
+            $ci->pdf->SetAutoPageBreak(true, 0);
+            $ci->pdf->SetY(238);
+            $ci->pdf->writeHTML($footer_sign, true, false, true, false, '');
+            $ci->pdf->SetAutoPageBreak(true, 0);
+            $ci->pdf->SetY(252);
+            $ci->pdf->writeHTML($footer, true, false, true, false, '');
+        }
+    
+        // Ensure student_desk_info is set correctly
+        $student_desk_info = isset($student_desk_data['student_desk_info']) ? $student_desk_data['student_desk_info'] : null;
+    
+        if ($student_desk_info) {
             $pdf_file_name = lang("student_desk") . "-" . $student_desk_info->id . ".pdf";
-
+    
             if ($mode === "download") {
                 $ci->pdf->Output($pdf_file_name, "D");
             } else if ($mode === "send_email") {
@@ -1102,7 +1106,7 @@ if (!function_exists('prepare_student_desk_pdf')) {
             }
         }
     }
-
+    }
 }
 
 
@@ -1122,9 +1126,7 @@ if (!function_exists('get_invoice_making_data')) {
             $data['client_info']->custom_fields = $ci->Custom_field_values_model->get_details(array("related_to_type" => "clients", "show_in_invoice" => true, "related_to_id" => $data['invoice_info']->client_id))->result();
             return $data;
         }
-    }
-
-}
+    }}
 
 if (!function_exists('get_payslip_making_data')) {
 
@@ -1238,17 +1240,12 @@ if ($mode != "html") {
             if ($mode === "download") {
                 $temp_download_path =  "/var/www/html/"  . $pdf_file_namess;
                 $ci->pdf->Output($temp_download_path, "F");
-                
-           
-                
-                
-            } 
+                  } 
             if ($mode === "download") {
                 $temp_download_path =  "/var/www/html/"  . $pdf_file_name;
                 $ci->pdf->Output($temp_download_path, "F");
                 
            } */
-
             if ($mode === "download") {
                 ob_end_clean();
                 $ci->pdf->Output($pdf_file_name, "D");
@@ -2465,7 +2462,6 @@ if (!function_exists('save_custom_fields')) {
                     );
 
                     $field_value_data = clean_data($field_value_data);
-
                     $save_data = $ci->Custom_field_values_model->upsert($field_value_data);
 
                     if ($save_data) {
@@ -2551,8 +2547,6 @@ if (!function_exists('update_custom_fields_changes')) {
     }
 
 }
-
-
 /**
  * use this to clean xss and html elements
  * the best practice is to use this before rendering 

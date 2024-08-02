@@ -5,8 +5,7 @@
             <h4> <?php echo lang('country_info'); ?></h4>
         </div>
         <div class="panel-body">
-             
-            <div class="form-group">
+        <div class="form-group">
                 <label for="country_name" class=" col-md-2"><?php echo lang('iso_code'); ?></label>
                 <div class=" col-md-10">
                     <?php

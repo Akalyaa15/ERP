@@ -494,38 +494,29 @@ $row_data[] = modal_anchor(get_uri("purchase_orders/modal_form"), "<i class='fa 
     }
 
     /* add or edit an estimate item */
-
     function save_item() {
         $this->access_only_allowed_members();
-
+    
         validate_submitted_data(array(
             "id" => "numeric",
             "purchase_order_id" => "required|numeric"
         ));
-
+    
         $purchase_order_id = $this->input->post('purchase_order_id');
-
+    
         $id = $this->input->post('id');
-        $rate = unformat_currency($this->input->post('purchase_order_item_rate'));
-        $quantity = unformat_currency($this->input->post('purchase_order_item_quantity'));
-        $gst = unformat_currency($this->input->post('purchase_order_item_gst'));
-         $discount_percentage = unformat_currency($this->input->post('discount_percentage'));
-         $total =$rate * $quantity;
-         $discount_amount = $total*$discount_percentage/100;
-         $discount = $total-$discount_amount;
-         $tax=$discount*$gst/100;
-         $net_total = $discount+$tax;
-         /*$total=$rate * $quantity;
-         $tax=$total*$gst/100;
-         $tax_total =$total+$tax;
-         $net_total =$tax_total; */
-
-
-
-
-$ss=$this->input->post('with_gst');
-
-if($ss=="yes"){
+        $rate = floatval(unformat_currency($this->input->post('purchase_order_item_rate')));
+        $quantity = floatval(unformat_currency($this->input->post('purchase_order_item_quantity')));
+        $gst = floatval(unformat_currency($this->input->post('purchase_order_item_gst')));
+        $discount_percentage = floatval(unformat_currency($this->input->post('discount_percentage')));
+    
+        $total = $rate * $quantity;
+        $discount_amount = $total * $discount_percentage / 100;
+        $discount = $total - $discount_amount;
+        $tax = $discount * $gst / 100;
+        $net_total = $discount + $tax;
+        $ss=$this->input->post('with_gst');
+        if($ss=="yes"){
         $purchase_order_item_data = array(
             "purchase_order_id" => $purchase_order_id,
             "title" => $this->input->post('purchase_order_item_title'),
@@ -636,9 +627,6 @@ if($ss=="yes"){
             }
                // $this->Hsn_sac_code_model->save($library_item_data);
             }
-
-
-
             $options = array("id" => $purchase_order_item_id);
             $item_info = $this->Purchase_order_items_model->get_details($options)->row();
             echo json_encode(array("success" => true, "purchase_order_id" => $item_info->purchase_order_id, "data" => $this->_make_item_row($item_info), "purchase_order_total_view" => $this->_get_purchase_order_total_view($item_info->purchase_order_id), 'id' => $purchase_order_item_id, 'message' => lang('record_saved')));
@@ -731,7 +719,6 @@ $category_name = $this->Product_categories_model->get_one($data->category);
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("purchase_orders/delete_item"), "data-action" => "delete-confirmation")) */
         );
     }
-
     /* prepare suggestion of estimate item */
 
      function get_estimate_item_suggestion() {
@@ -751,8 +738,7 @@ $d_item=str_ireplace("]",")",$vv);
 }else{
     $d_item="('empty')";
 }
-
-    $items = $this->Part_no_generation_model->get_part_no_suggestion($key,$d_item);
+$items = $this->Part_no_generation_model->get_part_no_suggestion($key,$d_item);
         
         foreach ($items as $item) {
             $suggestion[] = array("id" => $item->title, "text" => $item->title);
@@ -957,8 +943,7 @@ foreach ($query2->result() as $rows)
         }
         return "";
     }
-
-    function set_purchase_order_status_to_not_modified($purchase_order_id = 0) {
+  function set_purchase_order_status_to_not_modified($purchase_order_id = 0) {
         $this->access_only_allowed_members();
 
         if ($purchase_order_id) {
@@ -1077,10 +1062,7 @@ if($ss=="yes" && $with_inclusive=="yes"){
             echo json_encode(array("success" => true, "purchase_order_total_view" => $this->_get_purchase_order_total_view($purchase_order_id), 'message' => lang('record_saved'), "purchase_order_id" => $purchase_order_id));
         } else {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
-        }
-    }
-
-
+        }}
     function get_invoice_freight_suggestion() {
         $key = $_REQUEST["q"];
         $suggestion = array();

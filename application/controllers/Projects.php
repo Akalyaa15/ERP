@@ -4225,9 +4225,7 @@ function yearly_ot_handler() {
        // $this->load->view("ot_handler/index", $view_data);
         $this->load->view("project_ot_handler/yearly_ot_handler", $view_data);
     }
-
-
-    /* get data the ot handler summary details tab */
+/* get data the ot handler summary details tab */
 
     function summary_details_list_ot_handler_data() {
         $start_date = $this->input->post('start_date');

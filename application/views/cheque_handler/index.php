@@ -26,7 +26,7 @@
              dateRangeType: dateRange,
             filterDropdown: [
                 
-                {name: "status_id", class: "w200", options: <?php echo $status_dropdown; ?>},
+{name: "status_id", class: "w200", options: <?php echo $status_dropdown; ?>},
                 {name: "user_ids", class: "w160", options: <?php echo $rm_members_dropdown; ?>},
                 {name: "user_id", class: "w200", options: <?php echo $members_dropdown; ?>},
                 {name: "client_id", class: "w160", options: <?php echo $clients_dropdown; ?>},

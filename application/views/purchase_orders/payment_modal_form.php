@@ -1,9 +1,12 @@
 <?php
 // Make sure $model_info is not null before accessing its properties
 if ($model_info) {
-    $max_paid_amount = $purchase_order_total_summary->balance_due + $model_info->amount; 
-?>
+    // Ensure that both operands are cast to floats
+    $balance_due = (float) $purchase_order_total_summary->balance_due;
+    $amount = (float) $model_info->amount;
 
+    $max_paid_amount = $balance_due + $amount;
+?>
 <?php echo form_open(get_uri("purchase_order_payments/save_payment"), array("id" => "purchase_order-payment-form", "class" => "general-form", "role" => "form")); ?>
  <div id="purchase_payment-dropzone" class="post-dropzone">
 <div class="modal-body clearfix">

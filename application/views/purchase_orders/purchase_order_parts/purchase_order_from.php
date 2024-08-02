@@ -67,22 +67,23 @@ $company_state_data = $this->States_model->get_details($options)->row();
             <?php } ?></td>
     
   </tr>
-  <tr style="border: 1px solid #666;
-  text-align: left;padding: 5px;">
-    <td style="border: 1px solid #dddddd;color: #666;font-size:14px;
-  text-align: left;padding: 5px;height: 22px"><?php echo lang("other_references").":";?></td>
-    <td style="border: 1px solid #dddddd;color: #666;font-size:14px;
-  text-align: left;padding: 8px;font-weight: bold;color:#232323;"><?php if ($purchase_order_info->other_references) { ?>
-             <?php echo($purchase_order_info->other_references); ?>
-            <?php } ?></td>
-    
-  </tr>
-<!--tr style="border: 1px solid #666;
-  text-align: left;padding: 5px;">
-    <td colspan="2"; style="border: 1px solid #dddddd;color: #666;font-size:15px;max-width: 20px;word-wrap: break-word;
-  text-align: left;padding: 5px;height: 70px;"><?php echo lang("buyer_other_consignee").":";?><?php if ($invoice_info->delivery_address) { ?>
-             <br/><?php echo($invoice_info->delivery_address); ?>
-            <?php } ?></td>
+  <tr style="border: 1px solid #666; text-align: left; padding: 5px;">
+    <td style="border: 1px solid #dddddd; color: #666; font-size:14px; text-align: left; padding: 5px; height: 22px">
+        <?php echo lang("other_references") . ":"; ?>
+    </td>
+    <td style="border: 1px solid #dddddd; color: #666; font-size:14px; text-align: left; padding: 8px; font-weight: bold; color:#232323;">
+        <?php if (!empty($purchase_order_info->other_references)) { ?>
+            <?php echo $purchase_order_info->other_references; ?>
+        <?php } ?>
+    </td>
+</tr>
+<tr style="border: 1px solid #666; text-align: left; padding: 5px;">
+    <td colspan="2" style="border: 1px solid #dddddd; color: #666; font-size:15px; max-width: 20px; word-wrap: break-word; text-align: left; padding: 5px; height: 70px;">
+        <?php echo lang("buyer_other_consignee") . ":"; ?>
+        <?php if (isset($invoice_info) && !empty($invoice_info->delivery_address)) { ?>
+            <br/><?php echo $invoice_info->delivery_address; ?>
+        <?php } ?>
+    </td>
         
   </tr-->
 <?php if($purchase_order_info->estimate_delivery_address==1) { ?>
