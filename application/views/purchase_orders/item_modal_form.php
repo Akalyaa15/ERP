@@ -6,7 +6,6 @@ if(isset($buyer_type)) {
     $list_data = $this->Buyer_types_model->get_details($options)->row();
 }
 ?>
-
 <?php if(isset($model_info) && $model_info->with_gst == "no") { ?>
 <style>
     #s, #y, #z {
@@ -103,7 +102,6 @@ if(defined('purchase_order')) {
             ?>
         </div>
     </div>
-    
     <div class="form-group">
         <label for="purchase_order_item_description" class="col-md-3"><?php echo lang('description'); ?></label>
         <div class=" col-md-9">
@@ -214,8 +212,6 @@ if(defined('purchase_order')) {
                     <label for="without_gst" class=""><?php echo lang('without_gst'); ?></label>
                 </div>
             </div>
-
-
  <div id="s">
     <input type="hidden" name="add_new_item_to_librarys" value="" id="add_new_item_to_librarys" />
     <div class="form-group">
@@ -303,8 +299,7 @@ if(defined('purchase_order')) {
                 $("#purchase_order-total-section").html(result.purchase_order_total_view);
                 if (typeof updateInvoiceStatusBar == 'function') {
                     updateInvoiceStatusBar(result.purchase_order_id);
-                }
-            }
+                } }
         });
         <?php if (isset($unit_type_dropdown)) { ?>
             $("#purchase_order_unit_type").select2({
@@ -368,8 +363,7 @@ if(defined('purchase_order')) {
             },
             results: function (data, page) {
                 return { results: data };
-            }
-        }
+            }}
     }).change(function (e) {
         if (e.val === "+") {
             //show simple textbox to input the new item
