@@ -111,8 +111,7 @@ if ($this->Designation_model->is_designation_exists($this->input->post('departme
             }
         }
     }
-
-    function list_data() {        
+function list_data() {        
         $list_data = $this->Designation_model->get_details()->result();
         $result = array();
         foreach ($list_data as $data) {
@@ -121,7 +120,7 @@ if ($this->Designation_model->is_designation_exists($this->input->post('departme
         echo json_encode(array("data" => $result));
     }
 
-    private function _row_data($id) {
+private function _row_data($id) {
         $options = array("id" => $id);
         $data = $this->Designation_model->get_details($options)->row();
         return $this->_make_row($data);

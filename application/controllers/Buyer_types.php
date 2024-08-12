@@ -81,8 +81,7 @@ class Buyer_types extends MY_Controller {
         $data = $this->Buyer_types_model->get_details($options)->row();
         return $this->_make_row($data);
     }
-
-    private function _make_row($data) {
+private function _make_row($data) {
         return array($data->buyer_type,
             $data->description ? $data->description : "-",
             to_decimal_format($data->profit_margin)."%",
@@ -94,6 +93,5 @@ class Buyer_types extends MY_Controller {
     }
 
 }
-
 /* End of file Earnings.php */
 /* Location: ./application/controllers/Earnings.php */
