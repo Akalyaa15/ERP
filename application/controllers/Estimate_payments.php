@@ -72,8 +72,7 @@ class Estimate_payments extends MY_Controller {
     }
 
     /* add or edit a payment */
-
-    function save_payment() {
+function save_payment() {
         $this->access_only_allowed_members();
 
         validate_submitted_data(array(
@@ -110,9 +109,7 @@ class Estimate_payments extends MY_Controller {
         if($estimate_payment_data["files"]=='a:0:{}'){
         echo json_encode(array("success" => false, 'message' => '*Uploading files are required'));
         exit();
-}
-
-
+        }
         $estimate_payment_id = $this->Estimate_payments_model->save($estimate_payment_data, $id);
         if ($estimate_payment_id) {
 

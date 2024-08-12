@@ -2,7 +2,6 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
 class Ticket_types extends MY_Controller {
 
     function __construct() {

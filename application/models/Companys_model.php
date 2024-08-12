@@ -56,7 +56,7 @@ class Companys_model extends Crud_model {
                 $select_custom_fields
                 FROM `$clients_table`
                 LEFT JOIN `$users_table` 
-                    ON `$users_table`.company_id = `$clients_table`.cr_id 
+                    ON `$users_table`.company_id = `$clients_table`.id 
                     AND `$users_table`.deleted = 0 
                     AND `$users_table`.is_primary_contact = 1 
                 $join_custom_fields               
@@ -65,6 +65,7 @@ class Companys_model extends Crud_model {
         $query = $db->query($sql);
         return $query->result_array();
     }
+    
     
     function get_c_details($options = array()) {
         $clients_table = $this->db->dbprefix('companys');

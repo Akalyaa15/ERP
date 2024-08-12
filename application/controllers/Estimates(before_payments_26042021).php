@@ -11,8 +11,7 @@ if (!defined('BASEPATH'))
     }
 
     /* load estimate list view */
-
-    function index() {
+function index() {
         $this->check_module_availability("module_estimate");
         $view_data['can_request_estimate'] = false;
 
@@ -422,11 +421,7 @@ $estimate_prefix = get_estimate_id($estimate_no_last_id);
         foreach ($team_members as $team_member) {
             $part_no_dropdown[] = array("id" => $team_member->id, "text" => $team_member->title );
         }
-
-
-
-
-       $estimate_id = $this->input->post('estimate_id');
+        $estimate_id = $this->input->post('estimate_id');
 
         $view_data['model_info'] = $this->Estimate_items_model->get_one($this->input->post('id'));
         if (!$estimate_id) {
@@ -495,11 +490,7 @@ $estimate_prefix = get_estimate_id($estimate_no_last_id);
         }
         return $unit_type_dropdown;
     }
-    
-
-
     /* add or edit an invoice item */
-
     function save_item() {
         $this->access_only_allowed_members();
 
@@ -558,27 +549,23 @@ $profitvalue = $profit*$profit_supply_buyer_profit/100;
 
         $profitrates = $sum*$quantity;
         $profitvalues = $profitrates*$profit_percentage/100;
-
-
-
-
- $discount_percentage = unformat_currency($this->input->post('discount_percentage'));
+        $discount_percentage = unformat_currency($this->input->post('discount_percentage'));
 
 
 
  //installation 
    
-   $installation_new_rate = $this->input->post('installation_new_rate');
-   $installation_profit_percentage = $this->input->post('installation_profit_percentage');
-   $installation_profit_rate_percentage = $installation_new_rate*$installation_profit_percentage/100;
+    $installation_new_rate = $this->input->post('installation_new_rate');
+    $installation_profit_percentage = $this->input->post('installation_profit_percentage');
+    $installation_profit_rate_percentage = $installation_new_rate*$installation_profit_percentage/100;
     $installation_actual_rate=$installation_profit_rate_percentage+$installation_new_rate;
-   $installation_actual_rate_total=$installation_actual_rate*$quantity;
+    $installation_actual_rate_total=$installation_actual_rate*$quantity;
    
 
 
 
-   $installation_rate = $this->input->post('installation_rate');
-   $installation_total =  $installation_rate*$quantity;
+    $installation_rate = $this->input->post('installation_rate');
+    $installation_total =  $installation_rate*$quantity;
     $supply_total =$total?$total:$totals;
     $installtion_and_supply_subtotal=$supply_total+$installation_total;
 
@@ -702,9 +689,6 @@ if($ss=="yes"){
 
         );
  }if($ss=="yes" && $installation_applicable=="yes"&& $installation_gst=="no") {
-  
-
-
   $estimate_item_data = array(
             "estimate_id" => $estimate_id,
             "title" => $this->input->post('estimate_item_title'),

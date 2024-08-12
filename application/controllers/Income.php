@@ -184,13 +184,10 @@ $view_data['model_infos'] = $model_infos;
     }
 
      /* add or edit an estimate item */
-private function _get_users_dropdown_select2_data($show_header = false) {
+     private function _get_users_dropdown_select2_data($show_header = false) {
         $luts = $this->Users_model->get_all()->result();
         $lut_dropdown = array(array("id" => "", "text" => "-"));
-
-        
-
-        foreach ($luts as $code) {
+         foreach ($luts as $code) {
             $lut_dropdown[] = array("id" => $code->id, "text" => $code->first_name." ".$code->last_name);
         }
         return $lut_dropdown;

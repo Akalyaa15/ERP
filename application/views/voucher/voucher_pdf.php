@@ -68,7 +68,7 @@ echo $item->r_f_name." ".$item->r_l_name;
  </span><b style="border-bottom: 1px dashed #999;
           text-decoration: underline;color: #0e0e0f;font-size: 20px ">
           <?php 
-    function convertToIndianCurrency($number) {
+          function convertToIndianCurrency($number) {
     $no = round($number);
     $decimal = round($number - ($no = floor($number)), 2) * 100;    
     $digits_length = strlen($no);    

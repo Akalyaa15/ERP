@@ -24,7 +24,6 @@ class Expense_categories extends MY_Controller {
         $view_data['model_info'] = $this->Expense_categories_model->get_one($this->input->post('id'));
         $this->load->view('expense_categories/modal_form', $view_data);
     }
-
     //save expense category
     function save() {
 

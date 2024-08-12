@@ -1,5 +1,3 @@
-
-
 <div id="page-content" class="p20 clearfix">
     <?php
     load_css(array(

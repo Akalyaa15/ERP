@@ -4,7 +4,6 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 class Attendance extends MY_Controller {
-
     function __construct() {
         parent::__construct();
 
@@ -17,8 +16,7 @@ class Attendance extends MY_Controller {
         //initialize managerial permission
         $this->init_permission_checker("attendance");
     }
-
-    //check ip restriction for none admin users
+//check ip restriction for none admin users
     private function check_allowed_ip() {
         if (!$this->login_user->is_admin) {
           if ($this->login_user->work_mode=='0') {

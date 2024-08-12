@@ -8,8 +8,7 @@ class Request_estimate extends CI_Controller {
     function __construct() {
         parent::__construct();
     }
-
-    function index() {
+ function index() {
         if (!get_setting("module_estimate_request")) {
             show_404();
         }

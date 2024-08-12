@@ -28,7 +28,6 @@ class Clients_register extends MY_Controller {
     }
 
     /* load client add/edit modal */
-
     function modal_form() {
 
         $client_id = $this->input->post('id');

@@ -19,7 +19,6 @@ class Team_members extends MY_Controller {
             }
         }
     }
-
     private function can_view_team_members_social_links() {
         if ($this->login_user->user_type == "staff") {
             if ($this->login_user->is_admin) {

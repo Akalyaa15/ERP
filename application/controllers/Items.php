@@ -575,8 +575,6 @@ $options=array("quantity"=>$this->input->post("quantity"));
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("items/delete"), "data-action" => "delete-confirmation"))
         );
     }
-    
-
     function get_invoice_item_suggestion() {
         $key = $_REQUEST["q"];
         $suggestion = array();

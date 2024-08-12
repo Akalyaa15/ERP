@@ -20,7 +20,6 @@ if(isset($list_data)) {
     // echo $vendor_buyer_type_name;
 }
 ?>
-
 <!-- Make sure to handle cases where $list_data might not be set to avoid warnings -->
 <?php if(isset($vendor_buyer_type_name)) { ?>
     <!-- Use $vendor_buyer_type_name as needed -->
@@ -189,9 +188,7 @@ if(defined('purchase_order')) {
             ?>
         </div>
     </div>
-   
-
-<div class="form-group" id="gst_app">
+   <div class="form-group" id="gst_app">
                 <label for="invoice_recurring" class=" col-md-3"><?php echo lang('gst_applicable'); ?>  <span class="help" data-toggle="tooltip" title="<?php echo lang('gst_applicable'); ?>"><i class="fa fa-question-circle"></i></span></label>
                 <div class=" col-md-9">
                     <?php
@@ -245,8 +242,7 @@ if(defined('purchase_order')) {
                 "min"=>0,
                 "placeholder" => lang('gst'),
                 "readonly" =>"true",
-                
-            ));
+                 ));
             ?>
         </div>
     </div>

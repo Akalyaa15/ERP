@@ -13,7 +13,6 @@ class Hsn_sac_code extends MY_Controller {
     function index() {
         $this->template->rander("hsn_sac_code/index");
     }
-
     function modal_form() {
 
         validate_submitted_data(array(

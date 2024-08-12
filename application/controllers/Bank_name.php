@@ -11,8 +11,7 @@ class Bank_name extends MY_Controller {
         $this->init_permission_checker("master_data");
         $this->access_only_allowed_members();
     }
-
-    function index() {
+function index() {
         $this->check_module_availability("module_master_data");
         //$this->template->rander("bank_name/index");
                 if ($this->login_user->is_admin == "1")
@@ -53,8 +52,7 @@ class Bank_name extends MY_Controller {
         $view_data['account_number_suggestions'] = $account_number_suggestions;
         $this->load->view('bank_name/modal_form', $view_data);
     }
-
-    function save() {
+function save() {
 
         validate_submitted_data(array(
             "id" => "numeric",

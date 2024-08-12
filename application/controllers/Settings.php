@@ -701,12 +701,8 @@ function delivery() {
                 }
             }
         }
-
-
-        $data["notify_to_terms"] = $notify_to_terms;
-
-
-        $save_id = $this->Notification_settings_model->save($data, $id);
+       $data["notify_to_terms"] = $notify_to_terms;
+       $save_id = $this->Notification_settings_model->save($data, $id);
 
         if ($save_id) {
             echo json_encode(array("success" => true, "data" => $this->_notification_list_data($save_id), 'id' => $save_id, 'message' => lang('settings_updated')));

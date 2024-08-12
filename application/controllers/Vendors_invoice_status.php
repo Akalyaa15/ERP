@@ -9,21 +9,18 @@ class Vendors_invoice_status extends MY_Controller {
         parent::__construct();
         $this->access_only_admin();
     }
-
-    function index() {
+function index() {
         $this->template->rander("vendors_invoice_status/index");
     }
 
-    function modal_form() {
+function modal_form() {
 
         validate_submitted_data(array(
             "id" => "numeric"
         ));
-
         $view_data['model_info'] = $this->Vendors_invoice_status_model->get_one($this->input->post('id'));
         $this->load->view('vendors_invoice_status/modal_form', $view_data);
     }
-
     function save() {
         validate_submitted_data(array(
             "id" => "numeric",

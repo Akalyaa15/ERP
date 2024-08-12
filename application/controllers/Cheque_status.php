@@ -29,15 +29,12 @@ class Cheque_status extends MY_Controller {
             "id" => "numeric",
             "title" => "required"
         ));
-
-
         $id = $this->input->post('id');
         $data = array(
             "title" => $this->input->post('title'),
             "color" => $this->input->post('color')
         );
-
-        if (!$id) {
+       if (!$id) {
             //get sort value
             $max_sort_value = $this->Cheque_status_model->get_max_sort_value();
             $data["sort"] = $max_sort_value * 1 + 1; //increase sort value

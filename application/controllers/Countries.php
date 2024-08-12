@@ -35,9 +35,7 @@ class Countries extends MY_Controller {
 
         $this->template->rander_scroll("countries/index");
     } 
-    }
-
-    function modal_form() {
+    }function modal_form() {
 //$this->access_only_allowed_members();
         validate_submitted_data(array(
             "id" => "numeric"

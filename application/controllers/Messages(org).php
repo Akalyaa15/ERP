@@ -55,9 +55,7 @@ class Messages extends MY_Controller {
                 redirect("forbidden");
             }
         }
-
-
-        $view_data['users_dropdown'] = array("" => "-");
+    $view_data['users_dropdown'] = array("" => "-");
         if ($user_id) {
             $view_data['message_user_info'] = $this->Users_model->get_one($user_id);
         } else {

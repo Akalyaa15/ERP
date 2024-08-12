@@ -2,7 +2,6 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
 class Team extends MY_Controller {
 
     function __construct() {
@@ -118,8 +117,7 @@ class Team extends MY_Controller {
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_team'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("team/delete"), "data-action" => "delete-confirmation"))
         );
     }
-
-    function members_list() {
+function members_list() {
         $view_data['team_members'] = $this->Users_model->get_team_and_outsource_members($this->input->post('members'))->result();
         $this->load->view('team/members_list', $view_data);
     }

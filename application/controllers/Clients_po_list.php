@@ -34,9 +34,7 @@ class Clients_po_list extends MY_Controller {
     
         $this->template->rander("clients_po_list/index", $view_data);
     }    
-
-
-    //get clients dropdown
+  //get clients dropdown
     private function _get_vendors_dropdown() {
         $vendors_dropdown = array(array("id" => "", "text" => "- " . lang("client") . " -"));
         $vendors = $this->Clients_model->get_dropdown_list(array("company_name"));

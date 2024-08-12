@@ -96,7 +96,6 @@ class Custom_fields_model extends Crud_model {
 
         return $json_string;
     }
-
     function get_available_fields_for_table($related_to, $is_admin = 0, $user_type = "") {
         $custom_fields_table = $this->db->dbprefix('custom_fields');
 
@@ -119,7 +118,6 @@ class Custom_fields_model extends Crud_model {
 
         return $this->db->query($sql)->result();
     }
-
     function get_custom_fields_for_context($context) {
         $custom_fields_table = $this->db->dbprefix('custom_fields');
         

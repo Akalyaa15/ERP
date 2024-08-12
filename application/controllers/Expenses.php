@@ -54,7 +54,7 @@ class Expenses extends MY_Controller {
     }
 
      //get clients dropdown
-    private function _get_vendors_dropdown() {
+     private function _get_vendors_dropdown() {
         $vendors_dropdown = array(array("id" => "", "text" => "- " . lang("vendor") . " -"));
         $vendors = $this->Vendors_model->get_dropdown_list(array("company_name"));
         foreach ($vendors as $key => $value) {
@@ -142,8 +142,8 @@ private function _get_rm_members_dropdown() {
         }
 
       //add the clients and vendors 
-$view_data['vendors_dropdown'] = array("" => "-")+ $this->Vendors_model->get_dropdown_list(array("company_name"),'id');
-   $view_data['clients_dropdown'] =  array("" => "-")+$this->Clients_model->get_dropdown_list(array("company_name"),'id');
+    $view_data['vendors_dropdown'] = array("" => "-")+ $this->Vendors_model->get_dropdown_list(array("company_name"),'id');
+    $view_data['clients_dropdown'] =  array("" => "-")+$this->Clients_model->get_dropdown_list(array("company_name"),'id');
 
 $view_data['client_members_dropdown'] = $this->_get_users_dropdown_select2_data();
 $view_data['vendor_members_dropdown'] = $this->_get_users_dropdown_select2_data();  
@@ -169,7 +169,7 @@ $view_data['model_infos'] = $model_infos;
 
 
     /* add or edit an estimate item */
-private function _get_users_dropdown_select2_data($show_header = false) {
+        private function _get_users_dropdown_select2_data($show_header = false) {
         $luts = $this->Users_model->get_all()->result();
         $lut_dropdown = array(array("id" => "", "text" => "-"));
 
@@ -303,14 +303,11 @@ private function _get_users_dropdown_select2_data($show_header = false) {
             "category_id" => "required",
             "amount" => "required"
         ));
-
         $id = $this->input->post('id');
-
         $target_path = get_setting("timeline_file_path");
         $files_data = move_files_from_temp_dir_to_permanent_dir($target_path, "expense");
         $new_files = unserialize($files_data);
-
-    $amount = unformat_currency($this->input->post('amount'));
+        $amount = unformat_currency($this->input->post('amount'));
      //$igst_tax = $this->input->post('igst_tax')? $this->input->post('igst_tax') : 0;
 
      //$cgst_tax = $this->input->post('cgst_tax')? $this->input->post('cgst_tax') : 0;

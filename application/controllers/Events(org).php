@@ -10,7 +10,7 @@ class Events extends MY_Controller {
     }
 
     //load calendar view
-    function index($encrypted_event_id = "") {
+ function index($encrypted_event_id = "") {
         $this->check_module_availability("module_event");
         $view_data['encrypted_event_id'] = $encrypted_event_id;
 

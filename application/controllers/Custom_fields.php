@@ -2,7 +2,6 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
 class Custom_fields extends MY_Controller {
 
     function __construct() {
@@ -102,8 +101,7 @@ class Custom_fields extends MY_Controller {
         $data = $this->Custom_fields_model->get_details($options)->row();
         return $this->_make_field_row($data);
     }
-
-    //prepare a row of fields list
+//prepare a row of fields list
     private function _make_field_row($data) {
         $required = "";
         if ($data->required) {

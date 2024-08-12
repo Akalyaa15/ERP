@@ -46,8 +46,7 @@ class Vap_category extends MY_Controller {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
         }
     }
-
-    function delete() {
+   function delete() {
         validate_submitted_data(array(
             "id" => "numeric|required"
         ));

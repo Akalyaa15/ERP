@@ -2,7 +2,6 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
 class Knowledge_base extends CI_Controller {
 
     public $login_user;

@@ -47,13 +47,10 @@ class Buyer_types extends MY_Controller {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
         }
     }
-
     function delete() {
         validate_submitted_data(array(
             "id" => "numeric|required"
         ));
-
-
         $id = $this->input->post('id');
         if ($this->input->post('undo')) {
             if ($this->Buyer_types_model->delete($id, true)) {

@@ -69,8 +69,7 @@ class Purchase_orders extends MY_Controller {
 
         $this->load->view('purchase_orders/modal_form', $view_data);
     }
-
-    private function _get_lut_dropdown_select2_data($show_header = false) {
+  private function _get_lut_dropdown_select2_data($show_header = false) {
         $luts = $this->Lut_number_model->get_all_where(array("deleted" => 0, "status" => "active"))->result();
         $lut_dropdown = array(array("id" => "", "text" => "-"));
 

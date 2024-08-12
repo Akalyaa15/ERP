@@ -21,8 +21,7 @@ class Todo extends MY_Controller {
 
         $this->template->rander("todo/index");
     }
-
-    function modal_form() {
+   function modal_form() {
         $view_data['model_info'] = $this->Todo_model->get_one($this->input->post('id'));
 
         $labels = explode(",", $this->Todo_model->get_label_suggestions($this->login_user->id));

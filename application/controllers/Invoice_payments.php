@@ -286,10 +286,8 @@ class Invoice_payments extends MY_Controller {
         }
 
         $redirect_to = "invoices/preview/$invoice_id";
-
         try {
-
-            //check payment token
+         //check payment token
             $card = $this->input->post('stripe_token');
 
             $invoice_data = (Object) get_invoice_making_data($invoice_id);

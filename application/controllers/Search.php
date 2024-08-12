@@ -14,7 +14,6 @@ class Search extends MY_Controller {
     public function index() {
         
     }
-
     private function can_access_clients() {
         $permissions = $this->login_user->permissions;
         if ($this->login_user->is_admin || get_array_value($permissions, "client")) {

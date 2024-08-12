@@ -131,7 +131,6 @@ function modal_form()
             "note" => $this->input->post('purchase_order_note'),
             "lut_number" => $this->input->post('lut_number')
         );
-
         $purchase_order_id = $this->Purchase_orders_model->save($purchase_order_data, $id);
         if ($purchase_order_id) {
             save_custom_fields("purchase_order", $purchase_order_id, $this->login_user->is_admin, $this->login_user->user_type);

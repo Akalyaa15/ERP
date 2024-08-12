@@ -195,9 +195,7 @@ function excel_import_form() {
             }
         }
     }
-
-// get account number suggestion
-function get_account_number_suggestion() {
+// get account number suggestionfunction get_account_number_suggestion() {
         $key = $_REQUEST["q"];
         $bank_id=$_REQUEST["bank_id"];
         $itemss =  $this->Bank_name_model->get_item_account_number_suggestions($key,$bank_id);

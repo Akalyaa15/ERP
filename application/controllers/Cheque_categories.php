@@ -4,7 +4,6 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 class Cheque_categories extends MY_Controller {
-
     function __construct() {
         parent::__construct();
         $this->access_only_admin();
@@ -27,8 +26,7 @@ class Cheque_categories extends MY_Controller {
 
     //save expense category
     function save() {
-
-        validate_submitted_data(array(
+         validate_submitted_data(array(
             "id" => "numeric",
             "title" => "required"
         ));
@@ -85,8 +83,7 @@ class Cheque_categories extends MY_Controller {
         $data = $this->Cheque_categories_model->get_details($options)->row();
         return $this->_make_row($data);
     }
-
-    //prepare an expense category list row
+//prepare an expense category list row
     private function _make_row($data) {
         return array($data->title,
             $data->description ? $data->description : "-",

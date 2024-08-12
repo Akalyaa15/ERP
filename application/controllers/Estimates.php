@@ -75,8 +75,7 @@ if (!defined('BASEPATH'))
 
         $this->load->view('estimates/modal_form', $view_data);
     }
-
-     private function _get_lut_dropdown_select2_data($show_header = false) {
+   private function _get_lut_dropdown_select2_data($show_header = false) {
         //$luts = $this->Lut_number_model->get_all()->result();
         $luts = $this->Lut_number_model->get_all_where(array("deleted" => 0, "status" => "active"))->result();
         $lut_dropdown = array(array("id" => "", "text" => "-"));
@@ -662,11 +661,7 @@ if($rate) {
       $installation_net_total =$installation_tax+$installation_total;
        $supply_net_total_installation_total = $supply_net_total+$installation_total;
        $installation_supply_net_total = $supply_net_total+$installation_net_total;
-
-
-      
-
-       $totalss=$rate * $quantity;
+      $totalss=$rate * $quantity;
        $discount_amountss = $totalss*$discount_percentage/100;
        $discountss = $totalss-$discount_amountss;
        //$tax=$discount*$gst/100;

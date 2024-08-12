@@ -21,8 +21,6 @@ class Payslip extends MY_Controller {
             }
         }
     }
-
-
     //load the payslip list view
     function index() {
         $this->check_module_availability("module_payslip");
@@ -34,9 +32,9 @@ class Payslip extends MY_Controller {
         $view_data['access_info'] = $this->get_access_info("payslip");
         $view_data['payslip_access_all'] = $view_data['access_info']->access_type;
         $view_data['payslip_access'] = $view_data['access_info']->allowed_members;
-$access_info = $this->get_access_info("payslip");
-                $payslip_access_all = $access_info->access_type;
-                $payslip_access = $access_info->allowed_members;
+        $access_info = $this->get_access_info("payslip");
+        $payslip_access_all = $access_info->access_type;
+        $payslip_access = $access_info->allowed_members;
                  if($this->login_user->is_admin ||in_array($this->login_user->id,$payslip_access)||$payslip_access_all=="all"){
            // $this->access_only_allowed_members();
                   //country dropdown 
@@ -83,8 +81,6 @@ $access_info = $this->get_access_info("payslip");
         ));
 
         $model_info = $this->Payslip_model->get_one($this->input->post('id'));
-        
-
         $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_type" => "staff"))->result();
         $members_dropdown = array();
 
@@ -114,7 +110,6 @@ $access_info = $this->get_access_info("payslip");
          $company_branch = $this->Branches_model->get_all_where(array("deleted" => 0))->result();
 
        }
-        
         $company_branch_dropdown = array(array("id" => "", "text" => "-"));
         foreach ($company_branch as $branch) {
             $company_branch_dropdown[] = array("id" => $branch->branch_code, "text" =>$branch->title );
@@ -128,8 +123,6 @@ $access_info = $this->get_access_info("payslip");
          $annual_leave_dropdown[$key] = $value;
         }
         $view_data['annual_leave_dropdown'] = $annual_leave_dropdown;
-
-        
         $this->load->view('payslip/modal_form', $view_data);
     }
 

@@ -20,8 +20,7 @@ class Rm_members extends MY_Controller {
             }
         }
     }
-
-    private function can_view_team_members_social_links() {
+private function can_view_team_members_social_links() {
         if ($this->login_user->user_type == "resource") {
             if ($this->login_user->is_admin) {
                 return true;
@@ -72,7 +71,6 @@ class Rm_members extends MY_Controller {
        
 
         $view_data["show_contact_info"] = $this->can_view_team_members_contact_info();
-
         $view_data["custom_field_headers"] = $this->Custom_fields_model->get_custom_field_headers_for_table("team_members", $this->login_user->is_admin, $this->login_user->user_type);
 
         //$this->template->rander("rm_members/index", $view_data);

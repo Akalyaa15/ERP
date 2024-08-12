@@ -121,10 +121,7 @@ if($item_info){
 
             }
 }
-
-
 // check the make and vendors 
-
 $add_new_make_to_library = $this->input->post('add_new_make_to_library');
             if ($add_new_make_to_library) {
 

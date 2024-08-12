@@ -191,7 +191,7 @@ $make_dropdowns = $this->Manufacturer_model->get_all_where(array("deleted" => 0,
             "title" => "required",
             "quantity" => "required"
         )); 
-$member_type=$this->input->post('member_type');
+    $member_type=$this->input->post('member_type');
 
     if($member_type=='tm'){
         $team_member=$this->input->post('income_user_id');

@@ -9,7 +9,6 @@ class Unit_type extends MY_Controller {
         parent::__construct();
         $this->access_only_admin();
     }
-
     function index() {
         $this->template->rander("unit_type/index");
     }

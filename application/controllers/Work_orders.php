@@ -90,7 +90,7 @@ class Work_orders extends MY_Controller {
         return $lut_dropdown;
     } 
 
-    /* add or edit an estimate */
+/* add or edit an estimate */
 
     function save() {
         $this->access_only_allowed_members();

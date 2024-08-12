@@ -28,8 +28,7 @@ class Left_menu {
 
         return $items ? $items : "<span class='text-off empty-area-text'>" . lang('no_more_items_available') . "</span>";
     }
-
-    private function _prepare_sidebar_menu_items($type = "") {
+private function _prepare_sidebar_menu_items($type = "") {
         $final_items_array = array();
         $items_array = $this->_get_sidebar_menu_items($type);
 
@@ -61,7 +60,6 @@ class Left_menu {
         }
         //add todo
         $final_items_array["todo"] = array("name" => "todo", "url" => "todo", "class" => "fa-check-square-o");
-
         return $final_items_array;
     }
 
@@ -75,8 +73,7 @@ class Left_menu {
         } else if ($key == 5) {
             $s_menu["name"] = "knowledge_base_categories";
         }
-
-        return $s_menu;
+         return $s_menu;
     }
 
     private function _get_left_menu_from_setting_for_rander($is_preview = false, $type = "default") {
@@ -282,8 +279,7 @@ class Left_menu {
         } else if (array_key_exists($name, $left_menu_items)) { //default menu items
             $item_value_array = get_array_value($left_menu_items, $name);
         }
-
-        return $item_value_array;
+     return $item_value_array;
     }
 
 

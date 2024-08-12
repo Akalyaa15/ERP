@@ -68,9 +68,7 @@ class Branches extends MY_Controller {
          /*foreach ($company_state as $state) {
             $company_state_dropdown[] = array("id" => $state->id, "text" => $state->title);
         }*/
-
         $company_state = $this->States_model->get_dropdown_list(array("title"), "id", array("country_code" => $view_data['model_info']->company_setup_country));
-        
         $company_state_dropdown = array(array("id" => "", "text" => "-"));
         foreach ($company_state as $key => $value) {
             $company_state_dropdown[] = array("id" => $key, "text" => $value);
@@ -448,19 +446,13 @@ function save_profile_image($branch_id = 0) {
             /*$payslip_data["payslip_logo"] = $value;*/
              $image_data = array("image" => $value);
         }
-
-       
-
        $payslip_save =$this->Branches_model->save($image_data, $branch_id);
-            
         if ($payslip_save) {
             echo json_encode(array("success" => true, 'message' => lang('profile_image_changed')));
         } else {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
         }
-     
-
-     }
+      }
 
 
 //show the job information of a team member
@@ -498,9 +490,6 @@ function save_profile_image($branch_id = 0) {
         $client_logo = $this->input->post('site_logo');
         $target_path = getcwd() . "/" . get_general_file_path("branch", $branch_id);
         $value = move_temp_file("branch-logo.png", $target_path, "", $client_logo);
-
-        
-
         $payslip_data = array(
             "payslip_color" => $this->input->post('payslip_color'),
             "payslip_footer" => decode_ajax_post_data($this->input->post('payslip_footer')),  

@@ -9,13 +9,11 @@ class Dashboard extends MY_Controller {
         parent::__construct();
         $this->load->model("Custom_widgets_model");
     }
-
     public function index() {
         $widgets = $this->_check_widgets_permissions();
 
         $view_data["dashboards"] = $this->Dashboards_model->get_details(array("user_id" => $this->login_user->id))->result();
         $view_data["dashboard_type"] = "default";
-
         if ($this->login_user->user_type === "staff"||$this->login_user->user_type === "resource") {
             $view_data["show_timeline"] = get_array_value($widgets, "new_posts");
             $view_data["show_attendance"] = get_array_value($widgets, "clock_in_out");
@@ -61,7 +59,6 @@ class Dashboard extends MY_Controller {
             return $this->_check_widgets_for_vendors();
         }
     }
-
     private function _check_widgets_for_staffs() {
         //check which widgets are viewable to current logged in user
         $widget = array();
@@ -507,8 +504,7 @@ foreach ($query1->result() as $rows)
             echo json_encode(array("success" => false, 'message' => lang('record_cannot_be_deleted')));
         }
     }
-
-    private function _remove_widgets($widgets = array()) {
+private function _remove_widgets($widgets = array()) {
         $widgets_permission = $this->_check_widgets_permissions();
 
         foreach ($widgets as $widget) {
@@ -603,7 +599,7 @@ foreach ($query1->result() as $rows)
         return $default_widgets_array;
     }
 
-    private function _make_widgets($dashboard_id = 0) {
+ private function _make_widgets($dashboard_id = 0) {
         
         $default_widgets_array = $this->_get_default_widgets();
         $checked_widgets_array = $this->_remove_widgets($default_widgets_array);
@@ -639,7 +635,6 @@ foreach ($query1->result() as $rows)
 
         return $this->_make_widgets_row($widgets_array);
     }
-
     private function _make_widgets_row($widgets_array = array(), $permissions_array = array()) {
         $widgets = "";
 
@@ -659,7 +654,6 @@ foreach ($query1->result() as $rows)
             return "<span class='text-off empty-area-text'>" . lang('no_more_widgets_available') . "</span>";
         }
     }
-
     private function _widgets_row_data($widget_array) {
         $key = key($widget_array);
         $value = $widget_array[key($widget_array)];

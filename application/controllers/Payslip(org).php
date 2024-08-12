@@ -13,7 +13,6 @@ class Payslip extends MY_Controller {
 
         $this->access_only_team_members();
     }
-
     protected function access_only_allowed_members($user_id = 0) {
         if ($this->access_type !== "all") {
             if ($user_id === $this->login_user->id || !array_search($user_id, $this->allowed_members)) {

@@ -94,9 +94,7 @@ class Vendor_groups extends MY_Controller {
             modal_anchor(get_uri("vendor_groups/modal_form"), "<i class='fa fa-pencil'></i>", array("class" => "edit", "title" => lang('edit_vendor_group'), "data-post-id" => $data->id))
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_vendor_group'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("vendor_groups/delete"), "data-action" => "delete-confirmation"))
         );
-    }
-
-}
+    }}
 
 /* End of file client_groups.php */
 /* Location: ./application/controllers/client_groups.php */

@@ -65,8 +65,7 @@ class Attendance extends MY_Controller {
 
             $this->access_only_allowed_members($user_id, true);
         }
-
-        if ($user_id) {
+ if ($user_id) {
             //edit mode. show user's info
             $view_data['team_members_info'] = $this->Users_model->get_one($user_id);
         } else {

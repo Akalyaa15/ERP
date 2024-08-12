@@ -9,7 +9,6 @@ class Notes extends MY_Controller {
         parent::__construct();
         $this->access_only_team_members();
     }
-
     protected function validate_access_to_note($note_info) {
         if ($note_info->client_id) {
             //this is a client's note. check client access permission
@@ -219,8 +218,7 @@ class Notes extends MY_Controller {
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_note'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("notes/delete"), "data-action" => "delete-confirmation"))
         );
     }
-
-    function view() {
+   function view() {
         validate_submitted_data(array(
             "id" => "required|numeric"
         ));

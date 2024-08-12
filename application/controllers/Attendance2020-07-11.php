@@ -994,8 +994,7 @@ private function _get_rm_members_dropdown_list_for_filter() {
     }
 
     /* get all attendance of a given duration */
-
-    function summary_list_data() {
+function summary_list_data() {
         $start_date = $this->input->post('start_date');
         $end_date = $this->input->post('end_date');
         $user_id = $this->input->post('user_id');

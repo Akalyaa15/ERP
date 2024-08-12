@@ -1020,32 +1020,68 @@ class Projects extends MY_Controller {
     /* load project members add/edit modal */
 
     function project_member_modal_form() {
-
+        // Initialize variables
+        $add_leader = false;
+        $add_project = false;
+        $add_purchase = false;
+    
+        // Get model info and project ID
         $view_data['model_info'] = $this->Project_members_model->get_one($this->input->post('id'));
         $project_id = $this->input->post('project_id') ? $this->input->post('project_id') : $view_data['model_info']->project_id;
-
+    
+        // Check project permissions
         $this->init_project_permission_checker($project_id);
-
+    
         if (!$this->can_add_remove_project_members()) {
             redirect("forbidden");
         }
-
+    
+        // Get project members details
+        $options = array("project_id" => $project_id);
+        $datas = $this->Project_members_model->get_details($options)->result();
+        foreach ($datas as $data) {
+            if ($data->is_leader) {
+                $view_data['is_leader'] = '1';
+                $add_leader = true;
+            }
+            if ($data->is_project_manager) {
+                $view_data['is_project_manager'] = '1';
+                $add_project = true;
+            }
+            if ($data->is_purchase_manager) {
+                $view_data['is_purchase_manager'] = '1';
+                $add_purchase = true;
+            }
+        }
+    
+        // Set project ID in view data
         $view_data['project_id'] = $project_id;
+    
+        // Prepare users dropdown
         $users_dropdown = array();
         $users = $this->Project_members_model->get_rest_team_members_for_a_project($project_id)->result();
         foreach ($users as $user) {
             $users_dropdown[$user->id] = $user->member_name;
         }
-        $view_data["users_dropdown"] = $users_dropdown;
+    
+        if ($add_leader && $add_project && $add_purchase) {
+            $view_data["users_dropdown"] = $users_dropdown;
+        } else {
+            $view_data["users_dropdown"] = array("" => "-") + $users_dropdown;                    
+        }
+    
+        // Prepare RM users dropdown
         $rm_users_dropdown = array();
         $rm_users = $this->Project_members_model->get_rest_rm_members_for_a_project($project_id)->result();
-        foreach ($rm_users as $users) {
-            $rm_users_dropdown[$users->id] = $users->member_name;
+        foreach ($rm_users as $rm_user) {
+            $rm_users_dropdown[$rm_user->id] = $rm_user->member_name;
         }
         $view_data["rm_users_dropdown"] = $rm_users_dropdown;
+    
+        // Load the modal form view
         $this->load->view('projects/project_members/modal_form', $view_data);
     }
-
+    
     /* add a project members  */
 
     function save_project_member() {

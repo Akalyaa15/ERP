@@ -47,16 +47,7 @@ class Timezone_update extends MY_Controller {
             echo json_encode(array("success" => false, 'message' => "record cannot be updated"));
         }
     }
-   
-
-   
-
-    
-
-
-
-
-}
+   }
 
 /* End of file taxes.php */
 /* Location: ./application/controllers/taxes.php */

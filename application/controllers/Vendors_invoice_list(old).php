@@ -90,10 +90,7 @@ class Vendors_invoice_list extends MY_Controller {
 
         return json_encode($status_dropdown);
     }
-
-
-
-    function save() {
+   function save() {
 
         validate_submitted_data(array(
             "id" => "numeric"

@@ -2,7 +2,6 @@
     
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
 class Voucher extends MY_Controller {
  
     function __construct() {
@@ -15,10 +14,10 @@ class Voucher extends MY_Controller {
         $this->check_module_availability("module_voucher");
        // $view_data['can_request_estimate'] = false;
 
-        $view_data["custom_field_headers"] = $this->Custom_fields_model->get_custom_field_headers_for_table("voucher", $this->login_user->is_admin, $this->login_user->user_type);
+         $view_data["custom_field_headers"] = $this->Custom_fields_model->get_custom_field_headers_for_table("voucher", $this->login_user->is_admin, $this->login_user->user_type);
          $view_data['members_dropdown'] = $this->_get_team_members_dropdown();
          $view_data['line_manager_dropdown'] = $this->_get_line_members_dropdown();
-/*if ($this->login_user->user_type === "staff") {
+         /*if ($this->login_user->user_type === "staff") {
            // $this->access_only_allowed_members();
 
             $this->template->rander("voucher/index", $view_data);
@@ -90,7 +89,7 @@ function get_payment_method_dropdown() {
             $this->template->rander("voucher/voucher_info", $view_data);
         }
     }
-    public function modal_form() {
+ public function modal_form() {
         // Load models if not already loaded
         $this->load->model('Voucher_model');
         $this->load->model('Voucher_types_model');
@@ -524,7 +523,7 @@ if($this->login_user->department==='09' &&$voucher=='line_manager'){
 
     /* load estimate details view */
 
-    function view($estimate_id = 0) {
+function view($estimate_id = 0) {
         //$this->access_only_allowed_members();
 
         if ($estimate_id) {
@@ -542,9 +541,8 @@ if($this->login_user->department==='09' &&$voucher=='line_manager'){
                 $view_data["voucher_expense"] = $this->Voucher_expenses_model->get_details($options)->row();
                 
                 $view_data["can_create_projects"] = $this->can_create_projects();
-            $sort_as_decending = get_setting("show_recent_ticket_comments_at_the_top");
-
- $comments_options = array(
+                $sort_as_decending = get_setting("show_recent_ticket_comments_at_the_top");
+                $comments_options = array(
                     "voucher_id" => $estimate_id,
                     "sort_as_decending" => $sort_as_decending
                 );
@@ -560,7 +558,6 @@ if($this->login_user->department==='09' &&$voucher=='line_manager'){
     }
 
     /* estimate total section */
-
     private function _get_estimate_total_view($estimate_id = 0) {
         
         return $this->load->view('estimates/estimate_total_section', $view_data, true);

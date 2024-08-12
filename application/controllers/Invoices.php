@@ -597,8 +597,6 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
         if ($data->next_recurring_date < get_today_date()) {
             $next_recurring = "<span class='text-danger'>" . $next_recurring . "</span>";
         }
-
-
         $next_recurring_date = $data->next_recurring_date;
         if ($data->no_of_cycles_completed > 0 && $data->no_of_cycles_completed == $data->no_of_cycles) {
             $next_recurring = "-";
@@ -751,10 +749,7 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
         return $unit_type_dropdown;
     }
 
- 
-
-
-    /* add or edit an invoice item */
+/* add or edit an invoice item */
 
     function save_item() {
         $this->access_only_allowed_members();
@@ -2027,8 +2022,7 @@ $response_value   =  "same_country";
             $this->access_only_allowed_members();
         }
     }
-
-    function send_invoice_modal_form($invoice_id) {
+function send_invoice_modal_form($invoice_id) {
         $this->access_only_allowed_members();
 
         if ($invoice_id) {
@@ -2059,7 +2053,6 @@ $response_value   =  "same_country";
             $email_template = $this->Email_templates_model->get_final_template("send_invoice");
 
             $invoice_total_summary = $this->Invoices_model->get_invoice_total_summary($invoice_id);
-
             $parser_data["INVOICE_ID"] = $invoice_info->id;
             $parser_data["CONTACT_FIRST_NAME"] = $contact_first_name;
             $parser_data["CONTACT_LAST_NAME"] = $contact_last_name;

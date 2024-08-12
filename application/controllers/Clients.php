@@ -68,13 +68,9 @@ class Clients extends MY_Controller {
 
         $this->load->view('clients/modal_form', $view_data);
     }
-
-private function _get_state_dropdown_select2_data($show_header = false) {
+    private function _get_state_dropdown_select2_data($show_header = false) {
         $states = $this->States_model->get_all()->result();
         $state_dropdown = array();
-
-        
-
         foreach ($states as $code) {
             $state_dropdown[] = array("id" => $code->id, "text" => $code->title);
         }

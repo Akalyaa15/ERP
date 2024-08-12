@@ -22,5 +22,4 @@ class Voucher_types_model extends Crud_model {
         WHERE $voucher_types_table.deleted=0 $where";
         return $this->db->query($sql);
     }
-
 }
