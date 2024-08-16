@@ -57,8 +57,7 @@ $client_country = array(
                 foreach ($client_info->custom_fields as $field) {
                     if ($field->value) {
                         echo "<br />" . $field->custom_field_title . ": " . $this->load->view("custom_fields/output_" . $field->custom_field_type, array("value" => $field->value), true);
-                    }
-                }
+                    }}
             }
             ?></div>
 <?php } ?>

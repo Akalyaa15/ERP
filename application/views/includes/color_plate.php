@@ -12,7 +12,6 @@
     ?> 
     <input id="color" type="hidden" name="color" value="<?php echo $selected_color; ?>" />
 </div>
-
 <script type="text/javascript">
     $(document).ready(function () {
 

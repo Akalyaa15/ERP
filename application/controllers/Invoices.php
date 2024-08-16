@@ -1996,11 +1996,14 @@ $response_value   =  "same_country";
 
     function download_invoice_without_gst_pdf($invoice_id = 0) {
 
+
         if ($invoice_id) {
             $invoice_data = get_invoice_making_data($invoice_id);
+           
             $this->_check_invoice_access_permission($invoice_data);
-
+            
             prepare_invoice_without_gst_pdf($invoice_data, "download");
+            
         } else {
             show_404();
         }

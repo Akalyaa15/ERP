@@ -1216,7 +1216,9 @@ if (!function_exists('prepare_invoice_pdf')) {
         //$ci->pdf->Rect(5,5,200,287,'D');
 
         if ($invoice_data) {
-
+            echo "<pre>"
+            ;            print_r($invoice_data);
+                        exit;
             $invoice_data["mode"] = $mode;
 
             $html = $ci->load->view("invoices/invoice_pdf", $invoice_data, true);
@@ -1561,7 +1563,7 @@ if (!function_exists('prepare_voucher_pdf')) {
         $ci->pdf->AddPage();
 
        if ($estimate_data) {
-
+      
             $estimate_data["mode"] = $mode;
 
             $html = $ci->load->view("voucher/voucher_pdf", $estimate_data, true);

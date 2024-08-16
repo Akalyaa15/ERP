@@ -7,15 +7,17 @@
     $style = get_setting("voucher_style");
     ?>
     <?php
+    
     $data = array(
         "estimate_items" => $estimate_items,
         "color" => $color,
         "estimate_info" => $estimate_info
     );
+    
     if ($style === "style_2") {
-        $this->load->view('voucher/voucher_parts/header_style_2.php', $data);
+        $this->load->view('voucher/voucher_parts/header_style_2', $data);
     } else {
-        $this->load->view('voucher/voucher_parts/header_style_1.php', $data);
+        $this->load->view('voucher/voucher_parts/header_style_1', $data);
     }
     ?>
 </div>
@@ -24,6 +26,7 @@ $manager=$this->Users_model->get_one($estimate_info->line_manager);
  ?>
 <?php
     foreach ($estimate_items as $item) {
+        
         ?>
 <h1 style="text-align: center; text-decoration: underline;color: #4baae3"><b>VOUCHER</b></h1>
 <br><br>
@@ -258,14 +261,15 @@ if(isset($manager->signature) && $manager->signature) {
         
     </tr>
     <?php
-    foreach ($estimate_items as $item) {
-        ?>
-        <tr style="background-color: #f4f4f4; ">
-            <td style="width: 70%; border: 1px solid #fff; padding: 10px;"><?php echo $item->id; ?>
-                <br />
-                <span style="color: #888; font-size: 90%;"><?php echo nl2br($item->description); ?></span>
-            </td>
-            <td style="text-align: center; width: 30%; border: 1px solid #fff;"> <?php echo $item->quantity . " " . $item->unit_type; ?></td>
+// Add the debugging statement before the loop
+foreach ($estimate_items as $item) {
+    log_message('debug', 'Estimate Item: ' . print_r($item, true));
+}
+
+foreach ($estimate_items as $item) {
+    $quantity = isset($item->quantity) ? $item->quantity : 'N/A';
+    $unit_type = isset($item->unit_type) ? $item->unit_type : '';
+    ?>
            
         </tr>
     <?php } ?>

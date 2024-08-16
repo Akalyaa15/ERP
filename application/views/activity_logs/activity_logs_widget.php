@@ -70,13 +70,10 @@
     </div>
     <?php
 }
-
 $log_for = $log_for ? $log_for : 0;
 $log_for_id = $log_for_id ? $log_for_id : 0;
-
 $log_type = $log_type ? $log_type : 0;
 $log_type_id = $log_type_id ? $log_type_id : 0;
-
 $next_container_id = "loadproject" . $next_page_offset . $log_for . $log_type; //create unique id
 ?>    
 <div id="<?php echo $next_container_id; ?>">

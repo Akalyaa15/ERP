@@ -4794,3 +4794,2586 @@ ERROR - 2024-08-12 05:21:06 --> Language file contains no data: language/english
 ERROR - 2024-08-12 05:21:06 --> Language file contains no data: language/english/custom_lang.php
 ERROR - 2024-08-12 05:21:09 --> Language file contains no data: language/english/custom_lang.php
 ERROR - 2024-08-12 05:21:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:14 --> model_info is not set or client_id is not available
+ERROR - 2024-08-12 09:22:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:30 --> 404 Page Not Found: Work_orders/get_vendor_country_item_info_suggestion
+ERROR - 2024-08-12 09:22:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 09:22:32 --> Severity: Warning --> Undefined variable $estimate_info /var/www/demoERP_1/application/views/work_orders/view.php 94
+ERROR - 2024-08-12 09:22:32 --> Severity: Warning --> Attempt to read property "note" on null /var/www/demoERP_1/application/views/work_orders/view.php 94
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:54 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 09:22:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:54 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 09:22:54 --> Severity: Warning --> Undefined variable $estimate_info /var/www/demoERP_1/application/views/work_orders/view.php 94
+ERROR - 2024-08-12 09:22:54 --> Severity: Warning --> Attempt to read property "note" on null /var/www/demoERP_1/application/views/work_orders/view.php 94
+ERROR - 2024-08-12 09:22:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:22:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:11 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 09:23:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:23:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:14 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 09:24:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:24:19 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 09:26:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:26:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:26:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:26:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:26:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:26:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:26:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:26:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 09:26:40 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 11:45:20 --> Severity: Warning --> Undefined variable $estimate_info /var/www/demoERP_1/application/views/work_orders/view.php 94
+ERROR - 2024-08-12 11:45:20 --> Severity: Warning --> Attempt to read property "note" on null /var/www/demoERP_1/application/views/work_orders/view.php 94
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:45:26 --> GST value is not set or is not numeric.
+ERROR - 2024-08-12 11:47:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Could not find the language line "delet"
+ERROR - 2024-08-12 11:47:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:47:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:10 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:44 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:48:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:48:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:06 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:18 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 11:49:18 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 11:49:18 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 11:49:18 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 11:49:18 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:22 --> Could not find the language line "delete_vendor"
+ERROR - 2024-08-12 11:49:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:49:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:50:58 --> Severity: Warning --> Undefined property: stdClass::$id /var/www/demoERP_1/application/controllers/Attendance.php 1485
+ERROR - 2024-08-12 11:50:58 --> Severity: Warning --> Undefined property: stdClass::$id /var/www/demoERP_1/application/controllers/Attendance.php 1485
+ERROR - 2024-08-12 11:51:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:15 --> Could not find the language line "delete_payslip"
+ERROR - 2024-08-12 11:51:15 --> Severity: error --> Exception: Unsupported operand types: string - string /var/www/demoERP_1/application/controllers/Payslip.php 481
+ERROR - 2024-08-12 11:51:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:55 --> Severity: Warning --> Undefined property: stdClass::$id /var/www/demoERP_1/application/controllers/Attendance.php 1485
+ERROR - 2024-08-12 11:51:55 --> Severity: Warning --> Undefined property: stdClass::$id /var/www/demoERP_1/application/controllers/Attendance.php 1485
+ERROR - 2024-08-12 11:51:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:51:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:38 --> Could not find the language line "delete_payslip"
+ERROR - 2024-08-12 11:52:38 --> Severity: error --> Exception: Unsupported operand types: string - string /var/www/demoERP_1/application/controllers/Payslip.php 481
+ERROR - 2024-08-12 11:52:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:52:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:53:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:54:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:55:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:56:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:57:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:51 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:58:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 11:59:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:00:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:01:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:02:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:16 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:46 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:03:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:06 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:21 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:04:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:26 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:05:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:24 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:29 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:34 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:39 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:44 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:49 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:06:59 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:04 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:09 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:14 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:17 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:22 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:27 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:32 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:37 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:42 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:07:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:08:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:38 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:40 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:43 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:48 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:53 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:55 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:09:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:23 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:33 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 12:10:35 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:45 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: Gems manager Testing
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: Software development
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: Website development testing
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: website devolopment
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: Website development
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: REtrofit Job
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: hi
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: hi
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: Website development
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: hi
+ERROR - 2024-08-12 13:18:47 --> Missing project_id for task with title: CAmera fixing-testing
+ERROR - 2024-08-12 13:18:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:50 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:54 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:56 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:18:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:00 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:01 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:05 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:10 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:11 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:11 --> Severity: error --> Exception: Class "App\Models\Clients_model" not found /var/www/demoERP_1/application/controllers/Invoices.php 2345
+ERROR - 2024-08-12 13:19:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:15 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:20 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:25 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Severity: Warning --> Undefined property: stdClass::$igst_before_tax_total /var/www/demoERP_1/application/views/invoices/invoice_total_section.php 213
+ERROR - 2024-08-12 13:19:31 --> Severity: Warning --> Undefined property: stdClass::$tax /var/www/demoERP_1/application/views/invoices/invoice_total_section.php 221
+ERROR - 2024-08-12 13:19:31 --> Severity: Warning --> Undefined property: stdClass::$tax2 /var/www/demoERP_1/application/views/invoices/invoice_total_section.php 228
+ERROR - 2024-08-12 13:19:31 --> Severity: Warning --> Undefined property: stdClass::$discount_total /var/www/demoERP_1/application/views/invoices/invoice_total_section.php 236
+ERROR - 2024-08-12 13:19:31 --> Severity: Warning --> Undefined property: stdClass::$balances_due /var/www/demoERP_1/application/views/invoices/invoice_total_section.php 271
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:19:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:28 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:30 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:31 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 13:21:31 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 13:21:31 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 13:21:31 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 13:21:31 --> Could not find the language line "delete_voucher"
+ERROR - 2024-08-12 13:21:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:36 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:41 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:47 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:52 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:57 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:21:58 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:02 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:03 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:07 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:08 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:12 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:13 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:18 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:19 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:31 --> Language file contains no data: language/english/custom_lang.php
+ERROR - 2024-08-12 13:22:31 --> Language file contains no data: language/english/custom_lang.php

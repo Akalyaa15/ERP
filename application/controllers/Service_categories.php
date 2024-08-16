@@ -155,9 +155,7 @@ class Service_categories extends MY_Controller {
             modal_anchor(get_uri("service_categories/modal_form"), "<i class='fa fa-pencil'></i>", array("class" => "edit", "title" => lang('edit_service_category'), "data-post-id" => $data->id))
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_service_category'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("service_categories/delete"), "data-action" => "delete-confirmation"))
         );
-    }
-
-}
+    }}
 
 /* End of file service_categories.php */
 /* Location: ./application/controllers/service_categories.php */

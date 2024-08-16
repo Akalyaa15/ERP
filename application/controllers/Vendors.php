@@ -54,7 +54,7 @@ class Vendors extends MY_Controller {
         //$view_data['state_dropdown'] = $this->_get_state_dropdown_select2_data();
 
         $country_get_code = $this->Countries_model->get_one($view_data['model_info']->country);
-         $state_categories = $this->States_model->get_dropdown_list(array("title"), "id", array("country_code" => $country_get_code->numberCode));
+        $state_categories = $this->States_model->get_dropdown_list(array("title"), "id", array("country_code" => $country_get_code->numberCode));
         
         $state_categories_suggestion = array(array("id" => "", "text" => "-"));
         foreach ($state_categories as $key => $value) {

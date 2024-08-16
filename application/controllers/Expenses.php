@@ -570,9 +570,7 @@ if($data["files"]=='a:0:{}'){
     echo json_encode(array("success" => false, 'message' => '*Uploading files are required'));
 
     exit();
-}
-
-            $data["last_activity_user"] =$this->login_user->id;
+}           $data["last_activity_user"] =$this->login_user->id;
             $data["last_activity"] = get_current_utc_time();
 
         $save_id = $this->Expenses_model->save($data, $id);
@@ -611,7 +609,6 @@ $description='Changed the status from "'.lang($estmate_info->status).'" to "'.la
         }
         
     }
-
     //delete/undo an expense
     function delete() {
         validate_submitted_data(array(

@@ -33,7 +33,6 @@ class Attendance extends MY_Controller {
          }
         }
     }
-
     //only admin or assigend members can access/manage other member's attendance
     protected function access_only_allowed_members($user_id = 0) {
         if ($this->access_type !== "all") {

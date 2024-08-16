@@ -22,7 +22,6 @@
                     if ($expend_class && $active_class) {
                         $submenu_open_class = " open ";
                     }
-
                     $devider_class = ($show_devider && get_array_value($main_menu, "devider")) ? "devider" : "";
                     $badge = get_array_value($main_menu, "badge");
                     $badge_class = get_array_value($main_menu, "badge_class");

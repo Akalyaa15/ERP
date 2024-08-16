@@ -16,8 +16,8 @@
           <!--   <span class="text-off uppercase"><?php echo lang("total_project_hours"); ?></span> -->
              
         <span class="text-off uppercase"><?php echo anchor(get_uri("projects/all_timesheets"), lang("total_project_hours"),array("class" => "black-link")); ?></span>
-        </div>
-    </div>
+</div>
+</div>
 </div>
 
 

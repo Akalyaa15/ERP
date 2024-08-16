@@ -21,8 +21,7 @@
                         <li role="presentation"><?php echo modal_anchor(get_uri("voucher/modal_form"), "<i class='fa fa-edit'></i> " . lang('edit_voucher'), array("title" => lang('edit_voucher'), "data-post-id" => $estimate_info->id, "role" => "menuitem", "tabindex" => "-1")); ?> </li>
                         <?php } ?><?php if($estimate_status=="accepted") {?>
                         <li role="presentation"><?php echo ajax_anchor(get_uri("voucher/update_voucher_status/" . $estimate_info->id . "/modified"), "<i class='fa fa-send'></i> " . lang('mark_as_modified'), array("data-reload-on-success" => "1")); ?> </li> <?php } ?>
-
-                        <?php
+                       <?php
                         if ($estimate_status == "draft") {
                             ?>
                             <!--li role="presentation"><?php echo ajax_anchor(get_uri("delivery/update_delivery_status/" . $estimate_info->id . "/given"), "<i class='fa fa-hand-lizard-o'></i> " . lang('mark_as_given'), array("data-reload-on-success" => "1")); ?> </li!-->
@@ -45,9 +44,9 @@
                 
                     </ul>
                 </span>
-                <?php echo modal_anchor(get_uri("voucher/item_modal_form"), "<i class='fa fa-plus-circle'></i> " . lang('add_amount'), array("class" => "btn btn-default", "title" => lang('add_vd'),"id"=>"add_item", "data-post-estimate_id" => $estimate_info->id)); ?>
-            </div>
-        </div>
+                 <?php echo modal_anchor(get_uri("voucher/item_modal_form"), "<i class='fa fa-plus-circle'></i> " . lang('add_amount'), array("class" => "btn btn-default", "title" => lang('add_vd'),"id"=>"add_item", "data-post-estimate_id" => $estimate_info->id)); ?>
+                  </div>
+               </div>
         <div id="estimate-status-bar">
             <?php $this->load->view("voucher/voucher_status_bar"); ?>
         </div>
@@ -64,13 +63,14 @@
                     }
                     $style = get_setting("voucher_style");
                     ?>
-                 <?php
-if (isset($client_info)) {
+                 <?php 
+if (!empty($client_info)) {
     $data = array(
         "client_info" => $client_info,
-        "color" => isset($color) ? $color : '', // Provide default value if $color is not set
-        "estimate_info" => isset($estimate_info) ? $estimate_info : '', // Provide default value if $estimate_info is not set
+        "color" => isset($color) ? $color : '', 
+        "estimate_info" => isset($estimate_info) ? $estimate_info : '',
     );
+    
     if (isset($style) && $style === "style_2") {
         $this->load->view('voucher/voucher_parts/header_style_2.php', $data);
     } else {
@@ -79,10 +79,8 @@ if (isset($client_info)) {
 } else {
     echo "Client information is missing.";
 }
-?>
-
-
-                </div>
+   ?>
+ </div>
 <div class="table-responsive mt15 pl15 pr15">
                     <table id="estimate-item-table" class="display" width="100%">            
                     </table>
@@ -139,7 +137,7 @@ if (isset($client_info)) {
             {title: "<i class='fa fa-bars'></i>", "class": "text-center option w100"}
             ], 
                         <?php }else { ?>
-  columns: [
+           columns: [
             {title: "<?php echo lang("voucher_no") ?> ", "class": "text-center w10p"},
                 {title: "<?php echo lang("category") ?> ", "class": "text-center w55p"},
                 {title: "<?php echo lang("amount") ?>", "class": "text-center w45p"},

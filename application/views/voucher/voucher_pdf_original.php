@@ -109,7 +109,6 @@ person</h4>
     <tr style="font-weight: bold; background-color: <?php echo $color; ?>; color: #fff;  ">
         <th style="width: 70%; border-right: 1px solid #eee;"> <?php echo lang("item"); ?> </th>
         <th style="text-align: center;  width: 30%; border-right: 1px solid #eee;"> <?php echo lang("quantity"); ?></th>
-        
     </tr>
     <?php
     foreach ($estimate_items as $item) {

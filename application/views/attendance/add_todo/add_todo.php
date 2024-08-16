@@ -1,7 +1,6 @@
 <div  class="modal-body clearfix general-form ">
 <div id="page-content" class="p20 clearfix">
 <?php 
-
 $optionss = array(
             "id" =>$todo_id,
                    );

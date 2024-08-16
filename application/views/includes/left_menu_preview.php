@@ -10,7 +10,7 @@
                     $submenu = get_array_value($main_menu, "submenu");
                     $expend_class = $submenu ? " expand " : "";
                     $active_class = isset($main_menu["is_active_menu"]) ? "active" : "";
-$submenu_open_class = "";
+                    $submenu_open_class = "";
                     if ($expend_class && $active_class) {
                         $submenu_open_class = " open ";
                     }

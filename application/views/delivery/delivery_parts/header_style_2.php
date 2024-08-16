@@ -1,6 +1,5 @@
 <table style="color: #444; width: 100%;">
-    <tr>
-        <td style="width: 50%; vertical-align: top;"><?php
+    <tr><td style="width: 50%; vertical-align: top;"><?php
             $data = array(
                 "client_info" => $client_info,
                 "color" => $color,

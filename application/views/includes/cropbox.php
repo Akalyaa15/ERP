@@ -22,8 +22,6 @@ load_js(array(
         </div>
     </div>
 </div>
-
-
 <script type="text/javascript">
     var options =
             {

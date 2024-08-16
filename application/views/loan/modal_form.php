@@ -66,9 +66,7 @@ $("#member_type").select2("destroy").val("tm");
    
         <input type="hidden" name="id" value="<?php echo $model_info->id; ?>" />
          <?php if ($model_infos->user_type=="resource") { ?>
-           
-        
-        <div class="form-group">
+           <div class="form-group">
             <label for="loan_user_id" class=" col-md-3"><?php echo lang('team_member'); ?></label>
             <div class="col-md-9">
                 <?php
@@ -78,8 +76,6 @@ $("#member_type").select2("destroy").val("tm");
         </div>
 
 <?php }else if ($model_infos->user_type=="staff") {  ?>
-           
-        
         <div class="form-group">
             <label for="loan_user_id" class=" col-md-3"><?php echo lang('team_member'); ?></label>
             <div class="col-md-9">
@@ -313,8 +309,7 @@ $("#member_type").select2("destroy").val("tm");
                     "data-msg-required" => lang("field_required"),
                 ));
                 ?>
-
-            </div>
+                </div>
         </div>
          <div class="form-group">
             <label for="title" class=" col-md-3"><?php echo lang('amount'); ?></label>
@@ -497,97 +492,89 @@ $("#member_type").select2("destroy").val("tm");
             
         </div>
         <?php echo form_close(); ?>
-       <script type="text/javascript">
-       $(document).ready(function () {
+<script type="text/javascript">
+$(document).ready(function () {
 
-        //make the checklist items sortable
-        var $selector = $(".checklist-items");
-        Sortable.create($selector[0], {
-            animation: 150,
-            chosenClass: "sortable-chosen",
-            ghostClass: "sortable-ghost",
-            onUpdate: function (e) {
-                appLoader.show();
-                //prepare checklist items indexes 
-                var data = "";
-                $.each($selector.find(".checklist-item-row"), function (index, ele) {
-                    if (data) {
-                        data += ",";
-                    }
+    // Make the checklist items sortable
+    var $selector = $(".checklist-items");
+    Sortable.create($selector[0], {
+        animation: 150,
+        chosenClass: "sortable-chosen",
+        ghostClass: "sortable-ghost",
+        onUpdate: function (e) {
+            appLoader.show();
+            // Prepare checklist items indexes 
+            var data = "";
+            $.each($selector.find(".checklist-item-row"), function (index, ele) {
+                if (data) {
+                    data += ",";
+                }
+                data += $(ele).attr("data-id") + "-" + parseInt(index + 1);
+            });
 
-                    data += $(ele).attr("data-id") + "-" + parseInt(index + 1);
-                });
-                
-                //update sort indexes
-                $.ajax({
-                    url: '<?php echo_uri("vendors_invoice_list/save_checklist_items_sort") ?>',
-                    type: "POST",
-                    data: {sort_values: data},
-                    success: function () {
-                        appLoader.hide();
-                    }
-                });
-            }
-        });
-
-        //add a clickable link in task title.
-        $("#ajaxModalTitle").append('<?php echo $task_link ?>');
-
-        //show the items in checklist
-        $(".checklist-items").html(<?php echo $checklist_items; ?>);
-
-        //show save & cancel button when the checklist-add-item-form is focused
-        $("#checklist-add-item").focus(function () {
-            $("#checklist-options-panel").removeClass("hide");
-            $("#checklist-add-item-error").removeClass("hide");
-        });
-
-        $("#checklist-add-item-date").focus(function () {
-            $("#checklist-options-panel").removeClass("hide");
-            $("#checklist-add-item-error").removeClass("hide");
-        });
-
-        $("#checklist-options-panel-close").click(function () {
-            $("#checklist-options-panel").addClass("hide");
-            $("#checklist-add-item-error").addClass("hide");
-            $("#checklist-add-item").val("");
-            $("#checklist-add-item-date").val("");
-        });
-
-     /*   $("#checklist_form").appForm({
-            isModal: false,
-            onSuccess: function (response) {
-                $("#checklist-add-item").val("");
-                $("#checklist-add-item-date").val("");
-                $("#checklist-add-item").focus();
-                $(".checklist-items").append(response.data);
-                $("#loan-payment-table").appTable({newData: result.data, dataId: result.id});
-            }
-
-
-        }); */
-        $("#checklist_form").appForm({
-            onSuccess: function(result) {
-                $("#loan-payment-table").appTable({newData: result.data, dataId: result.id});
-            }
-        });
-        setDatePicker("#checklist-add-item-date");
-        $('body').on('click', '[data-act=update-checklist-item-status-checkbox]', function () {
-            var status_checkbox = $(this).find("span");
-            status_checkbox.addClass("inline-loader");
+            // Update sort indexes
             $.ajax({
-                url: '<?php echo_uri("vendors_invoice_list/save_checklist_item_status") ?>/' + $(this).attr('data-id'),
-                type: 'POST',
-                dataType: 'json',
-                data: {value: $(this).attr('data-value')},
-                success: function (response) {
-                    if (response.success) {
-                        status_checkbox.closest("div").html(response.data);
-                    }
+                url: '<?php echo_uri("vendors_invoice_list/save_checklist_items_sort") ?>',
+                type: "POST",
+                data: {sort_values: data},
+                success: function () {
+                    appLoader.hide();
                 }
             });
+        }
+    });
+
+    // Add a clickable link in the task title, if available
+    <?php if(isset($task_link)) { ?>
+        $("#ajaxModalTitle").append('<?php echo $task_link ?>');
+    <?php } ?>
+
+    // Show the items in the checklist, if available
+    <?php if(isset($checklist_items)) { ?>
+        $(".checklist-items").html(<?php echo $checklist_items; ?>);
+    <?php } ?>
+
+    // Show save & cancel button when the checklist-add-item-form is focused
+    $("#checklist-add-item").focus(function () {
+        $("#checklist-options-panel").removeClass("hide");
+        $("#checklist-add-item-error").removeClass("hide");
+    });
+
+    $("#checklist-add-item-date").focus(function () {
+        $("#checklist-options-panel").removeClass("hide");
+        $("#checklist-add-item-error").removeClass("hide");
+    });
+
+    $("#checklist-options-panel-close").click(function () {
+        $("#checklist-options-panel").addClass("hide");
+        $("#checklist-add-item-error").addClass("hide");
+        $("#checklist-add-item").val("");
+        $("#checklist-add-item-date").val("");
+    });
+
+    $("#checklist_form").appForm({
+        onSuccess: function(result) {
+            $("#loan-payment-table").appTable({newData: result.data, dataId: result.id});
+        }
+    });
+    setDatePicker("#checklist-add-item-date");
+
+    $('body').on('click', '[data-act=update-checklist-item-status-checkbox]', function () {
+        var status_checkbox = $(this).find("span");
+        status_checkbox.addClass("inline-loader");
+        $.ajax({
+            url: '<?php echo_uri("vendors_invoice_list/save_checklist_item_status") ?>/' + $(this).attr('data-id'),
+            type: 'POST',
+            dataType: 'json',
+            data: {value: $(this).attr('data-value')},
+            success: function (response) {
+                if (response.success) {
+                    status_checkbox.closest("div").html(response.data);
+                }
+            }
         });
     });
+});
 
     $("#checklist-add-item").on('keyup', function (){
    // Your stuff...

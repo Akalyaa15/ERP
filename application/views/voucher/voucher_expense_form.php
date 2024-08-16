@@ -594,12 +594,11 @@ $voucher_type = $this->Voucher_types_model->get_all_where(array("deleted" => 0,"
                             ?>
                         </div>
                     </div>
-        
-        <div class="form-group">
+          <div class="form-group">
             <label for="title" class=" col-md-3"><?php echo lang('amount'); ?></label>
             <div class=" col-md-9">
-                <?php
-                echo form_input(array(
+                    <?php
+                    echo form_input(array(
                     "id" => "amount",
                     "name" => "amount",
                     "value" => $model_info->amount ? to_decimal_format($model_info->amount) : "",
@@ -639,8 +638,7 @@ $voucher_type = $this->Voucher_types_model->get_all_where(array("deleted" => 0,"
               <div class="form-group" id="project_managers" style="display: none;">
             <label  class=" col-md-3"><?php echo lang('project_manager'); ?></label>
             <div class="col-md-9" id="project_manager">
-        
-    </div>
+        </div>
         </div>       
               <div class="form-group" id="purchase_managers" style="display: none;">
             <label  class=" col-md-3"><?php echo lang('purchase_manager'); ?></label>
@@ -740,9 +738,7 @@ setDatePicker("#drawn_on");
 
 
 
-      
-            
-                //get existing item info
+//get existing item info
                $("#country_id").change(function () {
                 var country_name =$("#country_id").val();
                 $.ajax({

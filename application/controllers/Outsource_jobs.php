@@ -197,7 +197,7 @@ if (!$id) {
         $type = $data->unit_type ? $data->unit_type : "";
 
          $client_info = $this->Clients_model->get_one($data->client_id);
-        $project_info = $this->Projects_model->get_one($data->project_id);
+         $project_info = $this->Projects_model->get_one($data->project_id);
 
         //last activity user name and date start 
          $last_activity_by_user_name= "-";

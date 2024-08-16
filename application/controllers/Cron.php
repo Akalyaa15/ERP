@@ -9,7 +9,6 @@ class Cron extends CI_Controller {
         parent::__construct();
         $this->load->library('cron_job');
     }
-
     function index() {
         ini_set('max_execution_time', 10); //execute maximum 300 seconds 
         //wait at least 5 minute befor starting new cron job

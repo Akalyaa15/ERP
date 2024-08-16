@@ -19,8 +19,6 @@
         </div>
     </div>
 </div>
-
-
 <script type="text/javascript">
     var prepareExpensesFlotChart = function (data) {
         appLoader.show();

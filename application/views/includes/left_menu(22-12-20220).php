@@ -47,12 +47,12 @@
                 $access_assets_data = get_array_value($permissions, "assets_data");
                  $access_voucher = get_array_value($permissions, "voucher");
                 $access_outsource_members = get_array_value($permissions, "outsource_members");
-$access_delivery = get_array_value($permissions, "delivery");
-$access_tools = get_array_value($permissions, "tools");
-$access_cheque_handler = get_array_value($permissions, "cheque_handler");
-$access_company_bank_statement = get_array_value($permissions, "company_bank_statement");
-$access_student_desk = get_array_value($permissions, "student_desk");
-$access_register = get_array_value($permissions, "register");
+               $access_delivery = get_array_value($permissions, "delivery");
+               $access_tools = get_array_value($permissions, "tools");
+               $access_cheque_handler = get_array_value($permissions, "cheque_handler");
+            $access_company_bank_statement = get_array_value($permissions, "company_bank_statement");
+            $access_student_desk = get_array_value($permissions, "student_desk");
+            $access_register = get_array_value($permissions, "register");
 
                 $manage_help_and_knowledge_base = ($this->login_user->is_admin || get_array_value($permissions, "help_and_knowledge_base"));
                 $manage_timesheets = ($this->login_user->is_admin || get_array_value($permissions, "timesheet_manage_permission"));
@@ -147,7 +147,7 @@ if (get_setting("module_master_data") == "1" && ($this->login_user->is_admin || 
                         $show_payments_menu = true;
                     }
                     if (get_setting("module_purchase_order") && ($this->login_user->is_admin ||$access_purchase_order)) {
-                    $finance_submenu[] = array("name" => "purchase_order_payments", "url" => "purchase_order_payments", "class" => "fa-credit-card");
+                    $finance_submenu[] = array("name" => "purchase_order_payments", "url" => "purchase_order_payments", "cldesktopass" => "fa-credit-card");
                                             $show_payments_menu = true;
 
                 }
@@ -235,16 +235,8 @@ if (get_setting("module_work_order") && ($this->login_user->is_admin ||$access_w
                 if ($this->login_user->is_admin) {
                     $hrm_submenu[] = array("name" => "settings", "url" => "settings/general", "class" => "fa-wrench");
                 }
-                
-                    
-                    
- 
-
-                    $sidebar_menu[] = array("name" => "hrm", "url" => $hrm_url, "class" => "fa fa-black-tie", "submenu" => $hrm_submenu);
+                 $sidebar_menu[] = array("name" => "hrm", "url" => $hrm_url, "class" => "fa fa-black-tie", "submenu" => $hrm_submenu);
                 }
-
-
-
                 $project_submenu = array(
                     array("name" => "all_projects", "url" => "projects/all_projects","class" => "fa fa-th"),
                     array("name" => "tasks", "url" => "projects/all_tasks","class" => "fa fa-tasks"));

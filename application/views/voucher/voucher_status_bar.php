@@ -1,6 +1,5 @@
 <div class="panel panel-default p15 no-border m0" style="line-height: 25px">
     <span><?php echo lang("status") . ": " . $estimate_status_label; ?></span>
-    
     <?php
     // show assign to field to team members only
     $options = array("id" => $estimate_info->created_user_id);
@@ -11,7 +10,6 @@
     <?php
     echo get_team_member_profile_link($created_user->id, $created_user->first_name . " " . $created_user->last_name);
     ?>
-
     <?php if (isset($estimate_info->line_manager) && $estimate_info->line_manager != "admin") { ?>
         <?php
         // show assign to field to team members only

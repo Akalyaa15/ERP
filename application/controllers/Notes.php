@@ -46,7 +46,7 @@ class Notes extends MY_Controller {
         $view_data['client_id'] = $this->input->post('client_id') ? $this->input->post('client_id') : $view_data['model_info']->client_id;
         $view_data['vendor_id'] = $this->input->post('vendor_id') ? $this->input->post('vendor_id') : $view_data['model_info']->vendor_id;
         $view_data['company_id'] = $this->input->post('company_id') ? $this->input->post('company_id') : $view_data['model_info']->company_id;
-     $view_data['user_id'] = $this->input->post('user_id') ? $this->input->post('user_id') : $view_data['model_info']->user_id;
+        $view_data['user_id'] = $this->input->post('user_id') ? $this->input->post('user_id') : $view_data['model_info']->user_id;
         $labels = explode(",", $this->Notes_model->get_label_suggestions($this->login_user->id));
 
         //check permission for saved note

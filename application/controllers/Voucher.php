@@ -2,6 +2,7 @@
     
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
+
 class Voucher extends MY_Controller {
  
     function __construct() {
@@ -9,20 +10,22 @@ class Voucher extends MY_Controller {
         $this->init_permission_checker("voucher");
          //$this->access_only_allowed_members();
     }
- /* load estimate list view */
-     function index() {
+
+    /* load estimate list view */
+
+    function index() {
         $this->check_module_availability("module_voucher");
        // $view_data['can_request_estimate'] = false;
 
-         $view_data["custom_field_headers"] = $this->Custom_fields_model->get_custom_field_headers_for_table("voucher", $this->login_user->is_admin, $this->login_user->user_type);
+        $view_data["custom_field_headers"] = $this->Custom_fields_model->get_custom_field_headers_for_table("voucher", $this->login_user->is_admin, $this->login_user->user_type);
          $view_data['members_dropdown'] = $this->_get_team_members_dropdown();
          $view_data['line_manager_dropdown'] = $this->_get_line_members_dropdown();
-         /*if ($this->login_user->user_type === "staff") {
+/*if ($this->login_user->user_type === "staff") {
            // $this->access_only_allowed_members();
 
             $this->template->rander("voucher/index", $view_data);
         } */
-        $access_info = $this->get_access_info("voucher");http://localhost:8000/index.php/voucher
+        $access_info = $this->get_access_info("voucher");
                 $voucher_access_all = $access_info->access_type;
                 $voucher_access = $access_info->allowed_members;
                  if($this->login_user->is_admin ||in_array($this->login_user->id,$voucher_access)||$voucher_access_all=="all"){
@@ -35,7 +38,9 @@ class Voucher extends MY_Controller {
 
         }
        
-    }     //get team members dropdown
+    }
+
+       //get team members dropdown
     private function _get_team_members_dropdown() {
         $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_type" => "staff"), 0, 0, "first_name")->result();
 
@@ -63,7 +68,11 @@ class Voucher extends MY_Controller {
     function yearly() {
         $this->load->view("estimates/yearly_estimates");
     } 
-   /* load new estimate modal */
+
+
+
+
+    /* load new estimate modal */
 function get_payment_method_dropdown() {
         $this->access_only_team_members();
 
@@ -89,50 +98,35 @@ function get_payment_method_dropdown() {
             $this->template->rander("voucher/voucher_info", $view_data);
         }
     }
- public function modal_form() {
-        // Load models if not already loaded
-        $this->load->model('Voucher_model');
-        $this->load->model('Voucher_types_model');
-        $this->load->model('Payment_methods_model');
-        $this->load->model('Users_model');
-        $this->load->model('Custom_fields_model');
-        
-        // Validate submitted data
-        validate_submitted_data(array(
-            "id" => "numeric",
-            "client_id" => "numeric"
-        ));
-        
-        $client_id = $this->input->post('client_id');
-        $view_data['model_info'] = $this->Voucher_model->get_one($this->input->post('id'));
+
+function modal_form() {
+    //validate the submitted data
+    validate_submitted_data(array(
+        "id" => "numeric",
+        "client_id" => "numeric"
+    ));
+
+    $client_id = $this->input->post('client_id');
     
-        if (!$view_data['model_info']) {
-            show_error('Voucher not found.');
-            return;
-        }
+    //fetch the model info
+    $view_data['model_info'] = $this->Voucher_model->get_one($this->input->post('id'));
     
-        $view_data['voucher_types_dropdown'] = $this->Voucher_types_model->get_dropdown_list(array("title"), "id", array("deleted" => 0, "status" => "active"));
-        $view_data['payment_methods_dropdown'] = $this->Payment_methods_model->get_dropdown_list(array("title"), "id", array("online_payable" => 0, "deleted" => 0));
-        
-        $project_client_id = $client_id;
-        if (isset($view_data['model_info']->client_id)) {
-            $project_client_id = $view_data['model_info']->client_id;
-        }
-        
-        $view_data['clients_dropdown'] = array("" => "-") + $this->Users_model->get_dropdown_list(array("first_name", "last_name"), 'id', array("user_type" => "staff"));
-        $view_data['client_id'] = $client_id;
-    
-        $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("estimates", $view_data['model_info']->id, $this->login_user->is_admin, $this->login_user->user_type)->result();
-    
-        // Ensure the view file exists
-        if (file_exists(APPPATH . 'views/voucher/modal_form.php')) {
-            $this->load->view('voucher/modal_form', $view_data);
-        } else {
-            show_error('The view file does not exist.');
-        }
-    }
-    
-    
+    //log the model info for debugging
+    log_message('debug', 'Model Info: ' . print_r($view_data['model_info'], true));
+
+    //handle client id and dropdowns
+    $project_client_id = isset($view_data['model_info']->client_id) ? $view_data['model_info']->client_id : $client_id;
+
+    $view_data['voucher_types_dropdown'] = $this->Voucher_types_model->get_dropdown_list(array("title"), "id", array("deleted" => 0, "status" => "active"));
+    $view_data['payment_methods_dropdown'] = $this->Payment_methods_model->get_dropdown_list(array("title"), "id", array("online_payable" => 0, "deleted" => 0));
+    $view_data['clients_dropdown'] = array("" => "-") + $this->Users_model->get_dropdown_list(array("first_name", "last_name"), 'id', array("user_type" => "staff"));
+    $view_data['client_id'] = $client_id;
+    $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("estimates", $view_data['model_info']->id, $this->login_user->is_admin, $this->login_user->user_type)->result();
+
+    //load the view
+    $this->load->view('voucher/modal_form', $view_data);
+}
+
     /* add or edit an estimate */
 
     function save() {
@@ -149,7 +143,7 @@ function get_payment_method_dropdown() {
         $id = $this->input->post('id');
     
         if ($this->input->post('line_manager') == '0') {
-            echo json_encode(array("success" => false, 'message' => lang('lien_manager_not_assign')));
+            echo json_encode(array("success" => false, 'message' => lang('line_manager_not_assign')));
             exit();
         }
     
@@ -168,7 +162,7 @@ function get_payment_method_dropdown() {
         }
     
         if ($id) {
-            // check if the invoice number already exists when updating
+            // Check if the invoice number already exists and update
             $estimate_data["voucher_no"] = $this->input->post('voucher_no');
             if ($this->Voucher_model->is_estimate_no_exists($estimate_data["voucher_no"], $id)) {
                 echo json_encode(array("success" => false, 'message' => lang('vo_no_already')));
@@ -176,7 +170,7 @@ function get_payment_method_dropdown() {
             }
         }
     
-        // create new invoice number if it doesn't already exist
+        // Create a new invoice number and check if it already exists
         if (!$id) {
             $get_last_estimate_id = $this->Voucher_model->get_last_estimate_id_exists();
             $estimate_no_last_id = ($get_last_estimate_id->id + 1);
@@ -190,45 +184,46 @@ function get_payment_method_dropdown() {
     
         $estimate_id = $this->Voucher_model->save($estimate_data, $id);
     
-        // Check if the estimate ID exists before proceeding
-        if (!$estimate_id) {
+        if ($estimate_id) {
+            // Save the new invoice number if needed
+            if (!$id) {
+                $estimate_prefix = get_voucher_id($estimate_id);
+                $estimate_prefix_data = array(
+                    "voucher_no" => $estimate_prefix
+                );
+                $this->Voucher_model->save($estimate_prefix_data, $estimate_id);
+            }
+    
+            // Handle voucher expenses
+            $options = array("estimate_id" => $estimate_id);
+            $ve_id = $this->Voucher_expenses_model->get_details($options)->row();
+    
+            if ($ve_id) {
+                $this->Voucher_expenses_model->delete($ve_id->id);
+            }
+    
+            save_custom_fields("voucher", $estimate_id, $this->login_user->is_admin, $this->login_user->user_type);
+    
+            echo json_encode(array("success" => true, "data" => $this->_row_data($estimate_id), 'id' => $estimate_id, 'message' => lang('record_saved')));
+        } else {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
-            return;
         }
-    
-        $options = array(
-            "estimate_id" => $estimate_id,
-        );
-    
-        $ve_id = $this->Voucher_expenses_model->get_details($options)->row();
-    
-        // Check if $ve_id is not null before accessing its id property
-        if ($ve_id) {
-            $s = $this->Voucher_expenses_model->delete($ve_id->id);
-        }
-    
-        // Save the new invoice number
-        if (!$id) {
-            $estimate_prefix = get_voucher_id($estimate_id);
-            $estimate_prefix_data = array(
-                "voucher_no" => $estimate_prefix
-            );
-            $estimate_prefix_id = $this->Voucher_model->save($estimate_prefix_data, $estimate_id);
-        }
-    
-        save_custom_fields("voucher", $estimate_id, $this->login_user->is_admin, $this->login_user->user_type);
-    
-        echo json_encode(array("success" => true, "data" => $this->_row_data($estimate_id), 'id' => $estimate_id, 'message' => lang('record_saved')));
     }
     
     function remarks($voucher_id=0,$status) {
-//$view_data['model_info'] = $this->Tickets_model->get_one($ticket_id);
+
+
+
+
+
+
+        //$view_data['model_info'] = $this->Tickets_model->get_one($ticket_id);
 
         $view_data['voucher_id'] = $voucher_id;       
         $view_data['status'] = $status;       
         //prepare assign to list
 //need to change(temporary change)
-http://localhost:8000/index.php/voucher
+        
 
         $this->load->view('voucher/remarks', $view_data);
     }
@@ -446,44 +441,49 @@ if($this->login_user->department==='09' &&$voucher=='line_manager'){
     /* prepare a row of estimate list table */
 
     private function _make_row($data, $custom_fields) {
-        $estimate_no_value = $data->voucher_no ? $data->voucher_no : get_voucher_id($data->id);
+        log_message('debug', 'Voucher Data: ' . print_r($data, true));
+    
+        $estimate_no_value = isset($data->voucher_no) ? $data->voucher_no : get_voucher_id($data->id);
         $estimate_no_url = "";
         if ($this->login_user->user_type == "staff") {
-             $estimate_no_url = anchor(get_uri("voucher/view/" . $data->id), $estimate_no_value);
+            $estimate_no_url = anchor(get_uri("voucher/view/" . $data->id), $estimate_no_value);
         } else {
-             $estimate_no_url = anchor(get_uri("voucher/preview/" . $data->id), $estimate_no_value);
+            $estimate_no_url = anchor(get_uri("voucher/preview/" . $data->id), $estimate_no_value);
         }
     
-        // Ensure $data->first_name, $data->last_name, and $data->client_id are set
-        $first_name = isset($data->first_name) ? $data->first_name : '';
-        $last_name = isset($data->last_name) ? $data->last_name : '';
-        $client_id = isset($data->client_id) ? $data->client_id : '';
+        // Use null coalescing operator to avoid undefined property warnings
+        $client_name = isset($data->first_name) && isset($data->last_name) 
+            ? $data->first_name . " " . $data->last_name 
+            : 'Unknown Client';
     
         $row_data = array(
             $estimate_no_url,
-            anchor(get_uri("team_members/view/" . $client_id), $first_name . " " . $last_name),
-            $data->estimate_date,
-            format_to_date($data->valid_until, false),
-            $data->note,
-            $data->type_title,
-            $data->title,
-            $this->_get_estimate_status_label($data),
+            isset($data->client_id) ? anchor(get_uri("team_members/view/" . $data->client_id), $client_name) : $client_name,
+            isset($data->estimate_date) ? $data->estimate_date : 'N/A',
+            isset($data->valid_until) ? format_to_date($data->valid_until, false) : 'N/A',
+            isset($data->note) ? $data->note : 'N/A',
+            isset($data->type_title) ? $data->type_title : 'N/A',
+            isset($data->title) ? $data->title : 'N/A',
+            isset($data->status) ? $this->_get_estimate_status_label($data) : 'N/A',
         );
     
         foreach ($custom_fields as $field) {
             $cf_id = "cfv_" . $field->id;
-            $row_data[] = $this->load->view("custom_fields/output_" . $field->field_type, array("value" => isset($data->$cf_id) ? $data->$cf_id : ''), true);
+            $row_data[] = isset($data->$cf_id) 
+                ? $this->load->view("custom_fields/output_" . $field->field_type, array("value" => $data->$cf_id), true) 
+                : 'N/A';
         }
     
-        if ($data->status == 'draft' || $data->status == 'modified') {
+        if (isset($data->status) && ($data->status == 'draft' || $data->status == 'modified')) {
             $row_data[] = modal_anchor(get_uri("voucher/modal_form"), "<i class='fa fa-pencil'></i>", array("class" => "edit", "title" => lang('edit_voucher'), "data-post-id" => $data->id))
                 . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_voucher'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("voucher/delete"), "data-action" => "delete-confirmation"));
         } else {
-            $row_data[] = '-';
+            $row_data[] = array('-');
         }
     
         return $row_data;
     }
+    
     
     //prepare estimate status label 
     private function _get_estimate_status_label($estimate_info, $return_html = true) {
@@ -523,7 +523,7 @@ if($this->login_user->department==='09' &&$voucher=='line_manager'){
 
     /* load estimate details view */
 
-function view($estimate_id = 0) {
+    function view($estimate_id = 0) {
         //$this->access_only_allowed_members();
 
         if ($estimate_id) {
@@ -541,8 +541,9 @@ function view($estimate_id = 0) {
                 $view_data["voucher_expense"] = $this->Voucher_expenses_model->get_details($options)->row();
                 
                 $view_data["can_create_projects"] = $this->can_create_projects();
-                $sort_as_decending = get_setting("show_recent_ticket_comments_at_the_top");
-                $comments_options = array(
+            $sort_as_decending = get_setting("show_recent_ticket_comments_at_the_top");
+
+ $comments_options = array(
                     "voucher_id" => $estimate_id,
                     "sort_as_decending" => $sort_as_decending
                 );
@@ -558,6 +559,7 @@ function view($estimate_id = 0) {
     }
 
     /* estimate total section */
+
     private function _get_estimate_total_view($estimate_id = 0) {
         
         return $this->load->view('estimates/estimate_total_section', $view_data, true);
@@ -566,14 +568,17 @@ function view($estimate_id = 0) {
     /* load item modal */
 
     function item_modal_form() {
-        // $this->access_only_allowed_members();
+        //$this->access_only_allowed_members();
     
         validate_submitted_data(array(
             "id" => "numeric"
         ));
     
         $estimate_id = $this->input->post('estimate_id');
-        $view_data['model_info'] = $this->Voucher_expenses_model->get_one($this->input->post('id'));
+        $model_info = $this->Voucher_expenses_model->get_one($this->input->post('id'));
+        
+        // Initialize $view_data with necessary dropdowns and data
+        $view_data['model_info'] = $model_info;
         $view_data['country_dropdown'] = $this->_get_country_dropdown_select2_data();
         $view_data['categories_dropdown'] = $this->Expense_categories_model->get_dropdown_list(array("title"));
         $view_data['vendors_dropdown'] = $this->Vendors_model->get_dropdown_list(array("company_name"), 'id');
@@ -581,63 +586,49 @@ function view($estimate_id = 0) {
     
         $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_type" => "staff"))->result();
         $members_dropdown = array();
-    
         foreach ($team_members as $team_member) {
             $members_dropdown[$team_member->id] = $team_member->first_name . " " . $team_member->last_name;
         }
-    
         $view_data['client_members_dropdown'] = $this->_get_users_dropdown_select2_data();
         $view_data['vendor_members_dropdown'] = array("" => "-") + $this->Users_model->get_dropdown_list(array("first_name", "last_name"), 'id', array("user_type" => "vendor"));
         $view_data['members_dropdown'] = array("0" => "") + $members_dropdown;
     
         $rm_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_type" => "resource"))->result();
         $rm_members_dropdown = array();
-    
         foreach ($rm_members as $rm_member) {
             $rm_members_dropdown[$rm_member->id] = $rm_member->first_name . " " . $rm_member->last_name;
         }
-    
         $view_data['rm_members_dropdown'] = array("" => "-") + $rm_members_dropdown;
-        $view_data['members_dropdown'] = array("" => "-") + $members_dropdown;
     
-        // Project dropdown check for the current logged-in user's projects
+        // Project dropdown check for the current login user projects
         if ($this->login_user->is_admin) {
             $view_data['projects_dropdown'] = array("0" => "-") + $this->Projects_model->get_dropdown_list(array("title"));
         } else {
             $project_options = array(
                 "user_id" => $this->login_user->id,
             );
-    
             $project_data = $this->Projects_model->get_details($project_options)->result();
             $projects_dropdown = array("" => "-");
-    
             foreach ($project_data as $project) {
                 $projects_dropdown[$project->id] = $project->title;
             }
-    
             $view_data['projects_dropdown'] = $projects_dropdown;
         }
     
         $view_data['taxes_dropdown'] = array("" => "-") + $this->Taxes_model->get_dropdown_list(array("title"));
     
-        // Ensure model_info is defined before using it
-        $model_info = $view_data['model_info'];
+        // Use $model_info to set default values
         $model_info->project_id = $model_info->project_id ? $model_info->project_id : $this->input->post('project_id');
         $model_info->user_id = $model_info->user_id ? $model_info->user_id : $this->input->post('user_id');
         if (!$estimate_id) {
             $estimate_id = $model_info->estimate_id;
         }
-    
         $view_data['estimate_id'] = $estimate_id;
     
-        // Fetch custom fields data
-        $view_data['custom_fields'] = $this->Custom_fields_model->get_custom_fields_for_context('voucher_expense');
-    
-        // Load the view with the data
         $this->load->view('voucher/voucher_expense_form', $view_data);
     }
     
-    
+
     /* add or edit an estimate item */
 private function _get_users_dropdown_select2_data($show_header = false) {
         $luts = $this->Users_model->get_all()->result();
@@ -726,6 +717,11 @@ if ($response_value==null) {
 $response_value   = 1;
      
 }
+
+
+
+
+
 $amount = unformat_currency($this->input->post('amount'));
         $target_path = get_setting("timeline_file_path");
         $files_data = move_files_from_temp_dir_to_permanent_dir($target_path, "voucher");
@@ -862,9 +858,9 @@ $data = array(
             "r_address" => $r_address,
             "r_phone" => $r_phone,
             "convert_amount"  => $response_value*$amount,
-            "currency"=>$this->input->post('currency'),
-            "currency_symbol"=>$this->input->post('currency_symbol'),
-            "country_id"=>$this->input->post('country_id'),
+"currency"=>$this->input->post('currency'),
+"currency_symbol"=>$this->input->post('currency_symbol'),
+"country_id"=>$this->input->post('country_id'),
 
 
         );
@@ -894,9 +890,9 @@ $data = array(
             "r_address" => $r_address,
             "r_phone" => $r_phone,
             "convert_amount"  => $response_value*$amount,
-            "currency"=>$this->input->post('currency'),
-            "currency_symbol"=>$this->input->post('currency_symbol'),
-         "country_id"=>$this->input->post('country_id'),
+"currency"=>$this->input->post('currency'),
+"currency_symbol"=>$this->input->post('currency_symbol'),
+"country_id"=>$this->input->post('country_id'),
         ); 
     }if($member=='vendors'){
         $data = array(
@@ -1049,7 +1045,8 @@ $files_link = "";
                 }
             }
         }
-          return array(
+
+        return array(
             $data->estimate_id,
             $item,
             to_currency($data->amount, $data->currency_symbol),
@@ -1114,62 +1111,50 @@ $files_link = "";
         }
     }
     //view html is accessable to client only.
-    public function preview($estimate_id = 0, $show_close_preview = false) {
+    function preview($estimate_id = 0, $show_close_preview = false) {
+
         $view_data = array();
-    
+
         if ($estimate_id) {
+
             $estimate_data = get_voucher_making_data($estimate_id);
             $this->_check_estimate_access_permission($estimate_data);
-    
+
+            //get the label of the estimate
             $estimate_info = get_array_value($estimate_data, "estimate_info");
             $estimate_items = get_array_value($estimate_data, "estimate_items");
-            $client_info = get_array_value($estimate_data, "client_info"); // Ensure this is fetched
-            $color = get_array_value($estimate_data, "color");
-    
-            // Debugging output to check if $client_info is set
-            if (empty($client_info)) {
-                log_message('error', 'Client information is missing for estimate ID: ' . $estimate_id);
-            } else {
-                log_message('info', 'Client information loaded successfully for estimate ID: ' . $estimate_id);
-            }
-    
             $estimate_data['estimate_status_label'] = $this->_get_estimate_status_label($estimate_info);
-    
+
             $view_data['estimate_preview'] = prepare_voucher_pdf($estimate_data, "html");
-            $view_data['show_close_preview'] = $show_close_preview && $this->login_user->user_type === "staff";
+
+            //show a back button
+            $view_data['show_close_preview'] = $show_close_preview && $this->login_user->user_type === "staff" ? true : false;
+
             $view_data['estimate_id'] = $estimate_id;
             $view_data['estimate_info'] = $estimate_info;
             $view_data['estimate_items'] = $estimate_items;
-            $view_data['client_info'] = $client_info; // Ensure this is set
-            $view_data['color'] = $color;
-    
+            
             $this->template->rander("voucher/voucher_preview", $view_data);
         } else {
             show_404();
         }
     }
-    
-    
-      function download_pdf($estimate_id = 0) {
+
+    function download_pdf($estimate_id = 0) {
         if ($estimate_id) {
-            // Fetch the estimate data
             $estimate_data = get_voucher_making_data($estimate_id);
-    
-            // Check if the user has access permission (commented out, but should be enabled if needed)
             //$this->_check_estimate_access_permission($estimate_data);
-    
-            // Clear the output buffer if any data exists
-            if (ob_get_length()) {
-                ob_end_clean();
-            }
-    
-            // Prepare and download the PDF
+
+            if (@ob_get_length())
+                @ob_clean();
+            //so, we have a valid estimate data. Prepare the view.
+
             prepare_voucher_pdf($estimate_data, "download");
         } else {
-            // Show a 404 error if the estimate ID is invalid
             show_404();
         }
     }
+
     private function _check_estimate_access_permission($estimate_data) {
         //check for valid estimate
         if (!$estimate_data) {
@@ -1261,6 +1246,7 @@ function get_client_contacts() {
     }
 
     /* upload a file */
+
     function upload_file() {
         upload_file_to_temp();
     }

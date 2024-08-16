@@ -182,7 +182,7 @@ $ret_sold_details = $this->Delivery_items_model->get_ret_sold_details($options)-
         });
     });
 
-    updateInvoiceStatusBar = function (estimateId) {
+updateInvoiceStatusBar = function (estimateId) {
         $.ajax({
             url: "<?php echo get_uri("delivery/get_delivery_status_bar"); ?>/" + estimateId,
             success: function (result) {

@@ -194,10 +194,7 @@ class Service_id_generation extends MY_Controller {
         }
         return null; // Handle case where data is not found
     }
-    
-    
-
-    function delete() {
+ function delete() {
         
         validate_submitted_data(array(
             "id" => "numeric|required"

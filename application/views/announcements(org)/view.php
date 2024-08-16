@@ -27,8 +27,6 @@
                             if ($total_files > 1) {
                                 $download_caption = sprintf(lang('download_files'), $total_files);
                             }
-                           
-
                             echo anchor(get_uri("announcements/download_announcement_files/" . $announcement->id), $download_caption, array("class" => "", "title" => $download_caption));
                         }
                     }

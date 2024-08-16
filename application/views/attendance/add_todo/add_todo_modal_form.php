@@ -96,8 +96,7 @@
             $(this).trigger("submit");
 
         });
-
-        var taskInfoText = "<?php echo lang('add_payment') ?>";
+         var taskInfoText = "<?php echo lang('add_payment') ?>";
 
         window.taskForm = $("#todo-form").appForm({
             closeModalOnSuccess: false,

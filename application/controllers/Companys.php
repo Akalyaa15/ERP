@@ -203,7 +203,6 @@ private function _get_groups_dropdown_select2_data($show_header = false) {
             "enable_company_logo" => $this->input->post('enable_company_logo'),
             "state_mandatory" => $this->input->post('state_mandatory'),
         );
-    
         // Handle company logo
         $company_info_logo = $this->Companys_model->get_one($company_id);
         $company_logo_file = $company_info_logo->company_logo;
@@ -257,23 +256,24 @@ private function _get_groups_dropdown_select2_data($show_header = false) {
     
     /* delete or undo a client */
 
-    function delete() {
+    public function delete() {
         $this->access_only_allowed_members();
-
+    
         validate_submitted_data(array(
             "id" => "required|numeric"
         ));
-
+    
         $id = $this->input->post('id');
         $company_data = $this->Companys_model->get_one($id);
-        $cr_id =$company_data->cr_id;
-        if ($this->Companys_model->delete_company_and_sub_items($id,$cr_id)) {
+        $cr_id = $company_data->cr_id;
+        
+        if ($this->Companys_model->delete_company_and_sub_items($id, $cr_id)) {
             echo json_encode(array("success" => true, 'message' => lang('record_deleted')));
         } else {
             echo json_encode(array("success" => false, 'message' => lang('record_cannot_be_deleted')));
         }
     }
-
+    
     /* list of clients, prepared for datatable  */
 
     function list_data() {
@@ -291,8 +291,7 @@ private function _get_groups_dropdown_select2_data($show_header = false) {
         }
         echo json_encode(array("data" => $result));
     }
-
-    /* return a row of client list  table */
+/* return a row of client list  table */
     private function _row_data($id)
     {
         $custom_fields = $this->Custom_fields_model->get_available_fields_for_table("companys", $this->login_user->is_admin, $this->login_user->user_type);
