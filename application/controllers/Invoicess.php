@@ -968,11 +968,7 @@ $add_new_item_to_librarys = $this->input->post('add_new_item_to_librarys');
 
     //view html is accessable to client only.
     function preview($invoice_id = 0, $show_close_preview = false) {
-
-
-
-
-        if ($invoice_id) {
+       if ($invoice_id) {
             $view_data = get_invoice_making_data($invoice_id);
 
             $this->_check_invoice_access_permission($view_data);
@@ -1054,8 +1050,7 @@ $add_new_item_to_librarys = $this->input->post('add_new_item_to_librarys');
                     $contacts_dropdown[$contact->id] = $contact->first_name . " " . $contact->last_name . " (" . lang("primary_contact") . ")";
                 }
             }
-
-            foreach ($contacts as $contact) {
+  foreach ($contacts as $contact) {
                 if (!$contact->is_primary_contact) {
                     $contacts_dropdown[$contact->id] = $contact->first_name . " " . $contact->last_name;
                 }
@@ -1220,10 +1215,8 @@ $add_new_item_to_librarys = $this->input->post('add_new_item_to_librarys');
             "invoice_id" => "required|numeric",
            
             "freight_amount" => "numeric"
-            
-        ));
-
-        $invoice_id = $this->input->post('invoice_id');
+              ));
+    $invoice_id = $this->input->post('invoice_id');
 
         $data = array(
            
@@ -1253,9 +1246,7 @@ $add_new_item_to_librarys = $this->input->post('add_new_item_to_librarys');
         } else {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
         }
-    }
-
-}
+    }}
 
 /* End of file invoices.php */
 /* Location: ./application/controllers/invoices.php */

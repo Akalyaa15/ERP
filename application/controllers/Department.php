@@ -12,8 +12,7 @@ class Department extends MY_Controller {
         //$this->access_only_allowed_members();
         $this->init_permission_checker("department");
     }
-
-    function index() {
+function index() {
         //$this->check_module_availability("module_master_data");
          $this->check_module_availability("module_department");
         //$this->template->rander("department/index");

@@ -50,9 +50,6 @@ $("#member_type").select2("destroy").val("tm");
       #luts_number{
         display:none;
       }
-
-       
-        
 </style>
 <?php } ?>
 

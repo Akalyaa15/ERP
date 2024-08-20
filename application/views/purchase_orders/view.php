@@ -72,7 +72,7 @@ $company_state_data = $this->States_model->get_details($options)->row();
                             if ($hsn_size > 0 || $purchase_order_total_summary->freight_tax_amount) { ?>
                                 <?php echo anchor(get_uri("purchase_orders/download_pdf/" . $purchase_order_info->id), "<i class='fa fa-download'></i> " . lang('download_pdf'), array("title" => lang('download_pdf'))); ?> 
                             <?php } else { ?> 
-                                <?php echo anchor(get_uri("purchase_orders/download_purchase_order_without_gst_pdf/" . $purchase_order_info->id), "<i class='fa fa-download'></i> " . lang('download_pdf'), array("title" => lang('download_pdf'))); ?>
+                               <?php// echo anchor(get_uri("purchase_orders/download_purchase_order_without_gst_pdf/" . $purchase_order_info->id), "<i class='fa fa-download'></i> " . lang('download_pdf'), array("title" => lang('download_pdf'))); ?>
                             <?php } ?> 
                         </li>
                         <li role="presentation"><?php echo anchor(get_uri("purchase_orders/preview/" . $purchase_order_info->id . "/1"), "<i class='fa fa-search'></i> " . lang('purchase_order_preview'), array("title" => lang('purchase_order_preview'), "target" => "_blank")); ?> </li>

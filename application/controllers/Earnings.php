@@ -22,7 +22,6 @@ class Earnings extends MY_Controller {
         $view_data['model_info'] = $this->Earnings_model->get_one($this->input->post('id'));
         $this->load->view('earnings/modal_form', $view_data);
     }
-
     function save() {
 
         validate_submitted_data(array(
@@ -54,13 +53,13 @@ class Earnings extends MY_Controller {
             $salary = $salary_default/100;
             $basic_salary_value = $salary*$basic_percentage->percentage;
             $c = $basic_salary_value/100; 
-$total=0;
+            $total=0;
             foreach($other_percentage as $other_per){
- $a=$c * $other_per->percentage;
- $total+=$a;
+            $a=$c * $other_per->percentage;
+            $total+=$a;
 
      }
-$current_percentage =  $c*$percentage;    
+         $current_percentage =  $c*$percentage;    
 $g = $basic_salary_value+$total+$current_percentage;            
 
 if($g>$salary_default){
@@ -68,7 +67,6 @@ if($g>$salary_default){
             exit();
                         }
             }else if($id!=1){
-
             $basic_percentage = $this->Earnings_model->get_all_where(array("deleted" => 0, "status" => "active" ,"key_name"=>"basic_salary"))->row();
             $options = array("id" => $id);
             $other_percentage = $this->Earnings_model->get_detailss($options)->result();
@@ -99,21 +97,18 @@ $g = $basic_salary_value+$total+$current_percentage;
             $salary = $salary_default/100;
             $basic_salary_value = $salary*$basic_percentage;
             $c = $basic_salary_value/100; 
-$total=0;
+            $total=0;
             foreach($other_percentage as $other_per){
- $a=$c * $other_per->percentage;
- $total+=$a;
-
-     }
+            $a=$c * $other_per->percentage;
+            $total+=$a;
+            }
 //$current_percentage =  $c*$percentage;    
 $g = $basic_salary_value+$total; 
  if($g>$salary_default){
              echo json_encode(array("success" => false, 'message' => lang('earnings_percentage')));
             exit();
                         } 
-
-}
-        
+}        
 } 
         $save_id = $this->Earnings_model->save($data, $id);
         if ($save_id) {
@@ -144,7 +139,6 @@ $g = $basic_salary_value+$total;
             }
         }
     }
-
     function list_data() {
         $list_data = $this->Earnings_model->get_details()->result();
         $result = array();
@@ -153,7 +147,6 @@ $g = $basic_salary_value+$total;
         }
         echo json_encode(array("data" => $result));
     }
-
     private function _row_data($id) {
         $options = array("id" => $id);
         $data = $this->Earnings_model->get_details($options)->row();

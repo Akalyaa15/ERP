@@ -135,7 +135,6 @@ if (!defined('BASEPATH'))
             "lut_number" => $this->input->post('lut_number')
 
         );
-
         if($id){
     // check the invoice no already exits  update    
         $estimate_data["estimate_no"] = $this->input->post('estimate_no');
@@ -599,34 +598,27 @@ $estimate_prefix = get_estimate_id($estimate_no_last_id);
         $profit_and_sum = $sum+$profits;
         $buyer_type_percentage=$profit_and_sum*$client_profit_margin/100;
         $actual_values =$profit_and_sum+$buyer_type_percentage; 
-        //$gst = $this->input->post('gst');
+        $gst = $this->input->post('gst');
         $mrps = $actual_values*$gst/100;
         $mrp_values =$mrps+$actual_values;
-
         $profitrates = $sum*$quantity;
         $profitvalues = $profitrates*$profit_percentage/100;
+        $discount_percentage = unformat_currency($this->input->post('discount_percentage'));
 
 
+//installation 
+   // Ensure these variables are defined or initialized
+  $installation_new_rate = isset($installation_new_rate) ? floatval($installation_new_rate) : 0.0;
+  $installation_profit_percentage = isset($installation_profit_percentage) ? floatval($installation_profit_percentage) : 0.0;
+  $installation_profit_rate_percentage = $installation_new_rate * $installation_profit_percentage / 100;
 
-
- $discount_percentage = unformat_currency($this->input->post('discount_percentage'));
-
-
-
- //installation 
-   
-   $installation_new_rate = $this->input->post('installation_new_rate');
-   $installation_profit_percentage = $this->input->post('installation_profit_percentage');
-   $installation_profit_rate_percentage = $installation_new_rate*$installation_profit_percentage/100;
+   $installation_profit_rate_percentage = $installation_new_rate * $installation_profit_percentage / 100;
    $installation_actual_rate=$installation_profit_rate_percentage+$installation_new_rate;
    $installation_actual_rate_total=$installation_actual_rate*$quantity;
    $installation_rate = $this->input->post('installation_rate');
    $installation_total =  $installation_rate*$quantity;
    $supply_total =$total?$total:$totals;
    $installtion_and_supply_subtotal=$supply_total+$installation_total;
-
-       
-
         $totals = $actual_values* $quantity;
         $discount_amounts = $totals*$discount_percentage/100;
         $discounts = $totals-$discount_amounts;
@@ -670,10 +662,7 @@ if($rate) {
        $supply_net_totalss = $discountss;
        $supply_net_total_installation_totalss = $supply_net_totalss+$installation_total;
        $supply_and_installation_net_totalss = $supply_net_totalss+$installation_net_total;
-
-  }     
-
-       
+}     
        $totalsss= $actual_values* $quantity;
        $discount_amountsss = $totalsss*$discount_percentage/100;
        $discountsss = $totalsss-$discount_amountsss;
@@ -688,14 +677,10 @@ if($rate) {
    $installation_total =  $installation_rate*$quantity;
    $supply_total =$total?$total:$totals;
    $installtion_and_supply_subtotal=$supply_total+$installation_total;
-
-
-
-
-$ss=$this->input->post('with_gst');
-$installation_applicable =$this->input->post('with_installation');
-$installation_gst = $this->input->post('with_installation_gst');
-if($ss=="yes"){
+   $ss=$this->input->post('with_gst');
+   $installation_applicable =$this->input->post('with_installation');
+   $installation_gst = $this->input->post('with_installation_gst');
+   if($ss=="yes"){
 
  if($ss=="yes"&& $installation_applicable=="no"&& $installation_gst=="no") {
         $estimate_item_data = array(
@@ -1373,9 +1358,7 @@ $estimate_item_data["estimate_type"] = $this->input->post('estimate_type');
             
             
                
-               
-
-                );
+ );
                 // check the same service id  product     
          $library_item_data["title"] = $this->input->post('estimate_service_item_title');
         if (!$this->Service_id_generation_model->is_service_id_generation_exists($library_item_data["title"])) {

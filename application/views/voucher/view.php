@@ -1,6 +1,6 @@
 <div id="page-content" class="clearfix">
-    <div style="max-width: 1000px; margin: auto;">
-        <div class="page-title clearfix mt15">
+<div style="max-width: 1000px; margin: auto;">
+<div class="page-title clearfix mt15">
             <h1><?php echo /*get_voucher_id($estimate_info->id)*/$estimate_info->voucher_no?$estimate_info->voucher_no:get_voucher_id($estimate_info->id); ?></h1>
             <div class="title-button-group">
                 <span class="dropdown inline-block">
@@ -179,9 +179,7 @@ if (!empty($client_info)) {
             }
         });
     };
-
 </script>
-
 <script type="text/javascript">
     $( document ).ready(function() {
    event.preventDefault();

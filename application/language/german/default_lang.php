@@ -1032,7 +1032,6 @@ $lang["todo"] = "To-Do";
 $lang["add_a_todo"] = "To-Do hinzufügen";;
 
 /* Version 1.9 */
-
 $lang["client_groups"] = "Kundengruppen";
 $lang["add_client_group"] = "Kundengruppe hinzufügen";
 $lang["edit_client_group"] = "Kundengruppe bearbeiten";

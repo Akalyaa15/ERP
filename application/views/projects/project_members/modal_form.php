@@ -1,34 +1,41 @@
- <?php echo form_open(get_uri("projects/save_project_member"), array("id" => "project-member-form", "class" => "general-form", "role" => "form")); ?>
+<?php echo form_open(get_uri("projects/save_project_member"), array("id" => "project-member-form", "class" => "general-form", "role" => "form")); ?>
 <div class="modal-body clearfix">
     <input type="hidden" name="id" value="<?php echo $model_info->id; ?>" />
     <input type="hidden" name="project_id" value="<?php echo $project_id; ?>" />
+    
     <?php if(!$is_project_manager){ ?>
     <div class="form-group" style="min-height: 50px">
-        <label for="user_id" class=" col-md-3"><?php echo lang('project_manager'); ?></label>
+        <label for="user_id" class="col-md-3"><?php echo lang('project_manager'); ?></label>
         <div class="col-md-9">
-                <div class="select-member-form clearfix pb10">
-                    <?php echo form_dropdown("project_manager", $users_dropdown, array($model_info->project_manager), "class='user_select2 col-md-10 p0'"); ?>
-                    <?php echo js_anchor("<i class='fa fa-times'></i> ", array("class" => "remove-member delete ml20")); ?>
-                </div>                                
+            <div class="select-member-form clearfix pb10">
+                <?php echo form_dropdown("project_manager", $users_dropdown, $model_info->project_manager, "class='user_select2 col-md-10 p0'"); ?>
+                <?php echo js_anchor("<i class='fa fa-times'></i> ", array("class" => "remove-member delete ml20")); ?>
+            </div>                                
         </div>
-    </div><?php } ?> <?php if(!$is_purchase_manager){ ?>
+    </div>
+    <?php } ?>
+
+    <?php if(!$is_purchase_manager){ ?>
     <div class="form-group" style="min-height: 50px">
-        <label for="user_id" class=" col-md-3"><?php echo lang('purchase_manager'); ?></label>
+        <label for="user_id" class="col-md-3"><?php echo lang('purchase_manager'); ?></label>
         <div class="col-md-9">
-                <div class="select-member-form clearfix pb10">
-                    <?php echo form_dropdown("purchase_manager", $users_dropdown, array($model_info->user_id), "class='user_select2 col-md-10 p0'"); ?>
-                    <?php echo js_anchor("<i class='fa fa-times'></i> ", array("class" => "remove-member delete ml20")); ?>
-                </div>                                
+            <div class="select-member-form clearfix pb10">
+                <?php echo form_dropdown("purchase_manager", $users_dropdown, $model_info->purchase_manager, "class='user_select2 col-md-10 p0'"); ?>
+                <?php echo js_anchor("<i class='fa fa-times'></i> ", array("class" => "remove-member delete ml20")); ?>
+            </div>                                
         </div>
-    </div><?php } ?><?php if(!$is_leader){ ?>
-        <div class="form-group" style="min-height: 50px">
-        <label for="user_id" class=" col-md-3"><?php echo lang('leader'); ?></label>
-        <div class="col-md-9">
-                <div class="select-member-form clearfix pb10">
-                    <?php echo form_dropdown("leader", $users_dropdown, array($model_info->user_id), "class='user_select2 col-md-10 p0'"); ?>
-                    <?php echo js_anchor("<i class='fa fa-times'></i> ", array("class" => "remove-member delete ml20")); ?>
-                </div>                                
-        </div>
+    </div>
+    <?php } ?>
+
+    <?php if(!$is_leader){ ?>
+<div class="form-group" style="min-height: 50px">
+    <label for="user_id" class="col-md-3"><?php echo lang('leader'); ?></label>
+    <div class="col-md-9">
+        <div class="select-member-form clearfix pb10">
+            <?php echo form_dropdown("leader", $users_dropdown, $model_info->leader, "class='user_select2 col-md-10 p0'"); ?>
+            <?php echo js_anchor("<i class='fa fa-times'></i> ", array("class" => "remove-member delete ml20")); ?>
+        </div>                                
+    </div>
     </div> <?php } ?>     <div class="form-group" style="min-height: 50px">
         <label for="user_id" class=" col-md-3"><?php echo lang('member'); ?></label>
         <div class="col-md-9">

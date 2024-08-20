@@ -21,8 +21,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="panel clearfix">
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade" id="team_member-monthly-leaves">
@@ -36,7 +34,7 @@
                         dateRange = "";
                     }
 
-                    $(selector).appTable({
+    $(selector).appTable({
                         source: '<?php echo_uri("invoice_payments/payment_list_data/") ?>',
                         order: [[0, "asc"]],
                         dateRangeType: dateRange,

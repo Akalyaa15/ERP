@@ -415,9 +415,7 @@ function modal_form()
         }
     }
 
-
-
-    function get_purchase_order_status_bar($purchase_order_id = 0)
+  function get_purchase_order_status_bar($purchase_order_id = 0)
     {
         $this->access_only_allowed_members();
 

@@ -121,11 +121,8 @@ class Items extends MY_Controller {
             echo json_encode(array("success" => false));
         }
     }
-    
-
     /* add or edit an item */
-
-     function save() {
+    function save() {
         $this->validate_access_to_items();
 
         validate_submitted_data(array(

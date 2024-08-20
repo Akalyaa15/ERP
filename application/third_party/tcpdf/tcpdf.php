@@ -4721,7 +4721,6 @@ $this->RotatedText(35,210,'GEMICATES',50);
 			$this->_out(sprintf('BT /F%d %F Tf ET', $this->CurrentFont['i'], $this->FontSizePt));
 		}
 	}
-
 	/**
 	 * Returns the bounding box of the current font in user units.
 	 * @return array

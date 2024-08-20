@@ -64,16 +64,15 @@ class Delivery extends MY_Controller {
         //$view_data['taxes_dropdown'] = array("" => "-") + $this->Taxes_model->get_dropdown_list(array("title"));
          $view_data['clients_dropdown'] = array("" => "-") + $this->Users_model->get_dropdown_list(array("first_name","last_name"),'id',array("user_type" => "staff"));
          $view_data['rm_dropdown'] = array("" => "-") + $this->Users_model->get_dropdown_list(array("first_name","last_name"),'id',array("user_type" => "resource"));
-        $view_data['client_id'] = $client_id;
-$view_data['org_clients_dropdown'] = array("" => "-") + $this->Clients_model->get_dropdown_list(array("company_name"));
-        $view_data['dispatched_through_dropdown'] = array("" => "-") + $this->Mode_of_dispatch_model->get_dropdown_list(array("title"),"id",array("status" => "active"));
-        $view_data['client_id'] = $client_id;
-$view_data['voucher_dropdown'] = array("0" => "-") + $this->Invoices_model->get_dropdown_list(array("invoice_no"), "id", array("deleted" => '0'));
-$view_data['vouchers_dropdown'] = array("0" => "-") + $this->Estimates_model->get_dropdown_list(array("estimate_no"), "id", array("deleted" => '0'));
-$view_data['dc_types_dropdown'] = array("" => "-") + $this->Dc_types_model->get_dropdown_list(array("title"), "id", array( "deleted" => 0 ,"status" => "active"));
-        $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("estimates", $view_data['model_info']->id, $this->login_user->is_admin, $this->login_user->user_type)->result();
-
-        $this->load->view('delivery/modal_form', $view_data);
+         $view_data['client_id'] = $client_id;
+         $view_data['org_clients_dropdown'] = array("" => "-") + $this->Clients_model->get_dropdown_list(array("company_name"));
+         $view_data['dispatched_through_dropdown'] = array("" => "-") + $this->Mode_of_dispatch_model->get_dropdown_list(array("title"),"id",array("status" => "active"));
+         $view_data['client_id'] = $client_id;
+         $view_data['voucher_dropdown'] = array("0" => "-") + $this->Invoices_model->get_dropdown_list(array("invoice_no"), "id", array("deleted" => '0'));
+         $view_data['vouchers_dropdown'] = array("0" => "-") + $this->Estimates_model->get_dropdown_list(array("estimate_no"), "id", array("deleted" => '0'));
+         $view_data['dc_types_dropdown'] = array("" => "-") + $this->Dc_types_model->get_dropdown_list(array("title"), "id", array( "deleted" => 0 ,"status" => "active"));
+         $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("estimates", $view_data['model_info']->id, $this->login_user->is_admin, $this->login_user->user_type)->result();
+         $this->load->view('delivery/modal_form', $view_data);
     }
 
     /* add or edit an estimate */
@@ -344,10 +343,8 @@ $estimate_item_data = array(
                     if($status=="given"){
                     $DB1 = $this->load->database('default', TRUE);
                    $DB1->select ("title,quantity");
-                 $DB1->from('delivery_items');
-                 $DB1->where('estimate_id' , $estimate_id);
-                   
-
+                   $DB1->from('delivery_items');
+                   $DB1->where('estimate_id' , $estimate_id);
                    $DB1->where('deleted' , '0');
                   $query1=$DB1->get();
  $query1->result();  
@@ -376,9 +373,7 @@ foreach ($query1->result() as $rows)
                    $DB1->select ("title,quantity");
                  $DB1->from('delivery_items');
                  $DB1->where('estimate_id' , $estimate_id);
-                   
-
-                   $DB1->where('deleted' , '0');
+                $DB1->where('deleted' , '0');
                   $query1=$DB1->get();
  $query1->result();  
 foreach ($query1->result() as $rows)

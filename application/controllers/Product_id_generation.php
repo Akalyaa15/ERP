@@ -13,7 +13,7 @@ class Product_id_generation extends MY_Controller {
     }
 
     function index() {
-     /*  $this->check_module_availability("module_production_data");
+      $this->check_module_availability("module_production_data");
         //$this->template->rander("product_id_generation/index");
         if ($this->login_user->is_admin == "1")
         {
@@ -30,8 +30,8 @@ class Product_id_generation extends MY_Controller {
 
 
         $this->template->rander("product_id_generation/index");
-    } */
-    }
+    } }
+    
 
     function modal_form() {
         validate_submitted_data(array(
@@ -313,18 +313,18 @@ if($id){
 
     private function _make_row($data) {
                  
-      $group_list = "";
+        $group_list = 0; // Initialize as 0 for summing rates
         if ($data->associated_with_part_no) {
             $groups = explode(",", $data->associated_with_part_no);
             foreach ($groups as $group) {
                 if ($group) {
-                     $options = array("id" => $group);
-                    $list_group = $this->Part_no_generation_model->get_details($options)->row(); 
-                    $group_list += $list_group->rate;
+                    $options = array("id" => $group);
+                    $list_group = $this->Part_no_generation_model->get_details($options)->row();
+                  //  $group_list += (float)$list_group->rate; // Sum the rates(made changes )
                 }
             }
-        }  
-
+        }
+        
         $make_name = $this->Manufacturer_model->get_one($data->make);
         $category_name = $this->Product_categories_model->get_one($data->category); 
         //last activity user name and date start 

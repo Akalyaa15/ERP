@@ -185,7 +185,7 @@ if (isset($list_data)) {
             echo form_input(array(
                 "id" => "buyer_type_name",
                 "name" => "buyer_type_name",
-                "value" => $client_buyer_type_name,
+               // "value" => $client_buyer_type_name,
                 "class" => "form-control",
                 "placeholder" => lang('buyer_type'),
                 
@@ -626,8 +626,6 @@ if (isset($list_data)) {
             ?>
         </div>
     </div>
-
-    
     <div style='display:none' id='service_rate'>
     <div class="form-group">
                         <label for="associated_with_part_no" class=" col-md-3"><?php echo lang('associated_with_part_no'); ?></label>
@@ -648,15 +646,7 @@ if (isset($list_data)) {
                     </div>
                     </div>
                     
-
-
-
-
-
-
-
-
-    <div class="form-group" id="service_gstapp">
+            <div class="form-group" id="service_gstapp">
                 <label for="invoice_recurring" class=" col-md-3"><?php echo lang('gst_applicable'); ?>  <span class="help" data-toggle="tooltip" title="<?php echo lang('gst_applicable'); ?>"><i class="fa fa-question-circle"></i></span></label>
                 <div class=" col-md-9">
                     <?php

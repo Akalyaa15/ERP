@@ -2,7 +2,7 @@
 $options = array("invoice_for_dc" => $invoice_info->id);
 $list_data = $this->Delivery_model->get_details($options)->row();
 ?>
- <?php 
+<?php 
 $invoice_item_options = array("invoice_id" => $invoice_info->id);
 $invoice_item_list_data = $this->Invoice_items_model->get_details($invoice_item_options)->result();
 ?>
@@ -50,9 +50,7 @@ if ($hsn_size>0||$invoice_total_summary->freight_tax_amount||$invoice_total_summ
                         <?php } ?>
                             
                         </li>
-
-
-                        <li role="presentation">
+                   <li role="presentation">
 
                         <?php echo anchor(get_uri("invoices/preview/" . $invoice_info->id . "/1"), "<i class='fa fa-search'></i> " . lang('invoice_preview'), array("title" => lang('invoice_preview')), array("target" => "_blank")); ?>
 

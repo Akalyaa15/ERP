@@ -17160,7 +17160,7 @@ if ($this->print_voucher_footer) {
 							$element = mb_convert_case($element, $ttm[$dom[$dom[$key]['parent']]['text-transform']], $this->encoding);
 						}
 					} elseif (!$this->isunicode) {
-						switch ($dom[$dom[$key]['parent']]['text-transform']) {
+							switch ($dom[$dom[$key]['parent']]['text-transform']) {
 							case 'capitalize': {
 								$element = ucwords(strtolower($element));
 								break;

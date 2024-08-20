@@ -91,7 +91,6 @@
         </div>
         <?php $this->load->view("includes/dropzone_preview"); ?>
     </div>
-
     <div class="modal-footer">
         <button class="btn btn-default upload-file-button pull-left btn-sm round" type="button" style="color:#7988a2"><i class='fa fa-camera'></i> <?php echo lang("upload_file"); ?></button>
         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-close"></span> <?php echo lang('close'); ?></button>

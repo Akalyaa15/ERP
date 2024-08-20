@@ -39,8 +39,8 @@ class Messages extends MY_Controller {
         if ($this->login_user->user_type === "staff") {
             //user is team member
             $client_message_users_array = explode(",", $client_message_users);
-            if (in_array($this->login_user->id, $client_message_users_array)) {
                 //user can send message to clients
+            if (in_array($this->login_user->id, $client_message_users_array)) {
                 $users = $this->Users_model->get_team_members_and_clients("", "", $this->login_user->id)->result();
             } else {
                 //user can send message only to team members

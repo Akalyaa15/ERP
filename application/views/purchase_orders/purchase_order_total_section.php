@@ -6,7 +6,6 @@
         <td style="width: 36px;"><?php echo to_currency($purchase_order_total_summary->estimate_subtotal ?? 0, $purchase_order_total_summary->currency_symbol ?? ''); ?></td>
         <td style="width: 30px;"></td>
     </tr>
-
     <?php
     if (isset($purchase_order_info) && $purchase_order_info) {
         $optionss = array("id" => $purchase_order_info->id);
@@ -29,7 +28,6 @@
         echo $freight_row;
     }
     ?>
-
     <?php 
     if (isset($vendor_info) && $vendor_info) {
         $company_setup_country = get_setting("company_setup_country");

@@ -29,7 +29,7 @@ class Expense_categories extends MY_Controller {
 
         validate_submitted_data(array(
             "id" => "numeric",
-            "title" => "required"
+        "title"=>"required"
         ));
 
         $id = $this->input->post('id');

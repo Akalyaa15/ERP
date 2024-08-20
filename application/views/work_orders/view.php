@@ -91,7 +91,7 @@ if($hsn_sizes>0 || $work_order_total_summary->freight_tax) { ?>
                     </div>
                 </div>
 
-                <!--p class="b-t b-info pt10 m15"><?php echo nl2br($estimate_info->note); ?></p-->
+ <!--p class="b-t b-info pt10 m15"><?php echo isset($estimate_info->note) ? nl2br($estimate_info->note) : ''; ?></p-->
 
             </div>
         </div>
@@ -177,8 +177,7 @@ $("#work_order-payment-table").appTable({
                 }
             }
         });
-
-    updateInvoiceStatusBar = function (work_orderId) {
+  updateInvoiceStatusBar = function (work_orderId) {
         $.ajax({
             url: "<?php echo get_uri("work_orders/get_work_order_status_bar"); ?>/" + work_orderId,
             success: function (result) {

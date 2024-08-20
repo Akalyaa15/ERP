@@ -153,13 +153,9 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
         foreach ($rm_members as $rm_member) {
             $rm_members_dropdown[$rm_member->id] = $rm_member->first_name . " " . $rm_member->last_name;
         }
- $view_data['rm_members_dropdown'] = array("" => "-") + $rm_members_dropdown;
+        $view_data['rm_members_dropdown'] = array("" => "-") + $rm_members_dropdown;
         $view_data['members_dropdown'] = array("" => "-") + $members_dropdown;
-
-
-
-
-        $this->load->view('invoices/modal_form', $view_data);
+     $this->load->view('invoices/modal_form', $view_data);
     }
 
 
@@ -193,33 +189,30 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
 
     function save() {
         $this->access_only_allowed_members();
-    
+
         validate_submitted_data(array(
             "id" => "numeric",
             "invoice_client_id" => "required|numeric",
             "invoice_bill_date" => "required",
             "invoice_due_date" => "required"
         ));
-    
+
         $client_id = $this->input->post('invoice_client_id');
         $id = $this->input->post('id');
-    
+
         $recurring = $this->input->post('recurring') ? 1 : 0;
+       // $invoice_delivery_address = $this->input->post('invoice_delivery_address') ? 1 : 0;
         $bill_date = $this->input->post('invoice_bill_date');
         $repeat_every = $this->input->post('repeat_every');
         $repeat_type = $this->input->post('repeat_type');
         $no_of_cycles = $this->input->post('no_of_cycles');
-        $members_type = $this->input->post('member_type');
-        
-        // Initialize dispatch_user_id to a default value
-        $dispatch_user_id = null;
-        
-        if ($members_type == 'tm') {
-            $dispatch_user_id = $this->input->post('invoice_dispatch_team_member_id');
-        } elseif ($members_type == 'om') {
-            $dispatch_user_id = $this->input->post('invoice_dispatch_outsource_id');
-        }
-    
+        $members_type=$this->input->post('member_type');
+if($members_type=='tm'){
+    $dispatch_user_id=$this->input->post('invoice_dispatch_team_member_id');
+}elseif($members_type=='om')
+{
+     $dispatch_user_id=$this->input->post('invoice_dispatch_outsource_id');
+}
         $invoice_data = array(
             "client_id" => $client_id,
             "project_id" => $this->input->post('invoice_project_id') ? $this->input->post('invoice_project_id') : 0,
@@ -229,7 +222,8 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
             "tax_id2" => $this->input->post('tax_id2') ? $this->input->post('tax_id2') : 0,
             "recurring" => $recurring,
             "invoice_delivery_address" => $this->input->post('invoice_delivery_address') ? 1 : 0,
-            "delivery_address_company_name" => $this->input->post('delivery_address_company_name'),
+            "delivery_address_company_name"=>$this->input->post('delivery_address_company_name'),
+           
             "repeat_every" => $repeat_every ? $repeat_every : 0,
             "repeat_type" => $repeat_type ? $repeat_type : NULL,
             "no_of_cycles" => $no_of_cycles ? $no_of_cycles : 0,
@@ -237,90 +231,118 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
             "delivery_note_date" => $this->input->post('delivery_note_date'),
             "supplier_ref" => $this->input->post('supplier_ref'),
             "other_references" => $this->input->post('other_references'),
+            //"terms_of_payment" => $this->input->post('terms_of_payment'),
             "terms_of_payment" => $this->input->post('invoice_payment_method_id'),
-            "buyers_order_no" => $this->input->post('buyers_order_no'),
-            "buyers_order_date" => $this->input->post('buyers_order_date'),
-            "destination" => $this->input->post('destination'),
+           "buyers_order_no" => $this->input->post('buyers_order_no'),
+             "buyers_order_date" => $this->input->post('buyers_order_date'),
+             "destination" => $this->input->post('destination'),
+            //"dispatch_document_no" => $this->input->post('dispatch_document_no'),
             "dispatched_through" => $this->input->post('dispatched_through'),
             "terms_of_delivery" => $this->input->post('terms_of_delivery'),
             "delivery_address" => $this->input->post('delivery_address'),
-            "delivery_address_state" => $this->input->post('delivery_address_state'),
-            "delivery_address_city" => $this->input->post('delivery_address_city'),
-            "delivery_address_country" => $this->input->post('delivery_address_country'),
-            "delivery_address_zip" => $this->input->post('delivery_address_zip'),
-            "delivery_address_phone" => $this->input->post('delivery_address_phone'),
-            "lut_number" => $this->input->post('lut_number'),
-            "lc_no" => $this->input->post('lc_no'),
-            "lc_date" => $this->input->post('lc_date'),
-            "dispatch_docket" => $this->input->post('dispatch_docket'),
-            "dispatch_name" => $this->input->post('dispatch_name'),
-            "waybill_no" => $this->input->post('waybill_no'),
-            "dispatch_user_id" => $dispatch_user_id,
-            "member_type" => $this->input->post('member_type'),
-            "f_name" => $this->input->post('first_name'),
+             "delivery_address_state" => $this->input->post('delivery_address_state'),
+              "delivery_address_city" => $this->input->post('delivery_address_city'),
+              "delivery_address_country" => $this->input->post('delivery_address_country'),
+               "delivery_address_zip" => $this->input->post('delivery_address_zip'),
+               "delivery_address_phone" => $this->input->post('delivery_address_phone'),
+               "lut_number" => $this->input->post('lut_number'), 
+               "lc_no" => $this->input->post('lc_no'),
+               "lc_date" => $this->input->post('lc_date'), 
+               "dispatch_docket" => $this->input->post('dispatch_docket'), 
+               "dispatch_name" => $this->input->post('dispatch_name'), 
+               "waybill_no" => $this->input->post('waybill_no'),
+
+//Add Dispatch By 
+       "dispatch_user_id" =>$dispatch_user_id,        
+      "member_type" => $this->input->post('member_type'),
+      "f_name" => $this->input->post('first_name'),
             "l_name" => $this->input->post('last_name'),
+            //"address" => $this->input->post('address'),
             "phone" => $this->input->post('phone'),
+
+
+
+  //freight amount add from profroma invoices
+
+
             "amount" => $this->input->post('amount'),
-            "hsn_code" => $this->input->post('hsn_code') ? $this->input->post('hsn_code') : "",
-            "hsn_description" => $this->input->post('hsn_description') ? $this->input->post('hsn_description') : "",
-            "gst" => $this->input->post('gst') ? $this->input->post('gst') : "",
+            "hsn_code" => $this->input->post('hsn_code')?$this->input->post('hsn_code'):"",
+             "hsn_description" => $this->input->post('hsn_description')?$this->input->post('hsn_description'):"",
+            "gst" => $this->input->post('gst')?$this->input->post('gst'):"",
             "with_inclusive_tax" => $this->input->post('with_inclusive_tax'),
             "with_gst" => $this->input->post('with_gst'),
             "freight_tax_amount" => $this->input->post('freight_tax_amount'),
-            "freight_amount" => $this->input->post('freight_amount') ? $this->input->post('freight_amount') : "",
-            "warranty" => $this->input->post('warranty'),
+            "freight_amount" => $this->input->post('freight_amount')?$this->input->post('freight_amount'):"",
+        "warranty" => $this->input->post('warranty'),
             "warranty_type" => $this->input->post('warranty_type'),
             "warranty_expiry_date" => $this->input->post('warranty_expiry_date')
+                       
+
         );
-    
+
+
+
         if ($recurring) {
+            //set next recurring date for recurring invoices
+
             if ($id) {
-                if ($this->input->post('next_recurring_date')) {
+                //update
+                if ($this->input->post('next_recurring_date')) { //submitted any recurring date? set it.
                     $invoice_data['next_recurring_date'] = $this->input->post('next_recurring_date');
                 } else {
+                    //re-calculate the next recurring date, if any recurring fields has changed.
                     $invoice_info = $this->Invoices_model->get_one($id);
                     if ($invoice_info->recurring != $invoice_data['recurring'] || $invoice_info->repeat_every != $invoice_data['repeat_every'] || $invoice_info->repeat_type != $invoice_data['repeat_type'] || $invoice_info->bill_date != $invoice_data['bill_date']) {
                         $invoice_data['next_recurring_date'] = add_period_to_date($bill_date, $repeat_every, $repeat_type);
                     }
                 }
             } else {
+                //insert new
                 $invoice_data['next_recurring_date'] = add_period_to_date($bill_date, $repeat_every, $repeat_type);
             }
-    
+
+
+            //recurring date must have to set a future date
             if (get_array_value($invoice_data, "next_recurring_date") && get_today_date() >= $invoice_data['next_recurring_date']) {
                 echo json_encode(array("success" => false, 'message' => lang('past_recurring_date_error_message_title'), 'next_recurring_date_error' => lang('past_recurring_date_error_message'), "next_recurring_date_value" => $invoice_data['next_recurring_date']));
                 return false;
             }
         }
-    
-        if ($id) {
-            $invoice_data["invoice_no"] = $this->input->post('invoice_no');
-            if ($this->Invoices_model->is_invoice_no_exists($invoice_data["invoice_no"], $id)) {
+
+
+if($id){
+    // check the invoice no already exits  update    
+        $invoice_data["invoice_no"] = $this->input->post('invoice_no');
+        if ($this->Invoices_model->is_invoice_no_exists($invoice_data["invoice_no"],$id)) {
                 echo json_encode(array("success" => false, 'message' => lang('vendors_invoice_already')));
                 exit();
             }
-        }
-    
-        if (!$id) {
-            $get_last_invoice_id = $this->Invoices_model->get_last_invoice_id_exists();
-            $invoice_no_last_id = ($get_last_invoice_id->id + 1);
-            $invoice_prefix = get_invoice_id($invoice_no_last_id);
-    
-            if ($this->Invoices_model->is_invoice_no_exists($invoice_prefix)) {
-                echo json_encode(array("success" => false, 'message' => $invoice_prefix . " " . lang('vendors_invoice_already')));
+}
+// create new invoice no check already  exsits 
+if (!$id) {
+$get_last_invoice_id = $this->Invoices_model->get_last_invoice_id_exists();
+$invoice_no_last_id = ($get_last_invoice_id->id+1);
+$invoice_prefix = get_invoice_id($invoice_no_last_id);
+ 
+        if ($this->Invoices_model->is_invoice_no_exists($invoice_prefix)) {
+                echo json_encode(array("success" => false, 'message' => $invoice_prefix." ".lang('vendors_invoice_already')));
                 exit();
             }
-        }
-    
+}
+
+//end  create new invoice no check already  exsits
+
         $invoice_id = $this->Invoices_model->save($invoice_data, $id);
         if ($invoice_id) {
-    
+
             save_custom_fields("invoices", $invoice_id, $this->login_user->is_admin, $this->login_user->user_type);
-    
+
+            //submitted copy_items_from_estimate? copy all items from estimate
             $copy_items_from_estimate = $this->input->post("copy_items_from_estimate");
             if ($copy_items_from_estimate) {
+
                 $estimate_items = $this->Estimate_items_model->get_details(array("estimate_id" => $copy_items_from_estimate))->result();
-    
+
                 foreach ($estimate_items as $data) {
                     $invoice_item_data = array(
                         "invoice_id" => $invoice_id,
@@ -329,33 +351,50 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
                         "quantity" => $data->quantity ? $data->quantity : 0,
                         "unit_type" => $data->unit_type ? $data->unit_type : "",
                         "rate" => $data->rate ? $data->rate : 0,
+                        "category" => $data->category ? $data->category : 0,
+                        "make" => $data->make ? $data->make : 0,
+                        "hsn_code" => $data->hsn_code ? $data->hsn_code : 0,
+                        "gst" => $data->gst ? $data->gst : 0,
+
                         "total" => $data->total ? $data->total : 0,
-                        "hsn_code" => $data->hsn_code ? $data->hsn_code : "",
-                        "tax_id" => $data->tax_id ? $data->tax_id : 0,
-                        "tax_id2" => $data->tax_id2 ? $data->tax_id2 : 0,
-                        "with_gst" => $data->with_gst,
-                        "gst" => $data->gst ? $data->gst : "",
-                        "warranty" => $data->warranty,
-                        "warranty_type" => $data->warranty_type,
-                        "warranty_expiry_date" => $data->warranty_expiry_date
+                        "hsn_description" => $data->hsn_description ? $data->hsn_description : 0,
+                        "tax_amount" =>$data->tax_amount ? $data->tax_amount : 0,
+                        "net_total"=> $data->net_total ? $data->net_total : 0,
+                        "discount_percentage"=> $data->discount_percentage ? $data->discount_percentage : 0,
+                        "quantity_total"=>$data->quantity_total ? $data->quantity_total : 0,
+                        "discount_amount"=> $data->discount_amount ? $data->discount_amount : 0,
+
+                        "with_installation"=> $data->with_installation ? $data->with_installation : "",
+                        "with_installation_gst"=> $data->with_installation_gst ? $data->with_installation_gst : "",
+                        "installation_hsn_code_description"=> $data->installation_hsn_code_description ? $data->installation_hsn_code_description : "-",
+                        "installation_gst"=> $data->installation_gst ? $data->installation_gst : 0,
+                        "installation_rate"=> $data->installation_rate ? $data->installation_rate : 0,
+                        "installation_hsn_code"=> $data->installation_hsn_code ? $data->installation_hsn_code : "-",
+                        "installation_total"=> $data->installation_total ? $data->installation_total : 0,
+                        "installation_tax_amount"=> $data->installation_tax_amount ? $data->installation_tax_amount : 0,
+                        "client_profit_margin"=> $data->client_profit_margin ? $data->client_profit_margin : 0,
+
                     );
-    
                     $this->Invoice_items_model->save($invoice_item_data);
                 }
             }
-    
-            if ($id) {
-                log_notification("invoice_updated", array("invoice_id" => $invoice_id));
-            } else {
-                log_notification("invoice_created", array("invoice_id" => $invoice_id));
+
+            // Save the new invoice no 
+           if (!$id) {
+               $invoice_prefix = get_invoice_id($invoice_id);
+               $invoice_prefix_data = array(
+                   
+                    "invoice_no" => $invoice_prefix
+                );
+                $invoice_prefix_id = $this->Invoices_model->save($invoice_prefix_data, $invoice_id);
             }
-    
-            echo json_encode(array("success" => true, 'message' => lang('record_saved'), "id" => $invoice_id, 'invoice_id' => get_invoice_id($invoice_id)));
+// End  the new invoice no 
+
+            echo json_encode(array("success" => true, "data" => $this->_row_data($invoice_id), 'id' => $invoice_id, 'message' => lang('record_saved')));
         } else {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
         }
     }
-    
 
     /* delete or undo an invoice */
 
@@ -487,38 +526,48 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
 
     /* return a row of invoice list table */
 
+    private function _row_data($id) {
+        $custom_fields = $this->Custom_fields_model->get_available_fields_for_table("invoices", $this->login_user->is_admin, $this->login_user->user_type);
+
+        $options = array("id" => $id, "custom_fields" => $custom_fields);
+        $data = $this->Invoices_model->get_details($options)->row();
+        return $this->_make_row($data, $custom_fields);
+    }
+
+    /* prepare a row of invoice list table */
+
     private function _make_row($data, $custom_fields) {
-        // Initialize $warranty_expiry_date
-        $warranty_expiry_date = "-"; // Default value if no date is available
-    
-        // Process invoice number URL
-        $invoice_no_value = $data->invoice_no ? $data->invoice_no : get_invoice_id($data->id);
+        /*$invoice_url = "";
+        if ($this->login_user->user_type == "staff") {
+            $invoice_url = anchor(get_uri("invoices/view/" . $data->id), get_invoice_id($data->id));
+        } else {
+            $invoice_url = anchor(get_uri("invoices/preview/" . $data->id), get_invoice_id($data->id));
+        }*/
+         $invoice_no_value = $data->invoice_no ? $data->invoice_no: get_invoice_id($data->id);
         $invoice_no_url = "";
         if ($this->login_user->user_type == "staff") {
-            $invoice_no_url = anchor(get_uri("invoices/view/" . $data->id), $invoice_no_value);
+             $invoice_no_url = anchor(get_uri("invoices/view/" . $data->id), $invoice_no_value);
         } else {
-            $invoice_no_url = anchor(get_uri("invoices/preview/" . $data->id), $invoice_no_value);
+             $invoice_no_url = anchor(get_uri("invoices/preview/" . $data->id), $invoice_no_value);
         }
-    
-        // Calculate due value
+
         $due = 0;
         if ($data->invoice_value) {
             $due = ignor_minor_value($data->invoice_value - $data->payment_received);
         }
-    
-        // Process warranty expiry date
         $warranty = format_to_date($data->warranty_expiry_date, false);
+        $warranty_expiry_date = "-"; // Default value
+        
         if (is_date_exists($warranty)) {
             if (get_my_local_time("Y-m-d") > $warranty) {
-                $warranty_expiry_date = "<span class='text-danger mr5'>" . $warranty . "</span>";
-            } else if (get_my_local_time("Y-m-d") == $warranty) {
-                $warranty_expiry_date = "<span class='text-warning mr5'>" . $warranty . "</span>";
+                $warranty_expiry_date = "<span class='text-danger mr5'>" . $warranty . "</span> ";
+            } elseif (get_my_local_time("Y-m-d") == $warranty) {
+                $warranty_expiry_date = "<span class='text-warning mr5'>" . $warranty . "</span> ";
             } else {
                 $warranty_expiry_date = $warranty;
             }
         }
-    
-        // Prepare row data
+        
         $row_data = array(
             //$invoice_url,
             $data->id,
@@ -529,15 +578,14 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
             format_to_date($data->bill_date, false),
             $data->due_date,
             format_to_date($data->due_date, false),
-            $warranty_expiry_date,
+            $warranty_expiry_date?$warranty_expiry_date:"-",
             to_currency($data->invoice_value, $data->currency_symbol),
-            to_currency($data->profit_value, $data->currency_symbol),
+             to_currency($data->profit_value, $data->currency_symbol),
             to_currency($data->payment_received, $data->currency_symbol),
             to_currency($due, $data->currency_symbol),
             $this->_get_invoice_status_label($data)
         );
-    
-    
+
         foreach ($custom_fields as $field) {
             $cf_id = "cfv_" . $field->id;
             $row_data[] = $this->load->view("custom_fields/output_" . $field->field_type, array("value" => $data->$cf_id), true);
@@ -597,6 +645,8 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
         if ($data->next_recurring_date < get_today_date()) {
             $next_recurring = "<span class='text-danger'>" . $next_recurring . "</span>";
         }
+
+
         $next_recurring_date = $data->next_recurring_date;
         if ($data->no_of_cycles_completed > 0 && $data->no_of_cycles_completed == $data->no_of_cycles) {
             $next_recurring = "-";
@@ -661,8 +711,8 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
         $part_no_dropdown = array();
 
         foreach ($team_members as $team_member) {
-            $part_no_dropdown[] = array("id" => $team_member->id, "text" => $team_member->title);
-        }
+            $part_no_dropdown[] = array("id" => $team_member->id, "text" => $team_member->title );
+        } 
 
         $invoice_id = $this->input->post('invoice_id');
         $view_data['taxes_dropdown'] = array("" => "-") + $this->Taxes_model->get_dropdown_list(array("title"));
@@ -670,71 +720,55 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
         if (!$invoice_id) {
             $invoice_id = $view_data['model_info']->invoice_id;
         }
-
-        $optionss = array("id" => $invoice_id);
+         $optionss = array("id" => $invoice_id);
         $datas = $this->Invoices_model->get_details($optionss)->row();
         $view_data['country'] = $datas->country;
         $view_data['buyer_type'] = $datas->buyer_type;
-
-        // Fetch Buyer Type Details
-        $client_buyer_type_name = '';
-        $client_buyer_type_profit = '';
-        
-        if ($datas->buyer_type) {
-            $options = array(
-                "id" => $datas->buyer_type,
-            );
-            $list_data = $this->Buyer_types_model->get_details($options)->row();
-
-            if ($list_data) {
-                $client_buyer_type_profit = $list_data->profit_margin;
-                $client_buyer_type_name = $list_data->buyer_type;
-            }
-        }
-
-        $view_data['client_buyer_type_name'] = $client_buyer_type_name;
-        $view_data['client_buyer_type_profit'] = $client_buyer_type_profit;
-
         $view_data["unit_type_dropdown"] = $this->_get_unit_type_dropdown_select2_data();
         $view_data['part_no_dropdown'] = json_encode($part_no_dropdown);
         $view_data['invoice_id'] = $invoice_id;
-        $manufactures = $this->Manufacturer_model->get_all_where(array("deleted" => 0, "status" => "active"), 0, 0, "title")->result();
+        $manufactures = $this->Manufacturer_model->get_all_where(array("deleted" => 0 , "status" => "active"), 0, 0, "title")->result();
 
-        $make_dropdown = array(array("id" => "", "text" => "- "));
+        $make_dropdown = array(array("id" => "", "text" => "- " ));
         foreach ($manufactures as $manufacture) {
             $make_dropdown[] = array("id" => $manufacture->id, "text" => $manufacture->title);
         }
         $view_data['make_dropdown'] = json_encode($make_dropdown);
 
-        $product_categories_dropdowns = $this->Product_categories_model->get_all_where(array("deleted" => 0, "status" => "active"))->result();
-        $product_categories_dropdown = array(array("id" => "", "text" => "-"));
+        $product_categories_dropdowns = $this->Product_categories_model->get_all_where(array("deleted" => 0,"status"=>"active"))->result();
+        $product_categories_dropdown = array(array("id"=>"", "text" => "-"));
 
         foreach ($product_categories_dropdowns as $product_categories) {
-            $product_categories_dropdown[] = array("id" => $product_categories->id, "text" => $product_categories->title);
+            $product_categories_dropdown[] = array("id" => $product_categories->id, "text" => $product_categories->title );
+
         }
 
-        $view_data['product_categories_dropdown'] = json_encode($product_categories_dropdown);
+       // $product_categories_dropdown[] = array("id"=> "+" ,"text"=> "+ " . lang("create_new_category"));
 
-        // Service categories
-        $service_categories_dropdowns = $this->Service_categories_model->get_all_where(array("deleted" => 0, "status" => "active"))->result();
-        $service_categories_dropdown = array(array("id" => "", "text" => "-"));
+        
+         $view_data['product_categories_dropdown'] =json_encode($product_categories_dropdown);
+         //service categories
+         $service_categories_dropdowns = $this->Service_categories_model->get_all_where(array("deleted" => 0,"status"=>"active"))->result();
+        $service_categories_dropdown = array(array("id"=>"", "text" => "-"));
 
         foreach ($service_categories_dropdowns as $service_categories) {
-            $service_categories_dropdown[] = array("id" => $service_categories->id, "text" => $service_categories->title);
+            $service_categories_dropdown[] = array("id" => $service_categories->id, "text" => $service_categories->title );
+
         }
 
-        $view_data['service_categories_dropdown'] = json_encode($service_categories_dropdown);
+       // $service_categories_dropdown[] = array("id"=> "+" ,"text"=> "+ " . lang("create_new_category"));
 
-        $job_id_info = $this->Job_id_generation_model->get_all_where(array("deleted" => 0))->result();
+        
+         $view_data['service_categories_dropdown'] =json_encode($service_categories_dropdown);
+         $job_id_info= $this->Job_id_generation_model->get_all_where(array("deleted" => 0))->result();
         $job_id_dropdown = array();
 
         foreach ($job_id_info as $job_id) {
-            $job_id_dropdown[] = array("id" => $job_id->id, "text" => $job_id->title);
-        }
+            $job_id_dropdown[] = array("id" => $job_id->id, "text" => $job_id->title );
+        } 
         $view_data['job_id_dropdown'] = json_encode($job_id_dropdown);
         $this->load->view('invoices/item_modal_form', $view_data);
     }
-
 
     private function _get_unit_type_dropdown_select2_data() {
         //$unit_types = $this->Unit_type_model->get_all()->result();
@@ -749,7 +783,10 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
         return $unit_type_dropdown;
     }
 
-/* add or edit an invoice item */
+ 
+
+
+    /* add or edit an invoice item */
 
     function save_item() {
         $this->access_only_allowed_members();
@@ -759,107 +796,134 @@ $team_members = $this->Users_model->get_all_where(array("deleted" => 0, "user_ty
             "invoice_id" => "required|numeric"
         ));
     
-        $invoice_type = (int)$this->input->post('invoice_type');
-    
+        $invoice_type = $this->input->post('invoice_type');
+        
         if ($invoice_type == 0) {
-            $invoice_id = (int)$this->input->post('invoice_id');
-            $client_profit_margin = (float)$this->input->post('client_profit_margin');
+            $invoice_id = $this->input->post('invoice_id');
+            $client_profit_margin = $this->input->post('client_profit_margin');
+            $id = $this->input->post('id');
     
-            $id = (int)$this->input->post('id');
-            $rate = (float)unformat_currency($this->input->post('invoice_item_rate'));
-            $quantity = (float)unformat_currency($this->input->post('invoice_item_quantity'));
-            $gst = (float)unformat_currency($this->input->post('invoice_item_gst'));
-            $installation_gst_percentage = (float)unformat_currency($this->input->post('installation_gst'));
-            $profit_percentage = (float)$this->input->post('profit_percentage');
+            // Convert all input values to floats
+            $rate = floatval(unformat_currency($this->input->post('invoice_item_rate')));
+            $quantity = floatval(unformat_currency($this->input->post('invoice_item_quantity')));
+            $gst = floatval(unformat_currency($this->input->post('invoice_item_gst')));
+            $installation_gst_percentage = floatval(unformat_currency($this->input->post('installation_gst')));
+            $profit_percentage = floatval($this->input->post('profit_percentage'));
     
+            // Perform calculations
             $profitrate = $rate * $quantity;
-            $profit_supply_buyer_profit = $profit_percentage + $client_profit_margin;
+            $profit_supply_buyer_profit = (float)$profit_percentage + (float)$client_profit_margin;
             $profitadd = $profitrate / ($profit_supply_buyer_profit + 100);
             $profit = $profitadd * 100;
             $profitvalue = $profit * $profit_supply_buyer_profit / 100;
     
-            $part_no = $this->input->post('associated_with_part_no');
-            $group_list = 0.0; // Initialize as numeric
-    
-            if ($part_no) {
-                $groups = explode(",", $part_no);
-                foreach ($groups as $group) {
-                    if ($group) {
-                        $options = array("id" => $group);
-                        $list_group = $this->Part_no_generation_model->get_details($options)->row();
-                        if (isset($list_group->rate)) {
-                            $group_list += (float)$list_group->rate; // Ensure $list_group->rate is treated as a float
-                        }
-                    }
+            // Debugging: Output calculated values
+            // Further processing and saving logic    
+       //$profit = $rate*$profit_percentage/100;
+        //$actual_value = $rate+$profit; 
+        //$gst = $this->input->post('gst');
+        //$mrp = $actual_value*$gst/100;
+        //$mrp_value =$mrp+$actual_value;
+        
+        $part_no = $this->input->post('associated_with_part_no');
+        $group_list = "";
+        if ($part_no) {
+            $groups = explode(",", $part_no);
+            foreach ($groups as $group) {
+                if ($group) {
+                     $options = array("id" => $group);
+                    $list_group = $this->Part_no_generation_model->get_details($options)->row(); 
+                    $group_list += $list_group->rate;
                 }
             }
-    
-            $sum = $group_list;
-    
-            $profits = $sum * $profit_percentage / 100;
-            $profit_and_sum = $sum + $profits;
-            $buyer_type_percentage = $profit_and_sum * $client_profit_margin / 100;
-            $actual_values = $profit_and_sum + $buyer_type_percentage;
-    
-            $mrps = $actual_values * $gst / 100;
-            $mrp_values = $mrps + $actual_values;
-    
-            $profitrates = $sum * $quantity;
-            $profitvalues = $profitrates * $profit_percentage / 100;
-    
-            $discount_percentage = (float)unformat_currency($this->input->post('discount_percentage'));
-    
-            // Installation calculations
-            $installation_new_rate = (float)$this->input->post('installation_new_rate');
-            $installation_profit_percentage = (float)$this->input->post('installation_profit_percentage');
-            $installation_profit_rate_percentage = $installation_new_rate * $installation_profit_percentage / 100;
-            $installation_actual_rate = $installation_profit_rate_percentage + $installation_new_rate;
-            $installation_actual_rate_total = $installation_actual_rate * $quantity;
-    
-            $installation_rate = (float)$this->input->post('installation_rate');
-            $installation_total = $installation_rate * $quantity;
-    
-            $supply_total = isset($total) ? (float)$total : (float)$totals;
-            $installtion_and_supply_subtotal = $supply_total + $installation_total;
-    
-            $totals = $actual_values * $quantity;
-            $discount_amounts = $totals * $discount_percentage / 100;
-            $discounts = $totals - $discount_amounts;
-            $taxs = $discounts * $gst / 100;
-    
-            $supply_installation_totals = $discounts;
-    
-            $installation_taxs = $installation_actual_rate_total * $installation_gst_percentage / 100;
-            $installation_net_totals = $installation_taxs + $installation_actual_rate_total;
-    
-            $supply_net_totals = $discounts + $taxs;
-            $supply_net_total_installation_totals = $supply_net_totals + $installation_actual_rate_total;
-            $installation_supply_net_totals = $supply_net_totals + $installation_net_totals;
-    
-            if ($rate) {
-                $total = $rate * $quantity;
-                $discount_amount = $total * $discount_percentage / 100;
-                $discount = $total - $discount_amount;
-    
-                $tax = $discount * $gst / 100;
-                $supply_installation_total = $discount;
-    
-                $supply_net_total = $discount + $tax;
-                $installation_tax = $installation_total * $installation_gst_percentage / 100;
-    
-                $installation_net_total = $installation_tax + $installation_total;
-                $supply_net_total_installation_total = $supply_net_total + $installation_total;
-                $installation_supply_net_total = $supply_net_total + $installation_net_total;
-    
-                $totalss = $rate * $quantity;
-                $discount_amountss = $totalss * $discount_percentage / 100;
-                $discountss = $totalss - $discount_amountss;
-    
-                $supply_installation_totalss = $discountss;
-                $supply_net_totalss = $discountss;
-                $supply_net_total_installation_totalss = $supply_net_totalss + $installation_total;
-                $supply_and_installation_net_totalss = $supply_net_totalss + $installation_net_total;
-            }
+        }
+        //$sum = array_sum( explode( ',', $part_no ));
+        $sum = floatval($group_list);
+        $profits = $sum * floatval($profit_percentage) / 100;
+        $profit_and_sum = $sum + $profits;
+        $buyer_type_percentage = $profit_and_sum * floatval($client_profit_margin) / 100;
+        $actual_values = $profit_and_sum + $buyer_type_percentage;
+        //$gst = floatval($this->input->post('gst'));
+        $mrps = $actual_values * floatval($gst) / 100;
+        $mrp_values = $mrps + $actual_values;
+        $profitrates = $sum * floatval($quantity);
+        $profitvalues = $profitrates * floatval($profit_percentage) / 100;
+
+
+
+ $discount_percentage = unformat_currency($this->input->post('discount_percentage'));
+
+
+
+ //installation 
+   
+ $installation_new_rate = floatval($this->input->post('installation_new_rate'));
+ $installation_profit_percentage = floatval($this->input->post('installation_profit_percentage'));
+ $installation_profit_rate_percentage = $installation_new_rate * $installation_profit_percentage / 100;
+ $installation_actual_rate = $installation_profit_rate_percentage + $installation_new_rate;
+ $installation_actual_rate_total = $installation_actual_rate * floatval($quantity);
+   
+
+
+
+ $installation_rate = floatval($this->input->post('installation_rate'));
+ $quantity = floatval($quantity);  // Assuming $quantity is coming from somewhere else
+ $installation_total = $installation_rate * $quantity;
+ $supply_total = isset($total) && $total !== '' ? floatval($total) : 0;
+ $installation_and_supply_subtotal = $supply_total + $installation_total;
+
+       
+
+ $totals = floatval($actual_values) * floatval($quantity);
+ $discount_percentage = floatval($discount_percentage);
+ $discount_amounts = $totals * $discount_percentage / 100;
+ $discounts = $totals - $discount_amounts;
+ $gst = floatval($gst);
+ $taxs = $discounts * $gst / 100;
+ $supply_installation_totals = $discounts;
+
+
+$installation_taxs = $installation_actual_rate_total*$installation_gst_percentage/100;
+
+$installation_net_totals =$installation_taxs+$installation_actual_rate_total;
+
+
+$supply_net_totals = $discounts+$taxs;
+$supply_net_total_installation_totals = $supply_net_totals+$installation_actual_rate_total;  
+$installation_supply_net_totals =$supply_net_totals+$installation_net_totals;
+        
+
+if($rate) {
+       $total=$rate * $quantity;
+       $discount_amount = $total*$discount_percentage/100;
+       $discount = $total-$discount_amount;
+
+       $tax=$discount*$gst/100;
+      // $supply_installation_total=$discount+$installation_total;
+       $supply_installation_total=$discount;
+
+       $supply_net_total = $discount+$tax;
+       $installation_tax = $installation_total*$installation_gst_percentage/100;
+
+      $installation_net_total =$installation_tax+$installation_total;
+       $supply_net_total_installation_total = $supply_net_total+$installation_total;
+       $installation_supply_net_total = $supply_net_total+$installation_net_total;
+
+
+      
+
+       $totalss=$rate * $quantity;
+       $discount_amountss = $totalss*$discount_percentage/100;
+       $discountss = $totalss-$discount_amountss;
+       //$tax=$discount*$gst/100;
+       //$supply_installation_totalss=$discountss+$installation_total;
+       $supply_installation_totalss=$discountss;
+       $supply_net_totalss = $discountss;
+       $supply_net_total_installation_totalss = $supply_net_totalss+$installation_total;
+       $supply_and_installation_net_totalss = $supply_net_totalss+$installation_net_total;
+
+  }     
+
        
        $totalsss= $actual_values* $quantity;
        $discount_amountsss = $totalsss*$discount_percentage/100;
@@ -928,10 +992,7 @@ if($ss=="yes"){
 
         );
  }if($ss=="yes" && $installation_applicable=="yes"&& $installation_gst=="no") {
-  
-
-
-  $invoice_item_data = array(
+$invoice_item_data = array(
             "invoice_id" => $invoice_id,
             "title" => $this->input->post('invoice_item_title'),
             "category" => $this->input->post('invoice_item_category'),
@@ -1295,13 +1356,11 @@ $add_new_item_to_librarys = $this->input->post('add_new_item_to_librarys');
         $installation_gst_percentage = unformat_currency($this->input->post('installation_service_gst'));
 
         $profit_percentage = $this->input->post('profit_percentage');
-//$profitrate= $rate*$quantity;
-//$profit_supply_buyer_profit = $profit_percentage+$client_profit_margin;
-//$profitadd = $profitrate/($profit_supply_buyer_profit+100);
-//$profit = $profitadd*100;
-//$profitvalue = $profit*$profit_supply_buyer_profit/100;
-       
-        
+      //$profitrate= $rate*$quantity;
+      //$profit_supply_buyer_profit = $profit_percentage+$client_profit_margin;
+      //$profitadd = $profitrate/($profit_supply_buyer_profit+100);
+      //$profit = $profitadd*100;
+      //$profitvalue = $profit*$profit_supply_buyer_profit/100;
         $part_no = $this->input->post('associated_with_job_id');
         $group_list = "";
         if ($part_no) {
@@ -1316,8 +1375,6 @@ $add_new_item_to_librarys = $this->input->post('add_new_item_to_librarys');
         }
         //$sum = array_sum( explode( ',', $part_no ));
         $sum = $group_list;
-
-
         $profits = $sum*$profit_percentage/100;
         $profit_and_sum = $sum+$profits;
         $buyer_type_percentage=$profit_and_sum*$client_profit_margin/100;
@@ -1927,14 +1984,9 @@ $response_value   =  "same_country";
             echo json_encode(array("success" => false));
         }
     }
-
     //view html is accessable to client only.
     function preview($invoice_id = 0, $show_close_preview = false) {
-
-
-
-
-        if ($invoice_id) {
+    if ($invoice_id) {
             $view_data = get_invoice_making_data($invoice_id);
 
             $this->_check_invoice_access_permission($view_data);
@@ -1996,14 +2048,11 @@ $response_value   =  "same_country";
 
     function download_invoice_without_gst_pdf($invoice_id = 0) {
 
-
         if ($invoice_id) {
             $invoice_data = get_invoice_making_data($invoice_id);
-           
             $this->_check_invoice_access_permission($invoice_data);
-            
+
             prepare_invoice_without_gst_pdf($invoice_data, "download");
-            
         } else {
             show_404();
         }
@@ -2025,7 +2074,8 @@ $response_value   =  "same_country";
             $this->access_only_allowed_members();
         }
     }
-function send_invoice_modal_form($invoice_id) {
+
+    function send_invoice_modal_form($invoice_id) {
         $this->access_only_allowed_members();
 
         if ($invoice_id) {
@@ -2056,6 +2106,7 @@ function send_invoice_modal_form($invoice_id) {
             $email_template = $this->Email_templates_model->get_final_template("send_invoice");
 
             $invoice_total_summary = $this->Invoices_model->get_invoice_total_summary($invoice_id);
+
             $parser_data["INVOICE_ID"] = $invoice_info->id;
             $parser_data["CONTACT_FIRST_NAME"] = $contact_first_name;
             $parser_data["CONTACT_LAST_NAME"] = $contact_last_name;
@@ -2344,10 +2395,11 @@ if($ss=="yes" && $with_inclusive=="yes"){
         }
     } */
 
-    public function get_client_country_item_info_suggestion() {
-        $clients_model = new \App\Models\Clients_model(); // Instantiate Clients_model
-        $item = $clients_model->get_client_country_info_suggestion($this->input->post("item_name"));
-        
+function get_client_country_item_info_suggestion() {
+        $item = $this->Clients_model->get_client_country_info_suggestion($this->input->post("item_name"));
+       // $itemss =  $this->Countries_model->get_item_suggestions_country_name($this->input->post("country_name"));
+//print_r($itemss);
+    
         if ($item) {
             echo json_encode(array("success" => true, "item_info" => $item));
         } else {

@@ -1,11 +1,5 @@
 <div id="page-content" class="p20 clearfix">
-    <?php
-    load_css(array(
-        "assets/css/invoice.css",
-    ));
-    ?>
-
-    <div class="invoice-preview">
+<div class="invoice-preview">
         <?php if ($this->login_user->user_type === "client" && $invoice_total_summary->balance_due >= 1 && count($payment_methods) && !$client_info->disable_online_payment) { ?>
             <div class="panel panel-default  p15 no-border clearfix">
                 <div class="inline-block strong pull-left pt5 pr15">
@@ -66,7 +60,7 @@
             </div>
 
             <?php
-            echo $invoice_preview;
+           echo $invoice_preview;
             ?>
         </div>
 

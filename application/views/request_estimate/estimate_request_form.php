@@ -56,8 +56,6 @@
                             ?>
                         </div>
                     </div>
-
-
                     <div class="form-group">
                         <label for="last_name"><?php echo lang('last_name'); ?>*</label>
                         <div >

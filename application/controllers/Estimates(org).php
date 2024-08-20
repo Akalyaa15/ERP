@@ -105,7 +105,6 @@ class Estimates extends MY_Controller {
             echo json_encode(array("success" => false, 'message' => lang('error_occurred')));
         }
     }
-
     //update estimate status
     function update_estimate_status($estimate_id, $status) {
         if ($estimate_id && $status) {

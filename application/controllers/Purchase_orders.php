@@ -844,21 +844,23 @@ if ($connected){
             show_404();
         }
     }
-
     function download_pdf($purchase_order_id = 0) {
         if ($purchase_order_id) {
             $purchase_order_data = get_purchase_order_making_data($purchase_order_id);
             $this->_check_purchase_order_access_permission($purchase_order_data);
-
-            if (@ob_get_length())
-                @ob_clean();
-            //so, we have a valid estimate data. Prepare the view.
-
-            prepare_purchase_order_pdf($purchase_order_data, "download");
+    
+            if (ob_get_length()) {
+                ob_clean();
+            }
+    
+            // Call function to prepare and output the PDF
+            prepare_purchase_order_pdf($purchase_order_data, 'download');
         } else {
             show_404();
         }
     }
+    
+    
 
     function download_purchase_order_without_gst_pdf($purchase_order_id = 0) {
         if ($purchase_order_id) {

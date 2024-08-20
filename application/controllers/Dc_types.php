@@ -94,9 +94,6 @@ class Dc_types extends MY_Controller {
             modal_anchor(get_uri("dc_types/modal_form"), "<i class='fa fa-pencil'></i>", array("class" => "edit", "title" => lang('edit_dc_type'), "data-post-id" => $data->id))
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_dc_type'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("dc_types/delete"), "data-action" => "delete-confirmation"))
         );
-    }
-
-}
-
+    }}
 /* End of file expense_categories.php */
 /* Location: ./application/controllers/expense_categories.php */

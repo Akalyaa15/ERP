@@ -6,8 +6,7 @@
         "assets/css/invoice.css",
     ));
     ?>
-
-     <div class="invoice-preview">
+    <div class="invoice-preview">
         <?php if ($this->login_user->user_type === "staff" && $purchase_order_total_summary->balance_due >= 1 && count($payment_methods) && !$vendor_info->disable_online_payment) { ?>
             <div class="panel panel-default  p15 no-border clearfix">
                 <div class="inline-block strong pull-left pt5 pr15">
@@ -230,10 +229,8 @@ $DB98->select_sum("total");
  $DB98->where('purchase_order_items.purchase_order_id',$purchase_order_info->id);
  $DB98->where('purchase_order_items.gst!=','0');
  $DB98->where('purchase_order_items.deleted','0');
- 
 $querys_same_taxvalue=$DB98->get();
 $querys_same_taxvalue->result();
-
 $DB988 = $this->load->database('default', TRUE);
 $DB988->select("amount");
  $DB988->from('purchase_orders');
@@ -362,15 +359,11 @@ $query->result();
 <?php } ?>
    
 <?php } ?>
-
-
-
-      <tr>
+<tr>
         <td colspan="0" style="text-align: right;color:#181919;"><?php echo lang("total"); ?></td>
         <!--td style="text-align: right; width: 14%; border: 1px solid #fff; background-color: #f4f4f4;color:#181919;">
             <?php echo to_currency($purchase_order_total_summary->estimate_subtotal+$purchase_order_total_summary->freight_tax2, $purchase_order_total_summary->currency_symbol); ?>
         </td-->
- 
  <td style="text-align: right; width: 14%; border: 1px solid #fff; background-color: #f4f4f4;color:#181919;">
             <?php 
             $DB98 = $this->load->database('default', TRUE);
@@ -653,7 +646,7 @@ $query->result();
   
             <?php 
             $DB99 = $this->load->database('default', TRUE);
-$DB99->select_sum("total");
+ $DB99->select_sum("total");
  $DB99->from('purchase_order_items');
  $DB99->where('purchase_order_items.purchase_order_id',$purchase_order_info->id);
  $DB99->where('purchase_order_items.gst!=','0');

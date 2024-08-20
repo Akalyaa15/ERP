@@ -3,3 +3,9 @@ files/general/team_members/621/
 files/general/team_members/621/
 files/general/team_members/621/
 files/general/team_members/621/_file5eba67b03b7b6-Misc-folder.zip
+*.ods
+*.pdf
+*.ods
+*.png
+*.xlsx
+application/logs/log-*.php

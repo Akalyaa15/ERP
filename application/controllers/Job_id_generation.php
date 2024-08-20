@@ -105,8 +105,7 @@ $view_data['groups_dropdown'] = json_encode($this->_get_groups_dropdown_select2_
 
         $this->load->view('job_id_generation/modal_form', $view_data);
     }
-
-    private function _get_unit_type_dropdown_select2_data() {
+private function _get_unit_type_dropdown_select2_data() {
         //$unit_types = $this->Unit_type_model->get_all()->result();
          $unit_types = $this->Unit_type_model->get_all_where(array("deleted" => 0, "status" => "active"))->result();
         $unit_type_dropdown = array();
@@ -168,13 +167,7 @@ if($item_info){
 
             }
 }
-
-
-
-
-
-
-        //check product category
+//check product category
             $add_new_category_to_library = $this->input->post('add_new_category_to_library');
             if ($add_new_category_to_library) {
 
@@ -193,10 +186,7 @@ if($item_info){
             exit();
         }
     }
-
-
-
-         $item_id = $this->Job_id_generation_model->save($item_data, $id);
+     $item_id = $this->Job_id_generation_model->save($item_data, $id);
         if ($item_id) {
 
             $add_new_item_to_library = $this->input->post('add_new_item_to_library');
@@ -292,13 +282,10 @@ if($item_info){
         }
          
     }
-
     /* list of items, prepared for datatable  */
-
     function list_data() {
         //$this->validate_access_to_items();
-        
-        $options = array(
+       $options = array(
             "group_id" => $this->input->post("group_id")
         );
         
@@ -311,8 +298,6 @@ if($item_info){
         
         echo json_encode(array("data" => $result));
     }
-    
-
     /* prepare a row of item list table */
 
     private function _make_item_row($data) {

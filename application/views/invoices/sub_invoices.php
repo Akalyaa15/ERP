@@ -9,7 +9,7 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-
+4
         $("#sub-invoice-table").appTable({
             source: '<?php echo_uri("invoices/sub_invoices_list_data/" . $recurring_invoice_id) ?>',
             order: [[0, "desc"]],

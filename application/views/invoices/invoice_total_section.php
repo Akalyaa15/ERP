@@ -6,8 +6,7 @@
         <td style="width: 36px;"><?php echo to_currency($invoice_total_summary->invoice_subtotal ?? 0, $invoice_total_summary->currency_symbol); ?></td>
         <td style="width: 30px;"></td>
     </tr>
-
-    <?php
+<?php
     // Check if 'discount_total' exists in the object and is not null
     $discount_total = isset($invoice_total_summary->discount_total) ? $invoice_total_summary->discount_total : 0;
 
@@ -22,7 +21,6 @@
         echo $discount_row;
     }
     ?>
-
     <?php
     $freight_row = "<tr>
                         <td></td>
@@ -35,7 +33,6 @@
     // Output the freight row
     echo $freight_row;
     ?>
-
     <!-- Optionally include IGST and other totals if needed -->
     <?php if($invoice_total_summary->installation_total) { ?>
     <tr>
@@ -60,8 +57,7 @@
                 if (!empty($client_info->gstin_number_first_two_digits)) { 
                 }
     ?>
-
-    <?php 
+<?php 
 $company_gstin_number_first_two_digits= get_setting("company_gstin_number_first_two_digits");
 if($company_gstin_number_first_two_digits !==$client_info->gstin_number_first_two_digits) {?>
 <tr>
@@ -133,7 +129,6 @@ if($company_gstin_number_first_two_digits ==$client_info->gstin_number_first_two
         <td style="width: 80px;"><?php echo lang("installation_cgst_output"); ?> </td>
         <td style="width: 36px;"><?php echo to_currency($invoice_total_summary->installation_tax/2, $invoice_total_summary->currency_symbol ); ?></td>
          <td style="width: 36px;"></td>
-
     </tr>
     <tr>
         <td style="width: 85px;"></td>
@@ -170,7 +165,6 @@ if($company_state ==$client_info->state) {?>
         <td style="width: 80px;"><?php echo lang("installation_cgst_output"); ?> </td>
         <td style="width: 36px;"><?php echo to_currency($invoice_total_summary->installation_tax/2, $invoice_total_summary->currency_symbol ); ?></td>
          <td style="width: 36px;"></td>
-
     </tr>
     <tr>
         <td style="width: 85px;"></td>
@@ -185,11 +179,7 @@ if($company_state ==$client_info->state) {?>
   <?php } ?>
 
 <?php } ?>
-
-
-
-
-    <tr>
+<tr>
             <td></td>
             <td></td>
             <td><?php echo lang("total"); ?></td>
@@ -210,7 +200,7 @@ if($company_state ==$client_info->state) {?>
     </tr>
    
 
-<!--<?php if($invoice_total_summary->igst_before_tax_total){?>
+<!--<?php if (isset($invoice_total_summary->igst_before_tax_total) && $invoice_total_summary->igst_before_tax_total) { ?>
     <tr>
         <td style="width: 85px;"><?php echo lang("igst_output"); ?></td>
         <td style="width: 96px;"><?php echo to_currency($invoice_total_summary->igst_before_tax_total, $invoice_total_summary->currency_symbol); ?></td>
@@ -258,7 +248,6 @@ if($company_state ==$client_info->state) {?>
         <td><?php echo to_currency($balance_due, $invoice_total_summary->currency_symbol); ?></td>
         <td></td>
     </tr>-->
-    
     <tr>
        <td></td>
        <td></td>
