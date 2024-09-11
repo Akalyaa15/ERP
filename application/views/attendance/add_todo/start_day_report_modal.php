@@ -57,10 +57,8 @@ echo form_open(get_uri($url), array("id" => "attendance-sor-form", "class" => "g
                 }
             }
         });  */
-
-       window.showAddNewModal = false;
-
-        $("#save-and-show-button").click(function () {
+window.showAddNewModal = false;
+$("#save-and-show-button").click(function () {
             window.showAddNewModal = true;
             $(this).trigger("submit");
 
@@ -98,7 +96,9 @@ if (result.clock_widget) {
 
     $("#note").focus();
     });
-        delay().then(function(response) {
+        
+        
+delay().then(function(response) {
  $.ajax({
   url: 'https://reverse.geocoder.api.here.com/6.2/reversegeocode.json',
   type: 'GET',
@@ -122,6 +122,7 @@ if (result.clock_widget) {
 
   }
 }); 
+
 //get the current user time zone 
 $.ajax({
   url: 'https://api.ipgeolocation.io/timezone',

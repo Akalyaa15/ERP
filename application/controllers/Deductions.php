@@ -69,7 +69,6 @@ class Deductions extends MY_Controller {
             }
         }
     }
-
     function list_data() {
         $list_data = $this->Deductions_model->get_details()->result();
         $result = array();

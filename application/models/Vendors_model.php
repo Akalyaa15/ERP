@@ -7,7 +7,6 @@ class Vendors_model extends Crud_model {
         $this->table = 'vendors';
         parent::__construct($this->table);
     }
-
     function get_details($options = array()) {
         $vendors_table = $this->db->dbprefix('vendors');
         $users_table = $this->db->dbprefix('users');

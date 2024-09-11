@@ -92,7 +92,6 @@ class Vap_category extends MY_Controller {
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_vap_category'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("vap_category/delete"), "data-action" => "delete-confirmation"))
         );
     }
-
 }
 
 /* End of file taxes.php */

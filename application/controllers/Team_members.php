@@ -846,40 +846,31 @@ $sign=move_temp_file($sign["0"], get_setting("profile_image_path").'/signature/'
         }
         return $role_dropdown;
     }
- private function _get_countries_dropdown() {
-        $country_dropdown = array(
-            //"0" => lang('team_member'),
-            //"admin" => lang('admin') //static role
-        );
+    private function _get_countries_dropdown() {
+        $country_dropdown = array("0" => "--Select a Country--");
         $countries = $this->Countries_model->get_details()->result();
         foreach ($countries as $country) {
             $country_dropdown[$country->numberCode] = $country->countryName;
         }
         return $country_dropdown;
     }
+    
     private function _get_companies_dropdown() {
-        $company_dropdown = array(
-            "" => "--Select the Employer--",
-            //"admin" => lang('admin') //static role
-        );
-    
-        // Assuming getDetails() method fetches data properly
+        $company_dropdown = array("0" => "--Select the Employer--");
         $companies = $this->Companys_model->getDetails();
-    
         if (!empty($companies) && is_array($companies)) {
             foreach ($companies as $company) {
-                // Ensure company has cr_id and company_name properties
-                if (isset($company->cr_id) && isset($company->company_name)) {
-                    $company_dropdown[$company->cr_id] = $company->company_name;
+                if (isset($company['cr_id']) && isset($company['company_name'])) {
+                    $company_dropdown[$company['cr_id']] = $company['company_name'];
                 }
             }
         } else {
-            // Handle the case where getDetails() returns an empty result or unexpected format
             log_message('error', 'No companies found or invalid format returned from Companys_model->getDetails()');
         }
-    
         return $company_dropdown;
     }
+    
+    
     
     
   private function _get_branches_dropdown() {

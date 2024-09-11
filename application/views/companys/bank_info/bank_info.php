@@ -1,13 +1,32 @@
 <div class="tab-content">
+    <?php
+    // Check if $model_info is set and not null
+    if (!isset($model_info)) {
+        $model_info = new stdClass();
+        $model_info->id = '';
+        $model_info->cin = '';
+        $model_info->panno = '';
+        $model_info->uam = '';
+        $model_info->iec = '';
+        $model_info->tan = '';
+        $model_info->name = '';
+        $model_info->accountnumber = '';
+        $model_info->bankname = '';
+        $model_info->branch = '';
+        $model_info->ifsc = '';
+        $model_info->micr = '';
+        $model_info->swift_code = '';
+    }
+    ?>
     <?php echo form_open(get_uri("companys/save_bank_info/" . $model_info->id), array("id" => "bank_info-form", "class" => "general-form", "role" => "form")); ?>
     <div class="panel">
         <div class="panel-default panel-heading">
-            <h4> <?php echo lang('bank_information'); ?></h4>
+            <h4><?php echo lang('bank_information'); ?></h4>
         </div>
         <div class="panel-body">
             <div class="form-group">
-                <label for="cin" class=" col-md-2"><?php echo lang('cin'); ?></label>
-                <div class=" col-md-10">
+                <label for="cin" class="col-md-2"><?php echo lang('cin'); ?></label>
+                <div class="col-md-10">
                     <?php
                     echo form_input(array(
                         "id" => "cin",
@@ -20,22 +39,22 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="panno" class=" col-md-2"><?php echo lang('panno'); ?></label>
-                <div class=" col-md-10">
+                <label for="panno" class="col-md-2"><?php echo lang('panno'); ?></label>
+                <div class="col-md-10">
                     <?php
                     echo form_input(array(
                         "id" => "panno",
                         "name" => "panno",
                         "value" => $model_info->panno,
                         "class" => "form-control",
-                        "placeholder" =>  lang('panno')
+                        "placeholder" => lang('panno')
                     ));
                     ?>
                 </div>
             </div>
             <div class="form-group">
-                <label for="uam" class=" col-md-2"><?php echo lang('uam'); ?></label>
-                <div class=" col-md-10">
+                <label for="uam" class="col-md-2"><?php echo lang('uam'); ?></label>
+                <div class="col-md-10">
                     <?php
                     echo form_input(array(
                         "id" => "uam",
@@ -48,8 +67,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="iec" class=" col-md-2"><?php echo lang('iec'); ?></label>
-                <div class=" col-md-10">
+                <label for="iec" class="col-md-2"><?php echo lang('iec'); ?></label>
+                <div class="col-md-10">
                     <?php
                     echo form_input(array(
                         "id" => "iec",
@@ -62,130 +81,128 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="tan" class=" col-md-2"><?php echo lang('tan'); ?></label>
-                <div class=" col-md-10">
+                <label for="tan" class="col-md-2"><?php echo lang('tan'); ?></label>
+                <div class="col-md-10">
                     <?php
                     echo form_input(array(
                         "id" => "tan",
                         "name" => "tan",
                         "value" => $model_info->tan,
                         "class" => "form-control",
-                        "placeholder" =>  
-                        lang('tax_deduction_number')
+                        "placeholder" => lang('tax_deduction_number')
                     ));
                     ?>
                 </div>
             </div>
-            </div>    <div class="panel">
-            <div class="panel-default panel-heading" >
-            <h4> <?php echo lang('bankaccountdetails'); ?></h4>
         </div>
-        <div class="panel-body">
-            <div class="form-group">
-                <label for="name" class=" col-md-2"><?php echo lang('beneficiaryname'); ?></label>
-                <div class=" col-md-10">
-                    <?php
-                    echo form_input(array(
-                        "id" => "name",
-                        "name" => "name",
-                        "value" => $model_info->name,
-                        "class" => "form-control",
-                        "placeholder" =>  lang('name')
-                    ));
-                    ?>
+        <div class="panel">
+            <div class="panel-default panel-heading">
+                <h4><?php echo lang('bankaccountdetails'); ?></h4>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="name" class="col-md-2"><?php echo lang('beneficiaryname'); ?></label>
+                    <div class="col-md-10">
+                        <?php
+                        echo form_input(array(
+                            "id" => "name",
+                            "name" => "name",
+                            "value" => $model_info->name,
+                            "class" => "form-control",
+                            "placeholder" => lang('name')
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="accountnumber" class="col-md-2"><?php echo lang('accountnumber'); ?></label>
+                    <div class="col-md-10">
+                        <?php
+                        echo form_input(array(
+                            "id" => "accountnumber",
+                            "name" => "accountnumber",
+                            "value" => $model_info->accountnumber,
+                            "class" => "form-control",
+                            "placeholder" => lang('accountnumber')
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bankname" class="col-md-2"><?php echo lang('bankname'); ?></label>
+                    <div class="col-md-10">
+                        <?php
+                        echo form_input(array(
+                            "id" => "bankname",
+                            "name" => "bankname",
+                            "value" => $model_info->bankname,
+                            "class" => "form-control",
+                            "placeholder" => lang('bankname')
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="branch" class="col-md-2"><?php echo lang('branch'); ?></label>
+                    <div class="col-md-10">
+                        <?php
+                        echo form_input(array(
+                            "id" => "branch",
+                            "name" => "branch",
+                            "value" => $model_info->branch,
+                            "class" => "form-control",
+                            "placeholder" => lang('branch')
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ifsc" class="col-md-2"><?php echo lang('ifsc'); ?></label>
+                    <div class="col-md-10">
+                        <?php
+                        echo form_input(array(
+                            "id" => "ifsc",
+                            "name" => "ifsc",
+                            "value" => $model_info->ifsc,
+                            "class" => "form-control",
+                            "placeholder" => lang('ifsc')
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="micr" class="col-md-2"><?php echo lang('micr'); ?></label>
+                    <div class="col-md-10">
+                        <?php
+                        echo form_input(array(
+                            "id" => "micr",
+                            "name" => "micr",
+                            "value" => $model_info->micr,
+                            "class" => "form-control",
+                            "placeholder" => lang('micr')
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="swift_code" class="col-md-2"><?php echo lang('swift_code'); ?></label>
+                    <div class="col-md-10">
+                        <?php
+                        echo form_input(array(
+                            "id" => "swift_code",
+                            "name" => "swift_code",
+                            "value" => $model_info->swift_code,
+                            "class" => "form-control",
+                            "placeholder" => lang('society_for_worldwide_interbank_financial_telecommunication')
+                        ));
+                        ?>
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="accountnumber" class=" col-md-2"><?php echo lang('accountnumber'); ?></label>
-                <div class=" col-md-10">
-                    <?php
-                    echo form_input(array(
-                        "id" => "accountnumber",
-                        "name" => "accountnumber",
-                        "value" => $model_info->accountnumber,
-                        "class" => "form-control",
-                        "placeholder" =>  lang ('accountnumber')
-                    ));
-                    ?>
-                </div>
+            <div class="panel-footer">
+                <button type="submit" class="btn btn-primary"><span class="fa fa-check-circle"></span> <?php echo lang('save'); ?></button>
             </div>
-            <div class="form-group">
-                <label for="bankname" class=" col-md-2"><?php echo lang('bankname'); ?></label>
-                <div class=" col-md-10">
-                    <?php
-                    echo form_input(array(
-                        "id" => "bankname",
-                        "name" => "bankname",
-                        "value" => $model_info->bankname,
-                        "class" => "form-control",
-                        "placeholder" =>  lang('bankname')
-                    ));
-                    ?>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="branch" class=" col-md-2"><?php echo lang('branch'); ?></label>
-                <div class=" col-md-10">
-                    <?php
-                    echo form_input(array(
-                        "id" => "branch",
-                        "name" => "branch",
-                        "value" => $model_info->branch,
-                        "class" => "form-control",
-                    "placeholder" =>  lang('branch')
-                    ));
-                    ?>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="ifsc" class=" col-md-2"><?php echo lang('ifsc'); ?></label>
-                <div class=" col-md-10">
-                    <?php
-                    echo form_input(array(
-                        "id" => "ifsc",
-                        "name" => "ifsc",
-                        "value" => $model_info->ifsc,
-                        "class" => "form-control",
-                        "placeholder" =>  lang('ifsc')
-                    ));
-                    ?>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="micr" class=" col-md-2"><?php echo lang('micr'); ?></label>
-                <div class=" col-md-10">
-                    <?php
-                    echo form_input(array(
-                        "id" => "micr",
-                        "name" => "micr",
-                        "value" => $model_info->micr,
-                        "class" => "form-control",
-                        "placeholder" =>  lang('micr')
-                    ));
-                    ?>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="swift_code" class=" col-md-2"><?php echo lang('swift_code'); ?></label>
-                <div class=" col-md-10">
-                    <?php
-                    echo form_input(array(
-                        "id" => "swift_code",
-                        "name" => "swift_code",
-                        "value" => $model_info->swift_code,
-                        "class" => "form-control",
-"placeholder" =>lang('society_for_worldwide_interbank_financial_telecommunication')
-                    ));
-                    ?>
-                </div>
-            </div>
-          
         </div>
-        <div class="panel-footer">
-            <button type="submit" class="btn btn-primary"><span class="fa fa-check-circle"></span> <?php echo lang('save'); ?></button>
-        </div>
-    </div>
     <?php echo form_close(); ?>
 </div>
 
@@ -195,10 +212,7 @@
             isModal: false,
             onSuccess: function (result) {
                 appAlert.success(result.message, {duration: 10000});
-                
-
-                
             }
         });
     });
-</script>    
+</script>

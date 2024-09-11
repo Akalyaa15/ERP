@@ -42,8 +42,7 @@ class Vendors_invoice_list_model extends Crud_model {
         if ($start_date && $end_date) {
             $where .= " AND ($vendors_invoice_list_table.invoice_date BETWEEN '$start_date' AND '$end_date') ";
         } 
-
-$status = get_array_value($options, "status");
+         $status = get_array_value($options, "status");
         if ($status === "draft") {
             $where .= " AND  $vendors_invoice_list_table.status='draft' AND IFNULL(payments_table.paid_amount,0)<=0";
         } else if ($status === "not_paid") {
@@ -106,9 +105,4 @@ function is_vendors_invoice_exists($invoice_no, $id = 0) {
     
         return $this->db->query($sql)->result();
     }
-    
-
-
-
-
-}
+    }

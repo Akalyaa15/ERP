@@ -56,9 +56,7 @@ class Invoice_payments extends MY_Controller {
             "id" => "numeric",
             "invoice_id" => "numeric"
         ));
-
         $invoice_id = $this->input->post('invoice_id');
-
         $view_data['model_info'] = $this->Invoice_payments_model->get_one($this->input->post('id')); 
         
         if (!$invoice_id) {
@@ -284,7 +282,6 @@ class Invoice_payments extends MY_Controller {
         if (!$invoice_id) {
             redirect("forbidden");
         }
-
         $redirect_to = "invoices/preview/$invoice_id";
         try {
          //check payment token

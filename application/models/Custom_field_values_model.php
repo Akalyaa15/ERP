@@ -18,8 +18,6 @@ class Custom_field_values_model extends Crud_model {
         if ($id) {
             $where .= " AND $custom_fields_table.id=$id";
         }
-
-
         $related_to_type = get_array_value($options, "related_to_type");
         if ($related_to_type) {
             $where .= " AND $custom_field_values_table.related_to_type='$related_to_type'";

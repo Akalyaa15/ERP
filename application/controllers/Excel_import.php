@@ -168,83 +168,62 @@ function excel_import_form() {
         );
     }
 
-    function delete() {
-        validate_submitted_data(array(
-            "id" => "numeric|required"
-        ));
-
-
-        $id = $this->input->post('id');
-        $data = array(
-            
-            "last_activity_user"=>$this->login_user->id,
-            "last_activity" => get_current_utc_time(),
-        );
-         $save_id = $this->Excel_import_model->save($data, $id);
-        if ($this->input->post('undo')) {
-            if ($this->Excel_import_model->delete($id, true)) {
-                echo json_encode(array("success" => true, "data" => $this->_row_data($id), "message" => lang('record_undone')));
-            } else {
-                echo json_encode(array("success" => false, lang('error_occurred')));
-            }
-        } else {
-            if ($this->Excel_import_model->delete($id)) {
-                echo json_encode(array("success" => true, 'message' => lang('record_deleted')));
-            } else {
-                echo json_encode(array("success" => false, 'message' => lang('record_cannot_be_deleted')));
-            }
-        }
-    }
-// get account number suggestionfunction get_account_number_suggestion() {
-        $key = $_REQUEST["q"];
-        $bank_id=$_REQUEST["bank_id"];
-        $itemss =  $this->Bank_name_model->get_item_account_number_suggestions($key,$bank_id);
-        //$itemss =  $this->Countries_model->get_item_suggestions_country_name('india');
-        $suggestions = array();
-      /*foreach ($itemss as $items) {
-           $suggestions[] = array("id" => $items->account_number, "text" => $items->account_number);
-       }*/
-       $ss = explode(",",  $itemss->account_number);
-       /*if(!$key){
-       foreach ($ss as $s) {
-            $suggestions[] = array("id" => $s, "text" => $s);
-
-       }
-   }else if ($key){
-   
-   		if ($key && !in_array($key,$ss)) {
-   				foreach ($ss as $s) {
-            $suggestions[] = array("id" => $s, "text" => $s);
-
-       }}
-   }*/
-
-   if(!$key){
-       foreach ($ss as $s) {
-            $suggestions[] = array("id" => $s, "text" => $s);
-
-       }
-   }else if ($key){
-   
-   				foreach ($ss as $s) {
-   					$len=strlen($key);
-       $keys = substr($s,0,$len);
-   					if(in_array($key, array($keys))){
-            $suggestions[] = array("id" => $s, "text" => $s);
-}
-          }
-        }
-
-        
-        echo json_encode($suggestions);
-    }
-
+	function delete() {
+		validate_submitted_data(array(
+			"id" => "numeric|required"
+		));
 	
-	function fetch()
-	{
+		$id = $this->input->post('id');
+		$data = array(
+			"last_activity_user" => $this->login_user->id,
+			"last_activity" => get_current_utc_time(),
+		);
+		$save_id = $this->Excel_import_model->save($data, $id);
+	
+		if ($this->input->post('undo')) {
+			if ($this->Excel_import_model->delete($id, true)) {
+				echo json_encode(array("success" => true, "data" => $this->_row_data($id), "message" => lang('record_undone')));
+			} else {
+				echo json_encode(array("success" => false, "message" => lang('error_occurred')));
+			}
+		} else {
+			if ($this->Excel_import_model->delete($id)) {
+				echo json_encode(array("success" => true, 'message' => lang('record_deleted')));
+			} else {
+				echo json_encode(array("success" => false, 'message' => lang('record_cannot_be_deleted')));
+			}
+		}
+	}
+	
+	function get_account_number_suggestion() {
+		$key = $_REQUEST["q"];
+		$bank_id = $_REQUEST["bank_id"];
+		$itemss = $this->Bank_name_model->get_item_account_number_suggestions($key, $bank_id);
+		$suggestions = array();
+	
+		$ss = explode(",", $itemss->account_number);
+	
+		if (!$key) {
+			foreach ($ss as $s) {
+				$suggestions[] = array("id" => $s, "text" => $s);
+			}
+		} else {
+			foreach ($ss as $s) {
+				$len = strlen($key);
+				$keys = substr($s, 0, $len);
+				if (in_array($key, array($keys))) {
+					$suggestions[] = array("id" => $s, "text" => $s);
+				}
+			}
+		}
+	
+		echo json_encode($suggestions);
+	}
+	
+	function fetch() {
 		$data = $this->excel_import_model->select();
 		$output = '
-		<h3 align="center">Total Data - '.$data->num_rows().'</h3>
+		<h3 align="center">Total Data - ' . $data->num_rows() . '</h3>
 		<table class="table table-striped table-bordered">
 			<tr>
 				<th>Customer Name</th>
@@ -257,24 +236,25 @@ function excel_import_form() {
 				<th>Country</th>
 			</tr>
 		';
-		foreach($data->result() as $row)
-		{
+	
+		foreach ($data->result() as $row) {
 			$output .= '
 			<tr>
-				<td>'.$row->ValueName.'</td>
-				<td>'.$row->PostDate.'</td>
-				<td>'.$row->RemitterBranch.'</td>
-				<td>'.$row->Description.'</td>
-				<td>'.$row->DebitAmount.'</td>
-				<td>'.$row->ChequeNo.'</td>
-				<td>'.$row->CreditAmount.'</td>
-				<td>'.$row->Balance.'</td>
+				<td>' . $row->ValueName . '</td>
+				<td>' . $row->PostDate . '</td>
+				<td>' . $row->RemitterBranch . '</td>
+				<td>' . $row->Description . '</td>F
+				<td>' . $row->DebitAmount . '</td>
+				<td>' . $row->ChequeNo . '</td>
+				<td>' . $row->CreditAmount . '</td>
+				<td>' . $row->Balance . '</td>
 			</tr>
 			';
 		}
 		$output .= '</table>';
 		echo $output;
 	}
+	
 
 	function import()
 	{

@@ -280,11 +280,7 @@
             return array(); // Return an empty array or handle the case where no data is found
         }
     }
-    
-
-    
-    
-    /* prepare a row of client list table */
+     /* prepare a row of client list table */
 
     private function _make_row($data, $custom_fields) {
 

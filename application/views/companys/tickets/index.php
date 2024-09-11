@@ -18,7 +18,6 @@
                 </div>
             </div>
         <?php } ?>
-
         <div class="table-responsive">
             <table id="ticket-table" class="display" width="100%">            
             </table>

@@ -1,6 +1,7 @@
+
 <div id="page-content" class="clearfix">
-<div style="max-width: 1000px; margin: auto;">
-<div class="page-title clearfix mt15">
+    <div style="max-width: 1000px; margin: auto;">
+        <div class="page-title clearfix mt15">
             <h1><?php echo /*get_voucher_id($estimate_info->id)*/$estimate_info->voucher_no?$estimate_info->voucher_no:get_voucher_id($estimate_info->id); ?></h1>
             <div class="title-button-group">
                 <span class="dropdown inline-block">
@@ -8,9 +9,9 @@
                         <i class='fa fa-cogs'></i> <?php echo lang('actions'); ?>
                         <span class="caret"></span>
                     </button> 
-                  <?php 
-                  $options = array("estimate_id" => $estimate_info->id);
-                  $list_data = $this->Voucher_expenses_model->get_details($options)->result();
+                     <?php 
+                     $options = array("estimate_id" => $estimate_info->id);
+                     $list_data = $this->Voucher_expenses_model->get_details($options)->result();
                       ?>
                     <ul class="dropdown-menu" role="menu">
                     <?php if($estimate_status=="accepted"||$estimate_status=="paid"||$estimate_status=="approved_by_accounts"||$estimate_status=="payment_in_progress"||$estimate_status=="payment_hold"||$estimate_status=="payment_done"||$estimate_status=="payment_received"||$estimate_status=="closed") {?>
@@ -21,7 +22,7 @@
                         <li role="presentation"><?php echo modal_anchor(get_uri("voucher/modal_form"), "<i class='fa fa-edit'></i> " . lang('edit_voucher'), array("title" => lang('edit_voucher'), "data-post-id" => $estimate_info->id, "role" => "menuitem", "tabindex" => "-1")); ?> </li>
                         <?php } ?><?php if($estimate_status=="accepted") {?>
                         <li role="presentation"><?php echo ajax_anchor(get_uri("voucher/update_voucher_status/" . $estimate_info->id . "/modified"), "<i class='fa fa-send'></i> " . lang('mark_as_modified'), array("data-reload-on-success" => "1")); ?> </li> <?php } ?>
-                       <?php
+                        <?php
                         if ($estimate_status == "draft") {
                             ?>
                             <!--li role="presentation"><?php echo ajax_anchor(get_uri("delivery/update_delivery_status/" . $estimate_info->id . "/given"), "<i class='fa fa-hand-lizard-o'></i> " . lang('mark_as_given'), array("data-reload-on-success" => "1")); ?> </li!-->
@@ -44,11 +45,11 @@
                 
                     </ul>
                 </span>
-                 <?php echo modal_anchor(get_uri("voucher/item_modal_form"), "<i class='fa fa-plus-circle'></i> " . lang('add_amount'), array("class" => "btn btn-default", "title" => lang('add_vd'),"id"=>"add_item", "data-post-estimate_id" => $estimate_info->id)); ?>
-                  </div>
-               </div>
+                <?php echo modal_anchor(get_uri("voucher/item_modal_form"), "<i class='fa fa-plus-circle'></i> " . lang('add_amount'), array("class" => "btn btn-default", "title" => lang('add_vd'),"id"=>"add_item", "data-post-estimate_id" => $estimate_info->id)); ?>
+            </div>
+        </div>
         <div id="estimate-status-bar">
-            <?php $this->load->view("voucher/voucher_status_bar"); ?>
+        <?php $this->load->view("voucher/voucher_status_bar"); ?>
         </div>
         <div class="mt15">
             <div class="panel panel-default p15 b-t">
@@ -63,25 +64,26 @@
                     }
                     $style = get_setting("voucher_style");
                     ?>
-                 <?php 
-if (!empty($client_info)) {
-    $data = array(
-        "client_info" => $client_info,
-        "color" => isset($color) ? $color : '', 
-        "estimate_info" => isset($estimate_info) ? $estimate_info : '',
-    );
-    
-    if (isset($style) && $style === "style_2") {
-        $this->load->view('voucher/voucher_parts/header_style_2.php', $data);
-    } else {
-        $this->load->view('voucher/voucher_parts/header_style_1.php', $data);
-    }
+                   <?php
+$client_info = $client_info ?? null; // Provide default value if undefined
+$color = $color ?? null;
+$estimate_info = $estimate_info ?? null;
+
+$data = array(
+    "client_info" => $client_info,
+    "color" => $color,
+    "estimate_info" => $estimate_info
+);
+
+if ($style === "style_2") {
+    $this->load->view('voucher/voucher_parts/header_style_2.php', $data);
 } else {
-    echo "Client information is missing.";
+    $this->load->view('voucher/voucher_parts/header_style_1.php', $data);
 }
-   ?>
- </div>
-<div class="table-responsive mt15 pl15 pr15">
+?>
+
+                   </div>
+                <div class="table-responsive mt15 pl15 pr15">
                     <table id="estimate-item-table" class="display" width="100%">            
                     </table>
                 </div>
@@ -100,8 +102,7 @@ if (!empty($client_info)) {
              <h1 style="color:orange"><?php echo lang('remark'); ?></h1>
                            
                         </div>
-
-            <?php
+             <?php
             //for decending mode, show the comment box at the bottom
             if ($sort_as_decending) {
                 foreach ($comments as $comment) {
@@ -111,11 +112,8 @@ if (!empty($client_info)) {
             ?>
             </div>
         </div>
-
-    </div>
+     </div>
 </div>
-
-
 <script type="text/javascript">
     RELOAD_VIEW_AFTER_UPDATE = true;
     $(document).ready(function () {
@@ -137,7 +135,7 @@ if (!empty($client_info)) {
             {title: "<i class='fa fa-bars'></i>", "class": "text-center option w100"}
             ], 
                         <?php }else { ?>
-           columns: [
+            columns: [
             {title: "<?php echo lang("voucher_no") ?> ", "class": "text-center w10p"},
                 {title: "<?php echo lang("category") ?> ", "class": "text-center w55p"},
                 {title: "<?php echo lang("amount") ?>", "class": "text-center w45p"},
@@ -179,7 +177,9 @@ if (!empty($client_info)) {
             }
         });
     };
+
 </script>
+
 <script type="text/javascript">
     $( document ).ready(function() {
    event.preventDefault();

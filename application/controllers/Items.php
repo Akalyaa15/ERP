@@ -173,17 +173,14 @@ class Items extends MY_Controller {
             "associated_with_part_no" => $this->input->post('associated_with_part_no'),
             /*"actual_value" => $actual_value?$actual_value:$actual_values,
             "MRP" => $mrp_value?$mrp_value:$mrp_values,*/
-//installation rate 
-
-
-            "installation_rate" => $this->input->post('installation_rate'),
-
-            "installation_hsn_code" => $this->input->post('installation_hsn_code'),
+            //installation rate 
+           "installation_rate" => $this->input->post('installation_rate'),
+           "installation_hsn_code" => $this->input->post('installation_hsn_code'),
             "installation_profit_percentage" => $this->input->post('installation_profit_percentage'),
             "installation_gst" => $this->input->post('installation_gst'),
            
 
-            "installation_hsn_description"=>$this->input->post('installation_hsn_description'),
+            "isnstallation_hsn_description"=>$this->input->post('installation_hsn_description'),
             /*"installation_profit_value"=> $installation_profit_value,
             "installation_actual_value"=>$installation_actual_value,*/
              "product_generation_id" => $this->input->post('product_generation_id')?$this->input->post('product_generation_id'):"",

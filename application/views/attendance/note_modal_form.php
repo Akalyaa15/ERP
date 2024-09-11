@@ -334,23 +334,22 @@ foreach ($task_statuses as $status) {
 
 <script type="text/javascript">
     $(document).ready(function () {
-
         $("#task-table").appTable({
             source: '<?php echo_uri("projects/my_tasks_list_data_at") ?>',
             order: [[1, "desc"]],
             filterDropdown: [
                 {name: "specific_user_id", class: "w200", options: <?php echo $team_members_dropdown; ?>},
-                {name: "milestone_id", class: "w200", options: [{id: "", text: "- <?php echo lang('milestone'); ?> -"}], dependency: ["project_id"], dataSource: '<?php echo_uri("projects/get_milestones_for_filter") ?>'}, //milestone is dependent on project
-                {name: "project_id", class: "w200", options: <?php echo $projects_dropdown; ?>, dependent: ["milestone_id"]}, //reset milestone on changing of project               
+                {name: "milestone_id", class: "w200", options: [{id: "", text: "- <?php echo lang('milestone'); ?> -"}], dependency: ["project_id"], dataSource: '<?php echo_uri("projects/get_milestones_for_filter") ?>'},
+                {name: "project_id", class: "w200", options: <?php echo $projects_dropdown; ?>, dependent: ["milestone_id"]}
             ],
             singleDatepicker: [{name: "deadline", defaultText: "<?php echo lang('deadline') ?>",
-                    options: [
-                        {value: "expired", text: "<?php echo lang('expired') ?>"},
-                        {value: moment().format("YYYY-MM-DD"), text: "<?php echo lang('today') ?>"},
-                        {value: moment().add(1, 'days').format("YYYY-MM-DD"), text: "<?php echo lang('tomorrow') ?>"},
-                        {value: moment().add(7, 'days').format("YYYY-MM-DD"), text: "<?php echo sprintf(lang('in_number_of_days'), 7); ?>"},
-                        {value: moment().add(15, 'days').format("YYYY-MM-DD"), text: "<?php echo sprintf(lang('in_number_of_days'), 15); ?>"}
-                    ]}],
+                options: [
+                    {value: "expired", text: "<?php echo lang('expired') ?>"},
+                    {value: moment().format("YYYY-MM-DD"), text: "<?php echo lang('today') ?>"},
+                    {value: moment().add(1, 'days').format("YYYY-MM-DD"), text: "<?php echo lang('tomorrow') ?>"},
+                    {value: moment().add(7, 'days').format("YYYY-MM-DD"), text: "<?php echo sprintf(lang('in_number_of_days'), 7); ?>"},
+                    {value: moment().add(15, 'days').format("YYYY-MM-DD"), text: "<?php echo sprintf(lang('in_number_of_days'), 15); ?>"}
+                ]}],
             multiSelect: [
                 {
                     name: "status_id",
@@ -371,7 +370,7 @@ foreach ($task_statuses as $status) {
                 {title: '<?php echo lang("assigned_to") ?>', "class": "min-w150"},
                 {title: '<?php echo lang("collaborators") ?>'},
                 {title: '<?php echo lang("status") ?>'}
-<?php echo $custom_field_headers; ?>,
+                <?php echo $custom_field_headers; ?>,
                 {visible: false, searchable: false}
             ],
             printColumns: combineCustomFieldsColumns([1, 2, 4, 6, 7, 8, 9, 10], '<?php echo $custom_field_headers; ?>'),
@@ -381,132 +380,75 @@ foreach ($task_statuses as $status) {
             }
         });
 
-
-        //open task details modal automatically 
-
+        // Open task details modal automatically
         if ($("#preview_task_link").length) {
             $("#preview_task_link").trigger("click");
         }
 
-
+        // Call the geolocation and timezone functions on page load
+        handleGeolocation();
+        handleTimeZone();
     });
-    
-</script>
-<?php $this->load->view("projects/tasks/update_task_script"); ?>
-<?php $this->load->view("projects/tasks/update_task_read_comments_status_script"); ?>
 
-</div>
-<script type="text/javascript">
-function dd(){
-                        setTimeout(function(){ 
+    function dd() {
+        setTimeout(function () { 
+            $("#closetodo").click();
+            $("#timecard-clock-out").click();  
+        }, 1000);
+    }
 
-             $("#closetodo ").click();
-             $("#timecard-clock-out ").click();  }, 1000);
-     
-                     
- 
-}
-</script>
-<script type="text/javascript">
-    delay().then(function(response) {
- $.ajax({
-  url: 'https://reverse.geocoder.api.here.com/6.2/reversegeocode.json',
-  type: 'GET',
-  dataType: 'json',
-  jsonp: 'jsoncallback',
-  data: {
-    prox: $("#result").val(),
-    mode: 'retrieveAddresses',
-    maxresults: '1',
-    gen: '9',
-    app_id: 'luqHzxdDgQRXukjNkhmd',
-    app_code: 'rJm0dYRyV5Cpchlv9SJWzQ'
-  },
-  success: function (data) {
-    var a=JSON.stringify(data.Response.View[0].Result[0].Location.Address.Label);
-        var b=$('#result').val()
+    function handleGeolocation() {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                $("#result").val(lat + "," + lon);
+                
+                // Fetch address from coordinates
+                getAddressFromCoordinates(lat, lon).then(address => {
+                    $('#note').append("\nClock out Location : " + address + "\nClock out - Lat, Long : " + $("#result").val());
+                    $("#check_status").removeAttr("disabled").prop('title', "");
+                });
+            });
+        } else {
+            console.log("Browser doesn't support geolocation!");
+        }
+    }
 
-$('#result').val(a)
-    $('#note').append("\n"+"Clock out Location : "+a+"\n"+"Clock out - Lat, Long : "+b)
+    async function getAddressFromCoordinates(lat, lon) {
+        const url = https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1&accept-language=en;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            return data.display_name;
+        } catch (error) {
+            console.error('Error fetching the address:', error);
+            return "Address not found";
+        }
+    }
 
-    $("#check_status").removeAttr("disabled").prop('title',"");
-    $("#check_status").removeAttr("disabled").prop('title',"");
-
-  }
-}); 
-
-
-//get curent login user timezone 
-$.ajax({
-  url: 'https://api.ipgeolocation.io/timezone',
-  type: 'GET',
-  dataType: 'json',
-  jsonp: 'jsoncallback',
-  data: {
-    //lat: $("#lat").val(),
-    //long: $("#long").val(),
-    apiKey: 'a7d92fa6b4944eae924a980892a6e6a4'
-      },
-   success: function (data) {
-    var a=JSON.stringify(data.timezone);
-    var time_result = data.timezone;
-    var t =  $("#timezone_result").val(time_result);
-    var loginuser_timezone = $("#loginuser_timezone").val(); 
-    if(time_result == loginuser_timezone){
-    /*alert(a);
-    alert(time_result);*/
-    }else{
-        //alert("different time zone")
-        //$("#timezone-button").show();
-        //$("#check_status").hide();
-         //$("#check_status").removeAttr("disabled");
-/*         if(confirm("Your current timezone differs from your previously saved timezone. Do you want to change your current timezone as default one?")){
-        //$("#delete-button").attr("href", "query.php?ACTION=delete&ID='1'");
-      var loginuser_timezone = $("#timezone_result").val();
-      var loginuser_id = $("#loginuser_id").val();
-$.ajax({
-                    url: "<?php /* echo get_uri('attendance/update_user_timezone') */ ?>",
+    function handleTimeZone() {
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        $("#timezone_result").val(timeZone);
+        const loginuser_timezone = $("#loginuser_timezone").val();
+        
+        if (timeZone !== loginuser_timezone) {
+            if (confirm("Your current timezone differs from your previously saved timezone. Do you want to change your current timezone as default one?")) {
+                const loginuser_id = $("#loginuser_id").val();
+                $.ajax({
+                    url: "<?php echo get_uri('attendance/update_user_timezone') ?>",
                     type: 'POST',
                     dataType: 'json',
-                    data: {login_user_id: loginuser_id, login_user_timezone: loginuser_timezone},
+                    data: { login_user_id: loginuser_id, login_user_timezone: timeZone },
                     success: function (result) {
                         if (result.success) {
-                           // $("#event-calendar").fullCalendar('refetchEvents');
-                           appAlert.warning(result.message, {duration: 10000});
-                          // $("#check_status").show();
-                           //$("#timezone-button").hide();
+                            appAlert.warning(result.message, { duration: 10000 });
                         } else {
                             appAlert.error(result.message);
                         }
                     }
                 });
+            }
+        }
     }
-    else{
-         return false;
-    }*/
-    window.location = "<?php echo site_url('timezone_update'); ?>"; 
-    }
-    
-  }
-}); 
-
-
-
-
-
-  });
-
-function delay() {
-  return new Promise(function(resolve,reject) {
-         if ("geolocation" in navigator){ //check geolocation available 
-        //try to get user current location using getCurrentPosition() method
-        navigator.geolocation.getCurrentPosition(function(position){ 
-                $("#result").val(position.coords.latitude+","+ position.coords.longitude);
-resolve('success');            });
-    }else{
-        console.log("Browser doesn't support geolocation!");
-    } 
-
-  });
-}
 </script>

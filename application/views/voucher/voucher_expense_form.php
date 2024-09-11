@@ -594,11 +594,12 @@ $voucher_type = $this->Voucher_types_model->get_all_where(array("deleted" => 0,"
                             ?>
                         </div>
                     </div>
-          <div class="form-group">
+        
+            <div class="form-group">
             <label for="title" class=" col-md-3"><?php echo lang('amount'); ?></label>
             <div class=" col-md-9">
-                    <?php
-                    echo form_input(array(
+                <?php
+                echo form_input(array(
                     "id" => "amount",
                     "name" => "amount",
                     "value" => $model_info->amount ? to_decimal_format($model_info->amount) : "",
@@ -638,7 +639,8 @@ $voucher_type = $this->Voucher_types_model->get_all_where(array("deleted" => 0,"
               <div class="form-group" id="project_managers" style="display: none;">
             <label  class=" col-md-3"><?php echo lang('project_manager'); ?></label>
             <div class="col-md-9" id="project_manager">
-        </div>
+        
+    </div>
         </div>       
               <div class="form-group" id="purchase_managers" style="display: none;">
             <label  class=" col-md-3"><?php echo lang('purchase_manager'); ?></label>
@@ -672,21 +674,10 @@ $voucher_type = $this->Voucher_types_model->get_all_where(array("deleted" => 0,"
                 ?>
             </div> 
         </div>
-
-        <?php 
-if (isset($custom_fields) && is_array($custom_fields)) {
-    $this->load->view("custom_fields/form/prepare_context_fields", array(
-        "custom_fields" => $custom_fields, 
-        "label_column" => "col-md-3", 
-        "field_column" => " col-md-9"
-    ));
-} else {
-    echo "Custom fields data is not set or not an array.";
-}
-?>
-        <?php $this->load->view("includes/dropzone_preview"); ?>    
-        <div class="modal-footer">
-            <div class="row">
+      <?php $this->load->view("custom_fields/form/prepare_context_fields", array("custom_fields" => $custom_fields, "label_column" => "col-md-3", "field_column" => " col-md-9")); ?> 
+      <?php $this->load->view("includes/dropzone_preview"); ?>    
+      <div class="modal-footer">
+                <div class="row">
                 <button class="btn btn-default upload-file-button pull-left btn-sm round" type="button" style="color:#7988a2"><i class='fa fa-camera'></i> <?php echo lang("upload_file"); ?></button>
                 <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-close"></span> <?php echo lang('close'); ?></button>
                 <button type="submit" class="btn btn-primary"><span class="fa fa-check-circle"></span> <?php echo lang('save_preview'); ?></button>
@@ -695,7 +686,6 @@ if (isset($custom_fields) && is_array($custom_fields)) {
         <?php echo form_close(); ?>
     </div>
 </div>
-
 <script type="text/javascript">
     $(document).ready(function () {
 $("#client_contact,#vendor_contact,#r_client_contact,#r_vendor_contact").select2({
@@ -707,11 +697,8 @@ $("#country_id").select2({
                 multiple: false,
                 data: <?php echo json_encode($country_dropdown); ?>
             }); 
-
-
-     $("#client_contact,#vendor_contact,#r_client_contact,#r_vendor_contact").select2("readonly", true);
-
-        var uploadUrl = "<?php echo get_uri("voucher/upload_file"); ?>";
+ $("#client_contact,#vendor_contact,#r_client_contact,#r_vendor_contact").select2("readonly", true);
+ var uploadUrl = "<?php echo get_uri("voucher/upload_file"); ?>";
         var validationUrl = "<?php echo get_uri("voucher/validate_expense_file"); ?>";
 
         var dropzone = attachDropzoneWithForm("#expense-dropzone", uploadUrl, validationUrl);
@@ -725,20 +712,11 @@ $("#country_id").select2({
                 }
             }
         });
+setDatePicker("#expense_date");
+setDatePicker("#drawn_on");+
 
-
-
-        
-       
-
-        setDatePicker("#expense_date");
-setDatePicker("#drawn_on");
         $("#expense-form .select2").select2();
-
-
-
-
-//get existing item info
+            //get existing item info
                $("#country_id").change(function () {
                 var country_name =$("#country_id").val();
                 $.ajax({
@@ -841,8 +819,7 @@ setDatePicker("#drawn_on");
                     type: 'POST',
                 results: function (data, page) {
                     return {results: data};
-                }
-            }
+                } }
         })
         })
 </script>
@@ -897,7 +874,7 @@ setDatePicker("#drawn_on");
                         }                        }
                     }
                 });
-     }else if($("#r_member_type").val()=="vendors"){
+                }else if($("#r_member_type").val()=="vendors"){
                           $.ajax({
 
                     url: "<?php echo get_uri("voucher/get_purchase_manager"); ?>",
@@ -928,7 +905,7 @@ setDatePicker("#drawn_on");
 <?php if($model_info->project_id>0){ ?>
     <script type="text/javascript">
     $(document).ready(function () {
-var project_id =$("#expense_project_id").val();
+    var project_id =$("#expense_project_id").val();
      if($("#r_member_type").val()!="vendors"){
                           $.ajax({
 
@@ -1094,5 +1071,4 @@ $(document).ready(function () {
        
     });
 </script>
-
 <?php } ?>

@@ -1,101 +1,66 @@
-<!-- <?php if($client_info->partner_id){ ?>
-<script type="text/javascript">
-     $(document).ready(function () {
-    $(".clientss").removeClass("active");        
-    $(".sss").addClass("active");        
-    });
-</script>
-<?php } ?>
-<?php if($client_info->partner_id){ ?>
-<style>
-#group_id {
-    display: none;
-}
-
-</style>
-<?php } ?> -->
-<div class="page-title clearfix no-border bg-off-white">
-    <h1>
-        <?php 
-
-    echo lang('company_details') . " - " . $company_info->company_name ;
-
- ?>
-</h1>
-        <span id="star-mark">
-            <?php
-            if ($is_starred) {
-                $this->load->view('companys/star/starred', array("company_id" => $company_info->id));
-            } else {
-                $this->load->view('companys/star/not_starred', array("company_id" => $company_info->id));
-            }
-            ?>
-        </span>    
-    </h1>
+<div id="page-content" class="p20 clearfix">
+    <div class="panel panel-default">
+            <a class="btn btn-primary" href="javascript:window.history.go(-1);">❮ Go Back</a>
+    <div class="page-title clearfix">
+            <h1><?php echo lang('companys'); ?></h1>
+            <div class="title-button-group">
+                <?php echo modal_anchor(get_uri("companys/modal_form"), "<i class='fa fa-plus-circle'></i> " . lang('add_company'), array("class" => "btn btn-default", "title" => lang('add_company'))); ?>
+            </div>
+            <div class="title-button-group">
+            <!-- <a href= "<?php /*echo base_url('assets/template/companys_Template.xlsx');*/ ?>"  download> 
+            <button type="button" class="btn btn-default"><i class='fa fa-download'></i> Download Template </button> -->
+  <!-- <img src="<?php echo base_url('assets/images/gem.ico'); ?>" alt="W3Schools" width="50" height="50"> -->
+</a>
 </div>
-        <a class="btn btn-primary" href="javascript:window.history.go(-1);">❮ Go Back</a>
-
-<div id="page-content" class="clearfix">
-    <div class="mt15">
-        <?php $this->load->view("companys/info_widgets/index"); ?>
-    </div>
-
-    <ul data-toggle="ajax-tab" class="nav nav-tabs" role="tablist">
-        <li><a  role="presentation" href="<?php echo_uri("companys/contacts/" . $company_info->cr_id); ?>" data-target="#company-contacts"> <?php echo lang('contacts'); ?></a></li>
-        <li><a  role="presentation" href="<?php echo_uri("companys/company_info_tab/" . $company_info->cr_id); ?>" data-target="#company-info"> <?php 
-
-    echo lang('company_info');
-
-     ?></a></li>
-    <li><a  role="presentation" href="<?php echo_uri("companys/bank_info_tab/" . $company_info->cr_id); ?>" data-target="#company-bank_info"> <?php echo lang('company_kyc'); ?></a></li>
-
-            <li><a  role="presentation" href="#" data-target="#client-estimate-requests"> <?php echo lang('estimate_requests'); ?></a></li>
-            <li><a  role="presentation" href="#" data-target="#client-estimates"> <?php echo lang('estimates'); ?></a></li>
-             <li><a  role="presentation" href="<?php echo_uri("clients/projects/" . $client_info->id); ?>" data-target="#client-projects"><?php echo lang('projects'); ?></a></li>
-      
-        <?php if ($show_invoice_info) { ?>
-            <li><a  role="presentation" href="#" data-target="#client-invoices"> <?php echo lang('invoices'); ?></a></li>
-            <li><a  role="presentation" href="#" data-target="#client-payments"> <?php echo lang('payments'); ?></a></li>
-        <?php } ?>
-
-        <?php if ($show_ticket_info) { ?>
-            <li><a  role="presentation" href="#" data-target="#client-tickets"> <?php echo lang('tickets'); ?></a></li>
-        <?php } ?>
-        <?php if ($show_note_info) { ?>
-             <li><a  role="presentation" href="<?php echo_uri("companys/notes/".$company_info->cr_id); ?>" data-target="#company-notes"> <?php echo lang('notes'); ?></a></li>
-        <?php } ?>
-      <li><a  role="presentation" href="<?php echo_uri("companys/files/" . $company_info->cr_id); ?>"  data-target="#company-files"><?php echo lang('files'); ?></a></li>
-       
-        <?php if ($show_event_info) { ?>
-            <li><a  role="presentation" href="#" data-target="#client-events"> <?php echo lang('events'); ?></a></li>
-        <?php } ?>
-
-       
-       </ul>
-    <div class="tab-content">
-        <div role="tabpanel" class="tab-pane fade" id="company-projects"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-files"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-info"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-bank_info"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-contacts"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-invoices"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-payments"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-estimates"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-estimate-requests"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-tickets"></div>
-        <div role="tabpanel" class="tab-pane fade" id="company-notes"></div>
-         <div role="tabpanel" class="tab-pane fade" id="company-po_list"></div>
-        <div role="tabpanel" class="tab-pane" id="company-events" style="min-height: 300px"></div>
+<div class="title-button-group">
+                <!-- <?php /* echo modal_anchor(get_uri("companys/companys_excel_form"), "<i class='fa fa-upload' aria-hidden='true'></i> " . lang('import'), array("class" => "btn btn-default", "title" => lang('import'))); */ ?> -->
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table id="company-table" class="display" cellspacing="0" width="100%">            
+            </table>
+        </div>
     </div>
 </div>
-
 <script type="text/javascript">
     $(document).ready(function () {
+        // Use a default value if $show_invoice_info is not set
+        var showInvoiceInfo = "<?php echo isset($show_invoice_info) ? $show_invoice_info : 'false'; ?>";
 
-        var tab = "<?php echo $tab; ?>";
-        if (tab === "info") {
-            $("[data-target=#company-info]").trigger("click");
+        // Convert the PHP value to a boolean
+        showInvoiceInfo = (showInvoiceInfo === 'true');
+
+        // Define columns based on showInvoiceInfo
+        var columns = [
+            {title: "<?php echo lang('id') ?>", "class": "text-center w50"},
+            {title: "<?php echo lang('company_id') ?>", "class": "text-center w50"},
+            {title: "<?php echo lang('company_name') ?>"},
+            {title: "<?php echo lang('primary_contact') ?>"},
+            {title: "<?php echo lang('company_groups') ?>"}
+        ];
+
+        // Conditionally add invoice-related columns if showInvoiceInfo is true
+        if (showInvoiceInfo) {
+            columns.push({visible: true, searchable: true, title: "<?php echo lang('projects') ?>"});
+            columns.push({visible: true, searchable: true, title: "<?php echo lang('invoice_value') ?>"});
+            columns.push({visible: true, searchable: true, title: "<?php echo lang('payment_received') ?>"});
+            columns.push({visible: true, searchable: true, title: "<?php echo lang('due') ?>"});
         }
 
+        // Always add the options column at the end
+        columns.push({title: '<i class="fa fa-bars"></i>', "class": "text-center option w100"});
+
+        // Initialize DataTable
+        $("#company-table").appTable({
+            source: '<?php echo_uri("companys/list_data") ?>',
+            filterDropdown: [
+                {name: "group_id", class: "w200", options: <?php echo $groups_dropdown; ?>}
+            ],
+            columns: columns,  // Use the dynamically defined columns
+            printColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4], '<?php echo $custom_field_headers; ?>'),
+            xlsColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4], '<?php echo $custom_field_headers; ?>')
+        });
     });
 </script>
+
+    

@@ -145,8 +145,8 @@ private function _get_rm_members_dropdown() {
     $view_data['vendors_dropdown'] = array("" => "-")+ $this->Vendors_model->get_dropdown_list(array("company_name"),'id');
     $view_data['clients_dropdown'] =  array("" => "-")+$this->Clients_model->get_dropdown_list(array("company_name"),'id');
 
-$view_data['client_members_dropdown'] = $this->_get_users_dropdown_select2_data();
-$view_data['vendor_members_dropdown'] = $this->_get_users_dropdown_select2_data();  
+        $view_data['client_members_dropdown'] = $this->_get_users_dropdown_select2_data();
+        $view_data['vendor_members_dropdown'] = $this->_get_users_dropdown_select2_data();  
 
         $view_data['rm_members_dropdown'] = array("0" => "-") + $rm_members_dropdown ;
         $view_data['projects_dropdown'] = array("0" => "-") + $this->Projects_model->get_dropdown_list(array("title"));
@@ -166,9 +166,7 @@ $view_data['model_infos'] = $model_infos;
         $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("expenses", $view_data['model_info']->id, $this->login_user->is_admin, $this->login_user->user_type)->result();
         $this->load->view('expenses/modal_form', $view_data);
     }
-
-
-    /* add or edit an estimate item */
+      /* add or edit an estimate item */
         private function _get_users_dropdown_select2_data($show_header = false) {
         $luts = $this->Users_model->get_all()->result();
         $lut_dropdown = array(array("id" => "", "text" => "-"));
@@ -180,9 +178,7 @@ $view_data['model_infos'] = $model_infos;
         }
         return $lut_dropdown;
     }
-
-
-    //save an expense
+  //save an expense
   /*  function save() {
         validate_submitted_data(array(
             "id" => "numeric",
@@ -190,13 +186,10 @@ $view_data['model_infos'] = $model_infos;
             "category_id" => "required",
             "amount" => "required"
         ));
-
         $id = $this->input->post('id');
-
         $target_path = get_setting("timeline_file_path");
         $files_data = move_files_from_temp_dir_to_permanent_dir($target_path, "expense");
         $new_files = unserialize($files_data);
-
         $data = array(
             "expense_date" => $this->input->post('expense_date'),
             "title" => $this->input->post('title'),
@@ -303,149 +296,149 @@ $view_data['model_infos'] = $model_infos;
             "category_id" => "required",
             "amount" => "required"
         ));
+    
         $id = $this->input->post('id');
         $target_path = get_setting("timeline_file_path");
         $files_data = move_files_from_temp_dir_to_permanent_dir($target_path, "expense");
         $new_files = unserialize($files_data);
         $amount = unformat_currency($this->input->post('amount'));
-     //$igst_tax = $this->input->post('igst_tax')? $this->input->post('igst_tax') : 0;
-
-     //$cgst_tax = $this->input->post('cgst_tax')? $this->input->post('cgst_tax') : 0;
-     //$sgst_tax = $this->input->post('sgst_tax')? $this->input->post('sgst_tax') : 0;
-     //$igst_total= $amount*$igst_tax/100;
-     //$cgst_total= $amount*$cgst_tax/100;
-     //$sgst_total= $amount*$sgst_tax/100;
     
-    $member_type=$this->input->post('member_type');
-
-    if($member_type=='tm'){
-        $team_member=$this->input->post('expense_user_id');
-    $member_type=$this->input->post('member_type');
-    $phone=0;
-    $company="";
-    $vendor_company="";
-    }elseif($member_type=='om'){
-        $team_member=$this->input->post('expense_user_ids');
-    $member_type=$this->input->post('member_type');
-    $phone=0;
-    $company="";
-    $vendor_company="";
-    }elseif($member_type=='others'){
-        $team_member=0;
-    $member_type=$this->input->post('member_type');
-    $phone=$this->input->post('expense_user_idss');
-    $company="";
-    $vendor_company="";
-    }elseif($member_type=='vendors'){
-    $team_member=$this->input->post('vendor_contact');
-    $member_type=$this->input->post('member_type');
-    $phone=0;
-    $vendor_company=$this->input->post('vendor_member');
-    $company="";
-    }elseif($member_type=='clients'){
-        $team_member=$this->input->post('client_contact');
-    $member_type=$this->input->post('member_type');
-    $phone=0;
-    $company=$this->input->post('client_member');
-    $vendor_company="";
-    }else{
-         $team_member=$this->input->post('expense_user_id');
- 
-$phone="";
-        $member_type="";
-    }
- $ss = $this->input->post('with_gst');
- $with_inclusive= $this->input->post('with_inclusive_tax');
- if($ss=="yes" && $with_inclusive=="yes"){
-   $gst_num = $this->input->post('expense_gst_number');
-$split_gst =substr($gst_num,0,2);
-$company_gstin_number_first_two_digits= get_setting("company_gstin_number_first_two_digits");
+        $member_type = $this->input->post('member_type');
     
-    if ($company_gstin_number_first_two_digits==$split_gst){
- $amount = unformat_currency($this->input->post('amount'));
-  $gst = $this->input->post('expense_item_gst');
-  $tax = $amount/(100+$gst);
-  $tax_orignal=$tax*100;
-  $tax_value = $amount-$tax_orignal;
- $tax_cgst_sgst = $tax_value/2;
-        $data = array(
-            "expense_date" => $this->input->post('expense_date'),
-            "title" => $this->input->post('title'),
-            "description" => $this->input->post('description'),
-            "category_id" => $this->input->post('category_id'),
-            "amount" => $tax_orignal,
-            "project_id" => $this->input->post('expense_project_id'),
-            "user_id" => $team_member,
-            "tax_id" => $this->input->post('tax_id') ? $this->input->post('tax_id') : 0,
-            "tax_id2" => $this->input->post('tax_id2') ? $this->input->post('tax_id2') : 0,
-            "igst_tax" => 0,
-            "cgst_tax" => $tax_cgst_sgst,
-            "sgst_tax" => $tax_cgst_sgst,
-            "total"=> unformat_currency($this->input->post('amount')),
-            "currency"=>$this->input->post('currency'),
-"currency_symbol"=>$this->input->post('currency_symbol'),
-            "voucher_no" => $this->input->post('voucher_no'),
-            "payment_status" => $this->input->post('payment_status'),
-            "with_gst" => $this->input->post('with_gst'),
-            "hsn_code" => $this->input->post('expense_item_hsn_code'),
-            "gst" => $this->input->post('expense_item_gst'),
-            "hsn_description" => $this->input->post('expense_item_hsn_code_description'),
-            "gst_number" => $this->input->post('expense_gst_number'),
-            "with_inclusive_tax" => $this->input->post('with_inclusive_tax'),
-"member_type" => $member_type,
-"phone"=>$phone,
-"company"=>$company,
-"vendor_company"=>$vendor_company
-        );
-   }else{
-
-    $amount = unformat_currency($this->input->post('amount'));
-    $gst = $this->input->post('expense_item_gst');
+        // Determine member details based on member type
+        if ($member_type == 'tm') {
+            $team_member = $this->input->post('expense_user_id');
+            $phone = 0;
+            $company = "";
+            $vendor_company = "";
+        } elseif ($member_type == 'om') {
+            $team_member = $this->input->post('expense_user_ids');
+            $phone = 0;
+            $company = "";
+            $vendor_company = "";
+        } elseif ($member_type == 'others') {
+            $team_member = 0;
+            $phone = $this->input->post('expense_user_idss');
+            $company = "";
+            $vendor_company = "";
+        } elseif ($member_type == 'vendors') {
+            $team_member = $this->input->post('vendor_contact');
+            $phone = 0;
+            $vendor_company = $this->input->post('vendor_member');
+            $company = "";
+        } elseif ($member_type == 'clients') {
+            $team_member = $this->input->post('client_contact');
+            $phone = 0;
+            $company = $this->input->post('client_member');
+            $vendor_company = "";
+        } else {
+            $team_member = $this->input->post('expense_user_id');
+            $phone = "";
+            $member_type = "";
+        }
     
-    // Validate and cast inputs to ensure they are numeric
-    if (!is_numeric($amount)) {
-        throw new Exception("Invalid amount: must be a number");
-    }
-    if (!is_numeric($gst)) {
-        throw new Exception("Invalid GST: must be a number");
-    }
+        $ss = $this->input->post('with_gst');
+        $with_inclusive = $this->input->post('with_inclusive_tax');
     
-    $amount = (float)$amount;
-    $gst = (float)$gst;
+        if ($ss == "yes" && $with_inclusive == "yes") {
+            $gst_num = $this->input->post('expense_gst_number');
+            $split_gst = substr($gst_num, 0, 2);
+            $company_gstin_number_first_two_digits = get_setting("company_gstin_number_first_two_digits");
     
-    // Calculate tax values
-    $tax = $amount / (100 + $gst) * 100;
-    $tax_value = $amount - $tax;
+            if ($company_gstin_number_first_two_digits == $split_gst) {
+                $amount = unformat_currency($this->input->post('amount'));
+                $gst = $this->input->post('expense_item_gst');
     
-    $data = array(
-        "expense_date" => $this->input->post('expense_date'),
-        "title" => $this->input->post('title'),
-        "description" => $this->input->post('description'),
-        "category_id" => $this->input->post('category_id'),
-        "amount" => $tax,
-        "project_id" => $this->input->post('expense_project_id'),
-        "user_id" => $team_member,
-        "tax_id" => $this->input->post('tax_id') ? $this->input->post('tax_id') : 0,
-        "tax_id2" => $this->input->post('tax_id2') ? $this->input->post('tax_id2') : 0,
-        "igst_tax" => $tax_value,
-        "cgst_tax" => 0,
-        "sgst_tax" => 0,
-        "total" => unformat_currency($this->input->post('amount')),
-        "currency" => $this->input->post('currency'),
-        "currency_symbol" => $this->input->post('currency_symbol'),
-        "voucher_no" => $this->input->post('voucher_no'),
-        "payment_status" => $this->input->post('payment_status'),
-        "with_gst" => $this->input->post('with_gst'),
-        "hsn_code" => $this->input->post('expense_item_hsn_code'),
-        "gst" => $this->input->post('expense_item_gst'),
-        "hsn_description" => $this->input->post('expense_item_hsn_code_description'),
-        "gst_number" => $this->input->post('expense_gst_number'),
-        "with_inclusive_tax" => $this->input->post('with_inclusive_tax'),
-        "member_type" => $member_type,
-        "phone" => $phone,
-        "company" => $company
-    );
-    }
+                // Validate and cast GST
+                if (empty($gst) || !is_numeric($gst)) {
+                    throw new Exception("Invalid GST: must be a number");
+                }
+    
+                $gst = (float)$gst;
+                $tax = $amount / (100 + $gst);
+                $tax_orignal = $tax * 100;
+                $tax_value = $amount - $tax_orignal;
+                $tax_cgst_sgst = $tax_value / 2;
+    
+                $data = array(
+                    "expense_date" => $this->input->post('expense_date'),
+                    "title" => $this->input->post('title'),
+                    "description" => $this->input->post('description'),
+                    "category_id" => $this->input->post('category_id'),
+                    "amount" => $tax_orignal,
+                    "project_id" => $this->input->post('expense_project_id'),
+                    "user_id" => $team_member,
+                    "tax_id" => $this->input->post('tax_id') ? $this->input->post('tax_id') : 0,
+                    "tax_id2" => $this->input->post('tax_id2') ? $this->input->post('tax_id2') : 0,
+                    "igst_tax" => 0,
+                    "cgst_tax" => $tax_cgst_sgst,
+                    "sgst_tax" => $tax_cgst_sgst,
+                    "total" => unformat_currency($this->input->post('amount')),
+                    "currency" => $this->input->post('currency'),
+                    "currency_symbol" => $this->input->post('currency_symbol'),
+                    "voucher_no" => $this->input->post('voucher_no'),
+                    "payment_status" => $this->input->post('payment_status'),
+                    "with_gst" => $this->input->post('with_gst'),
+                    "hsn_code" => $this->input->post('expense_item_hsn_code'),
+                    "gst" => $gst,
+                    "hsn_description" => $this->input->post('expense_item_hsn_code_description'),
+                    "gst_number" => $this->input->post('expense_gst_number'),
+                    "with_inclusive_tax" => $this->input->post('with_inclusive_tax'),
+                    "member_type" => $member_type,
+                    "phone" => $phone,
+                    "company" => $company,
+                    "vendor_company" => $vendor_company
+                );
+            } else {
+                $amount = unformat_currency($this->input->post('amount'));
+                $gst = trim($this->input->post('expense_item_gst'));
+    
+                // Validate and cast inputs to ensure they are numeric
+                if (!is_numeric($amount)) {
+                    throw new Exception("Invalid amount: must be a number");
+                }
+    
+                if (empty($gst) || !is_numeric($gst)) {
+                    throw new Exception("Invalid GST: must be a number");
+                }
+    
+                $amount = (float)$amount;
+                $gst = (float)$gst;
+    
+                // Calculate tax values
+                $tax = $amount / (100 + $gst) * 100;
+                $tax_value = $amount - $tax;
+    
+                $data = array(
+                    "expense_date" => $this->input->post('expense_date'),
+                    "title" => $this->input->post('title'),
+                    "description" => $this->input->post('description'),
+                    "category_id" => $this->input->post('category_id'),
+                    "amount" => $tax,
+                    "project_id" => $this->input->post('expense_project_id'),
+                    "user_id" => $team_member,
+                    "tax_id" => $this->input->post('tax_id') ? $this->input->post('tax_id') : 0,
+                    "tax_id2" => $this->input->post('tax_id2') ? $this->input->post('tax_id2') : 0,
+                    "igst_tax" => $tax_value,
+                    "cgst_tax" => 0,
+                    "sgst_tax" => 0,
+                    "total" => unformat_currency($this->input->post('amount')),
+                    "currency" => $this->input->post('currency'),
+                    "currency_symbol" => $this->input->post('currency_symbol'),
+                    "voucher_no" => $this->input->post('voucher_no'),
+                    "payment_status" => $this->input->post('payment_status'),
+                    "with_gst" => $this->input->post('with_gst'),
+                    "hsn_code" => $this->input->post('expense_item_hsn_code'),
+                    "gst" => $gst,
+                    "hsn_description" => $this->input->post('expense_item_hsn_code_description'),
+                    "gst_number" => $this->input->post('expense_gst_number'),
+                    "with_inclusive_tax" => $this->input->post('with_inclusive_tax'),
+                    "member_type" => $member_type,
+                    "phone" => $phone,
+                    "company" => $company,
+                    "vendor_company" => $vendor_company
+                );
+            }
 }else if($ss=="yes" && $with_inclusive=="no"){
 
 $gst_num = $this->input->post('expense_gst_number');

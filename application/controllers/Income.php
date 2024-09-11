@@ -15,36 +15,29 @@ class Income extends MY_Controller {
     }
 
     //load the expenses list view
-    function index() {
+    public function index() {
         $this->check_module_availability("module_income");
-
-        $view_data["custom_field_headers"] = $this->Custom_fields_model->get_custom_field_headers_for_table("income", $this->login_user->is_admin, $this->login_user->user_type);
-
-        $view_data['categories_dropdown'] = $this->_get_categories_dropdown();
-        $view_data['members_dropdown'] = $this->_get_team_members_dropdown();
-        $view_data['clients_dropdown'] = json_encode($this->_get_clients_dropdown());
-        $view_data['vendors_dropdown'] = json_encode($this->_get_vendors_dropdown());
-        $view_data['rm_members_dropdown'] = $this->_get_rm_members_dropdown();
-        $view_data['projects_dropdown'] = $this->_get_projects_dropdown();
-
-        //$this->template->rander("income/index", $view_data);
-        if ($this->login_user->is_admin == "1")
-        { 
-
+    
+        $view_data = [
+            "custom_field_headers" => $this->Custom_fields_model->get_custom_field_headers_for_table("income", $this->login_user->is_admin, $this->login_user->user_type),
+            'categories_dropdown' => $this->_get_categories_dropdown(),
+            'members_dropdown' => $this->_get_team_members_dropdown(),
+            'clients_dropdown' => json_encode($this->_get_clients_dropdown()),
+            'vendors_dropdown' => json_encode($this->_get_vendors_dropdown()),
+            'rm_members_dropdown' => $this->_get_rm_members_dropdown(),
+            'projects_dropdown' => $this->_get_projects_dropdown()
+        ];
+    
+        if ($this->login_user->is_admin == "1") {
+            $this->template->rander("income/index", $view_data);
+        } else if ($this->login_user->user_type == "staff" || $this->login_user->user_type == "resource") {
+            if ($this->access_type != "all" && !in_array($this->login_user->id, $this->allowed_members)) {
+                redirect("forbidden");
+            }
+            $this->template->rander("income/index", $view_data);
+        } else {
             $this->template->rander("income/index", $view_data);
         }
-        else if ($this->login_user->user_type == "staff"||$this->login_user->user_type == "resource")
-         {
-            //$this->access_only_allowed_members();
-      if ($this->access_type!="all"&&!in_array($this->login_user->id, $this->allowed_members)) {
-                   redirect("forbidden");
-              }
-            $this->template->rander("income/index", $view_data);
-        }else {
-
-
-       $this->template->rander("income/index", $view_data);
-    } 
     }
 
     //get categories dropdown
@@ -406,37 +399,45 @@ $company_gstin_number_first_two_digits= get_setting("company_gstin_number_first_
             "hsn_description" => $this->input->post('income_item_hsn_code_description'),
             "gst_number" => $this->input->post('income_gst_number'),
             "with_inclusive_tax" => $this->input->post('with_inclusive_tax'),
-"member_type" => $member_type,
-"phone"=>$phone,
-"company"=>$company,
-"vendor_company"=>$vendor_company
+            "member_type" => $member_type,
+            "phone"=>$phone,
+            "company"=>$company,
+            "vendor_company"=>$vendor_company
 
         );
-   }else{
-    $amount = floatval(unformat_currency($this->input->post('amount')));
-    $gst = floatval($this->input->post('income_item_gst'));
+    } else {
+        // Ensure all variables are defined before use
+        $team_member = $this->input->post('team_member') ?? null;
+        $member_type = $this->input->post('member_type') ?? null;
+        $phone = $this->input->post('phone') ?? null;
+        $company = $this->input->post('company') ?? null;
+        $vendor_company = $this->input->post('vendor_company') ?? null;
     
-    // Calculate tax
-    $tax = $amount / (100 + $gst);
-    $tax_original = $tax * 100;
-    $tax_value = $amount - $tax_original;
-    $data = array(
+        $amount = floatval(unformat_currency($this->input->post('amount')));
+        $gst = floatval($this->input->post('income_item_gst'));
+    
+        // Calculate tax
+        $tax = $amount / (100 + $gst);
+        $tax_original = $tax * 100;
+        $tax_value = $amount - $tax_original;
+    
+        $data = array(
             "income_date" => $this->input->post('income_date'),
             "title" => $this->input->post('title'),
             "description" => $this->input->post('description'),
             "category_id" => $this->input->post('category_id'),
-            "amount" => $tax_orignal,
+            "amount" => $tax_original,
             "project_id" => $this->input->post('income_project_id'),
             "user_id" => $team_member,
             "tax_id" => $this->input->post('tax_id') ? $this->input->post('tax_id') : 0,
             "tax_id2" => $this->input->post('tax_id2') ? $this->input->post('tax_id2') : 0,
-            "igst_tax" =>$tax_value ,
+            "igst_tax" => $tax_value,
             "cgst_tax" => 0,
             "sgst_tax" => 0,
-            "total"=> unformat_currency($this->input->post('amount')),
+            "total" => unformat_currency($this->input->post('amount')),
             "voucher_no" => $this->input->post('voucher_no'),
-            "currency"=>$this->input->post('currency'),
-            "currency_symbol"=>$this->input->post('currency_symbol'),
+            "currency" => $this->input->post('currency'),
+            "currency_symbol" => $this->input->post('currency_symbol'),
             "payment_status" => $this->input->post('payment_status'),
             "with_gst" => $this->input->post('with_gst'),
             "hsn_code" => $this->input->post('income_item_hsn_code'),
@@ -444,19 +445,17 @@ $company_gstin_number_first_two_digits= get_setting("company_gstin_number_first_
             "hsn_description" => $this->input->post('income_item_hsn_code_description'),
             "gst_number" => $this->input->post('income_gst_number'),
             "with_inclusive_tax" => $this->input->post('with_inclusive_tax'),
-"member_type" => $member_type,
-"phone"=>$phone,
-"company"=>$company,
-"vendor_company"=>$vendor_company
+            "member_type" => $member_type,
+            "phone" => $phone,
+            "company" => $company,
+            "vendor_company" => $vendor_company
         );
-}
+    }
 }else if($ss=="yes" && $with_inclusive=="no"){
-
 $gst_num = $this->input->post('income_gst_number');
 $split_gst =substr($gst_num,0,2);
 $company_gstin_number_first_two_digits= get_setting("company_gstin_number_first_two_digits");
-    
-    if ($company_gstin_number_first_two_digits==$split_gst){
+if ($company_gstin_number_first_two_digits==$split_gst){
         $amount = unformat_currency($this->input->post('amount'));
   $gst = $this->input->post('income_item_gst')/100;
   $tax = $amount*$gst;

@@ -1,12 +1,13 @@
 <div id="page-content" class="p20 clearfix">
     <?php
-              
     load_css(array(
         "assets/css/invoice.css",
     ));
     ?>
-<div class="invoice-preview">
+
+    <div class="invoice-preview">
         <?php
+        
         if ($show_close_preview)
             echo "<div class='text-center'>" . anchor("voucher/view/" . $estimate_info->id, lang("close_preview"), array("class" => "btn btn-default round")) . "</div>"
             ?>
@@ -21,7 +22,6 @@
             </div>
 
             <?php
-            
             echo $estimate_preview;
             ?><br>
             <?php echo get_setting("voucher_footer"); ?>
@@ -30,6 +30,7 @@
 
     </div>
 </div>
+
 <script type="text/javascript">
     $(document).ready(function () {
         $("#payment-amount").change(function () {

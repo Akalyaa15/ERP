@@ -1,8 +1,7 @@
 <?php if (isset($page_type) && $page_type === "full") { ?>
     <div id="page-content" class="m20 clearfix">
     <?php } ?>
-
-    <div class="panel">
+ <div class="panel">
         <?php if (isset($page_type) && $page_type === "full") { ?>
             <div class="page-title clearfix">
                 <h1><?php echo lang('clients_po_list'); ?></h1>

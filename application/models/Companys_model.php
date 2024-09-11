@@ -9,62 +9,108 @@ class Companys_model extends Crud_model {
         parent::__construct($this->table);
     }
     public function getDetails($options = [])
-    {
-        // Load the database if not already loaded
-        $CI =& get_instance();
-        if (!isset($CI->db)) {
-            $CI->load->database();
-        }
-    
-        // Use the loaded database instance
-        $db = $CI->db;
-    
-        $clients_table = $db->dbprefix('companys');
-        $users_table = $db->dbprefix('users');
-        $client_groups_table = $db->dbprefix('company_groups');
-    
-        $where = " WHERE `$clients_table`.deleted = 0";
-        
-        if (!empty($options['id'])) {
-            $where .= " AND `$clients_table`.id = " . $db->escape($options['id']);
-        }
-    
-        if (!empty($options['cr_id'])) {
-            $where .= " AND `$clients_table`.cr_id = " . $db->escape($options['cr_id']);
-        }
-    
-        if (!empty($options['group_id'])) {
-            $where .= " AND FIND_IN_SET(" . $db->escape($options['group_id']) . ", `$clients_table`.group_ids)";
-        }
-    
-        $custom_fields = $options['custom_fields'] ?? [];
-        $custom_field_query_info = $this->prepare_custom_field_query_string('companys', $custom_fields, $clients_table);
-        $select_custom_fields = $custom_field_query_info['select_string'] ?? '';
-        $join_custom_fields = $custom_field_query_info['join_string'] ?? '';
-    
-        // Ensure SQL_BIG_SELECTS is enabled
-        $db->query('SET SQL_BIG_SELECTS=1');
-    
-        $sql = "SELECT `$clients_table`.*, 
-                    CONCAT(`$users_table`.first_name, ' ', `$users_table`.last_name) AS primary_contact, 
-                    `$users_table`.id AS primary_contact_id, 
-                    `$users_table`.image AS contact_avatar, 
-                    (SELECT GROUP_CONCAT(`$client_groups_table`.title) 
-                     FROM `$client_groups_table` 
-                     WHERE FIND_IN_SET(`$client_groups_table`.id, `$clients_table`.group_ids) 
-                     AND `$clients_table`.partner_id IS NULL) AS `groups`
-                $select_custom_fields
-                FROM `$clients_table`
-                LEFT JOIN `$users_table` 
-                    ON `$users_table`.company_id = `$clients_table`.id 
-                    AND `$users_table`.deleted = 0 
-                    AND `$users_table`.is_primary_contact = 1 
-                $join_custom_fields               
-                $where";
-    
-        $query = $db->query($sql);
-        return $query->result_array();
+{
+    $CI =& get_instance();
+    if (!isset($CI->db)) {
+        $CI->load->database();
     }
+    $db = $CI->db;
+    $clients_table = $db->dbprefix('companys');
+    $users_table = $db->dbprefix('users');
+    $client_groups_table = $db->dbprefix('company_groups');
+
+    $where = " WHERE `$clients_table`.deleted = 0";
+
+    if (!empty($options['id'])) {
+        $where .= " AND `$clients_table`.id = " . $db->escape($options['id']);
+    }
+
+    if (!empty($options['cr_id'])) {
+        $where .= " AND `$clients_table`.cr_id = " . $db->escape($options['cr_id']);
+    }
+
+    if (!empty($options['group_id'])) {
+        $where .= " AND FIND_IN_SET(" . $db->escape($options['group_id']) . ", `$clients_table`.group_ids)";
+    }
+
+    $custom_fields = $options['custom_fields'] ?? [];
+    $custom_field_query_info = $this->prepare_custom_field_query_string('companys', $custom_fields, $clients_table);
+    $select_custom_fields = $custom_field_query_info['select_string'] ?? '';
+    $join_custom_fields = $custom_field_query_info['join_string'] ?? '';
+    $db->query('SET SQL_BIG_SELECTS=1');
+    $sql = "SELECT `$clients_table`.*, 
+                CONCAT(`$users_table`.first_name, ' ', `$users_table`.last_name) AS primary_contact, 
+                `$users_table`.id AS primary_contact_id, 
+                `$users_table`.image AS contact_avatar, 
+                (SELECT GROUP_CONCAT(`$client_groups_table`.title) 
+                 FROM `$client_groups_table` 
+                 WHERE FIND_IN_SET(`$client_groups_table`.id, `$clients_table`.group_ids) 
+                 AND `$clients_table`.partner_id IS NULL) AS `groups`
+            $select_custom_fields
+            FROM `$clients_table`
+            LEFT JOIN `$users_table` 
+                ON `$users_table`.company_id = `$clients_table`.id 
+                AND `$users_table`.deleted = 0 
+                AND `$users_table`.is_primary_contact = 1 
+            $join_custom_fields               
+            $where";
+
+    $query = $db->query($sql);
+    return $query->result_array();
+}
+function get_details($options = array()) {
+    $CI =& get_instance();
+    if (!isset($CI->db)) {
+        $CI->load->database();
+    }
+
+    $db = $CI->db;
+    $clients_table = $db->dbprefix('companys');
+    $users_table = $db->dbprefix('users');
+    $client_groups_table = $db->dbprefix('company_groups');
+
+    $where = " WHERE `$clients_table`.deleted = 0";
+
+    if (!empty($options['id'])) {
+        $where .= " AND `$clients_table`.id = " . $db->escape($options['id']);
+    }
+
+    if (!empty($options['cr_id'])) {
+        $where .= " AND `$clients_table`.cr_id = " . $db->escape($options['cr_id']);
+    }
+
+    if (!empty($options['group_id'])) {
+        $where .= " AND FIND_IN_SET(" . $db->escape($options['group_id']) . ", `$clients_table`.group_ids)";
+    }
+
+    $custom_fields = $options['custom_fields'] ?? [];
+    $custom_field_query_info = $this->prepare_custom_field_query_string('companys', $custom_fields, $clients_table);
+    $select_custom_fields = $custom_field_query_info['select_string'] ?? '';
+    $join_custom_fields = $custom_field_query_info['join_string'] ?? '';
+
+    $db->query('SET SQL_BIG_SELECTS=1');
+
+    $sql = "SELECT `$clients_table`.*, 
+                CONCAT(`$users_table`.first_name, ' ', `$users_table`.last_name) AS primary_contact, 
+                `$users_table`.id AS primary_contact_id, 
+                `$users_table`.image AS contact_avatar, 
+                (SELECT GROUP_CONCAT(`$client_groups_table`.title) 
+                 FROM `$client_groups_table` 
+                 WHERE FIND_IN_SET(`$client_groups_table`.id, `$clients_table`.group_ids) 
+                 AND `$clients_table`.partner_id IS NULL) AS `groups`
+            $select_custom_fields
+            FROM `$clients_table`
+            LEFT JOIN `$users_table` 
+                ON `$users_table`.company_id = `$clients_table`.id 
+                AND `$users_table`.deleted = 0 
+                AND `$users_table`.is_primary_contact = 1 
+            $join_custom_fields               
+            $where";
+
+    $query = $db->query($sql);
+    return $query;
+}
+
     
     
     function get_c_details($options = array()) {
@@ -210,9 +256,7 @@ class Companys_model extends Crud_model {
         }
 
     }
-
-
-// excel file get data clents 
+   // excel file get data clents 
     function get_import_detailss($options = array()) {
         $vendors_table = $this->db->dbprefix('companys');
         $where = "";
@@ -268,9 +312,6 @@ class Companys_model extends Crud_model {
         if ($currency_symbol) {
             $where = " AND  $vendors_table.currency_symbol='$currency_symbol'";
         }*/
-        
-        
-
         $sql = "SELECT  $vendors_table.*
         FROM  $vendors_table
         WHERE  $vendors_table.deleted=0 $where";
@@ -278,10 +319,16 @@ class Companys_model extends Crud_model {
     }
 
 
-    function insert($data)
-    {
+    public function insert($data)
+{
+    if (is_array($data)) {
         $this->db->insert_batch('companys', $data);
+        return $this->db->affected_rows();
+    } else {
+        $this->db->insert('companys', $data);
+        return $this->db->insert_id();
     }
+}
 
 
  function get_country_info_suggestion($item_name = "") {
@@ -306,7 +353,6 @@ class Companys_model extends Crud_model {
         }
 
     }
-
     function get_item_suggestions_country_name($keyword = "",$keywords = "") {
         $items_table = $this->db->dbprefix('country');
         $states_table = $this->db->dbprefix('states');

@@ -427,7 +427,11 @@ $description='Changed the status from "'.lang($estmate_info->status).'" to "'.la
 
     //prepare a row of expnese list
     private function _make_row($data, $custom_fields) {
-
+        $unread_comments_class = ""; 
+        if (isset($data->unread_comments) && $data->unread_comments) {
+            $unread_comments_class = "unread-comments"; 
+        }
+    
         $description = $data->description;
         if ($data->project_title) {
             if ($description) {
@@ -435,58 +439,53 @@ $description='Changed the status from "'.lang($estmate_info->status).'" to "'.la
             }
             $description .= lang("project") . ": " . $data->project_title;
         }
-if($data->member_type=='tm'){
-        if ($data->linked_user_name) {
-            if ($description) {
-                $description .= "<br /> ";
+        if ($data->member_type == 'tm') {
+            if ($data->linked_user_name) {
+                if ($description) {
+                    $description .= "<br /> ";
+                }
+                $description .= lang("team_member") . ": " . $data->linked_user_name;
             }
-            $description .= lang("team_member") . ": " . $data->linked_user_name;
-        }
-    }else if($data->member_type=='om'){
-        if ($data->linked_user_name) {
-            if ($description) {
-                $description .= "<br /> ";
+        } else if ($data->member_type == 'om') {
+            if ($data->linked_user_name) {
+                if ($description) {
+                    $description .= "<br /> ";
+                }
+                $description .= lang("outsource_member") . ": " . $data->linked_user_name;
             }
-            $description .= lang("outsource_member") . ": " . $data->linked_user_name;
-        }
-    }else if ($data->member_type=='clients'){
-if ($data->client_company) {
-            if ($description) {
-                $description .= "<br /> ";
+        } else if ($data->member_type == 'clients') {
+            if ($data->client_company) {
+                if ($description) {
+                    $description .= "<br /> ";
+                }
+                $description .= lang("client_company") . ": " . $data->client_company . "<br>";
+                $description .= lang("client_contact_member") . ": " . $data->linked_user_name;
             }
-            $description .= lang("client_company") . ": " . $data->client_company."<br>"; 
-            $description .= lang("client_contact_member") . ": " . $data->linked_user_name;
-        }
-
-    }else if ($data->member_type=='vendors'){
-if ($data->vendor_company) {
-            if ($description) {
-                $description .= "<br /> ";
+        } else if ($data->member_type == 'vendors') {
+            if ($data->vendor_company) {
+                if ($description) {
+                    $description .= "<br /> ";
+                }
+                $description .= lang("vendor_company") . ": " . $data->vendor_company . "<br>";
+                $description .= lang("vendor_contact_member") . ": " . $data->linked_user_name;
             }
-            $description .= lang("vendor_company") . ": " . $data->vendor_company."<br>"; 
-            $description .= lang("vendor_contact_member") . ": " . $data->linked_user_name;
-        }
-
-    }elseif ($data->member_type=='others') {
-if ($data->phone) {
-            if ($description) {
-                $description .= "<br /> ";
+        } elseif ($data->member_type == 'others') {
+            if ($data->phone) {
+                if ($description) {
+                    $description .= "<br /> ";
+                }
+                $description .= lang("other_contact") . ": " . $data->phone . " " . $data->l_name;
             }
-             
-            $description .= lang("other_contact") . ": " . $data->phone." ". $data->l_name;
         }
-
-    }
-
-    $due = 0;
+    
+        $due = 0;
         if ($data->total) {
             $due = ignor_minor_value($data->total - $data->paid_amount);
         }
-
-
-    $title = modal_anchor(get_uri("loan/loan_view"), $data->category_title . $icon, array("title" => lang('loan_info') . " #$data->id", "data-post-id" => $data->id, "class" => $unread_comments_class));
-    $item = "<div style='color:#4e5e6a;font-size:12px;'>$description</div>";
-
+    
+        $title = modal_anchor(get_uri("loan/loan_view"), $data->category_title, array("title" => lang('loan_info') . " #$data->id", "data-post-id" => $data->id, "class" => $unread_comments_class));
+        $item = "<div style='color:#4e5e6a;font-size:12px;'>$description</div>";
+    
         $files_link = "";
         if ($data->files) {
             $files = unserialize($data->files);
@@ -498,93 +497,82 @@ if ($data->phone) {
                 }
             }
         }
-
-         $files_links = "";
-       
-            $payment_files = $this->Loan_payments_list_model->get_details(array("loan_id" => $data->id))->result();
-            foreach ($payment_files as $payment_file) {
-                # code...
-             if ($payment_file->files) {
-            $files = unserialize($payment_file->files);
-            if (count($files)) {
-                foreach ($files as $file) {
-                    $file_name = get_array_value($file, "file_name");
-                    $link = " fa fa-" . get_file_icon(strtolower(pathinfo($file_name, PATHINFO_EXTENSION)));
-                    $files_links .= js_anchor(" ", array('title' => "", "data-toggle" => "app-modal", "data-sidebar" => "0", "class" => "pull-left font-22 mr10 $link", "title" => remove_file_prefix($file_name), "data-url" => get_uri("notes/file_preview/" . $file_name)));
+    
+        $files_links = "";
+        $payment_files = $this->Loan_payments_list_model->get_details(array("loan_id" => $data->id))->result();
+        foreach ($payment_files as $payment_file) {
+            if ($payment_file->files) {
+                $files = unserialize($payment_file->files);
+                if (count($files)) {
+                    foreach ($files as $file) {
+                        $file_name = get_array_value($file, "file_name");
+                        $link = " fa fa-" . get_file_icon(strtolower(pathinfo($file_name, PATHINFO_EXTENSION)));
+                        $files_links .= js_anchor(" ", array('title' => "", "data-toggle" => "app-modal", "data-sidebar" => "0", "class" => "pull-left font-22 mr10 $link", "title" => remove_file_prefix($file_name), "data-url" => get_uri("notes/file_preview/" . $file_name)));
+                    }
                 }
             }
-         }
         }
-
-//last activity user name and date start 
-         $last_activity_by_user_name= "-";
-        if($data->last_activity_user){
-        $last_activity_user_data = $this->Users_model->get_one($data->last_activity_user);
-        $last_activity_image_url = get_avatar($last_activity_user_data->image);
-        $last_activity_user = "<span class='avatar avatar-xs mr10'><img src='$last_activity_image_url' alt='...'></span> $last_activity_user_data->first_name $last_activity_user_data->last_name";
-        
-        if($last_activity_user_data->user_type=="resource"){
-          $last_activity_by_user_name= get_rm_member_profile_link($data->last_activity_user, $last_activity_user );   
-        }else if($last_activity_user_data->user_type=="client") {
-          $last_activity_by_user_name= get_client_contact_profile_link($data->last_activity_user, $last_activity_user);
-        }else if($last_activity_user_data->user_type=="staff"){
-             $last_activity_by_user_name= get_team_member_profile_link($data->last_activity_user, $last_activity_user); 
-       }else if($last_activity_user_data->user_type=="vendor"){
-             $last_activity_by_user_name= get_vendor_contact_profile_link($data->last_activity_user, $last_activity_user); 
+    
+        $last_activity_by_user_name = "-";
+        if ($data->last_activity_user) {
+            $last_activity_user_data = $this->Users_model->get_one($data->last_activity_user);
+            $last_activity_image_url = get_avatar($last_activity_user_data->image);
+            $last_activity_user = "<span class='avatar avatar-xs mr10'><img src='$last_activity_image_url' alt='...'></span> $last_activity_user_data->first_name $last_activity_user_data->last_name";
+    
+            if ($last_activity_user_data->user_type == "resource") {
+                $last_activity_by_user_name = get_rm_member_profile_link($data->last_activity_user, $last_activity_user);
+            } else if ($last_activity_user_data->user_type == "client") {
+                $last_activity_by_user_name = get_client_contact_profile_link($data->last_activity_user, $last_activity_user);
+            } else if ($last_activity_user_data->user_type == "staff") {
+                $last_activity_by_user_name = get_team_member_profile_link($data->last_activity_user, $last_activity_user);
+            } else if ($last_activity_user_data->user_type == "vendor") {
+                $last_activity_by_user_name = get_vendor_contact_profile_link($data->last_activity_user, $last_activity_user);
+            }
         }
-       }
-      
-       $last_activity_date = "-";
-       if($data->last_activity){
-       $last_activity_date = format_to_relative_time($data->last_activity);
-       }
-       // end last activity 
-
-       // voucher no 
-if($data->voucher_no){
-    $voucher_info = $this->Voucher_model->get_one($data->voucher_no);
-     $voucher_order_url = anchor(get_uri("voucher/view/" . $data->voucher_no), $voucher_info->voucher_no?$voucher_info->voucher_no:get_voucher_id($data->voucher_no));
- }else{
-    $voucher_order_url = "-";
- }
-
+    
+        $last_activity_date = "-";
+        if (isset($data->last_activity)) {
+            $last_activity_date = format_to_relative_time($data->last_activity);
+        }
+    
+        $voucher_order_url = "-";
+        if ($data->voucher_no) {
+            $voucher_info = $this->Voucher_model->get_one($data->voucher_no);
+            $voucher_order_url = anchor(get_uri("voucher/view/" . $data->voucher_no), $voucher_info->voucher_no ? $voucher_info->voucher_no : get_voucher_id($data->voucher_no));
+        }
+    
         $row_data = array(
             $voucher_order_url,
             $data->loan_date,
-            
             format_to_date($data->loan_date, false),
-            //$data->category_title,
             $data->due_date,
             $title,
             $data->title,
             $item,
-            //nl2br($description),
-            to_currency($data->amount,$data->currency_symbol),
+            to_currency($data->amount, $data->currency_symbol),
             $data->interest,
-            to_currency($data->interest_amount,$data->currency_symbol),
-            to_currency($data->total,$data->currency_symbol),
-            to_currency($data->paid_amount,$data->currency_symbol),
-           to_currency($due,$data->currency_symbol),
-           $files_link.$files_links,
-           $this->_get_loan_status_label($data),
-           $this->_get_loan_voucher_status_label($data),
+            to_currency($data->interest_amount, $data->currency_symbol),
+            to_currency($data->total, $data->currency_symbol),
+            to_currency($data->paid_amount, $data->currency_symbol),
+            to_currency($due, $data->currency_symbol),
+            $files_link . $files_links,
+            $this->_get_loan_status_label($data),
+            $this->_get_loan_voucher_status_label($data),
             $last_activity_by_user_name,
-            $last_activity_date,
-
-            //to_currency($data->igst_tax),
-            //to_currency($data->total)
+            $last_activity_date
         );
-
+    
         foreach ($custom_fields as $field) {
             $cf_id = "cfv_" . $field->id;
             $row_data[] = $this->load->view("custom_fields/output_" . $field->field_type, array("value" => $data->$cf_id), true);
         }
-
+    
         $row_data[] = modal_anchor(get_uri("loan/modal_form"), "<i class='fa fa-pencil'></i>", array("class" => "edit", "title" => lang('edit_loan'), "data-post-id" => $data->id))
-                . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_loan'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("loan/delete"), "data-action" => "delete-confirmation"));
-
+            . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_loan'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("loan/delete"), "data-action" => "delete-confirmation"));
+    
         return $row_data;
     }
+    
 
     private function _get_loan_status_label($data, $return_html = true) {
         return get_loan_status_label($data, $return_html);
@@ -705,7 +693,7 @@ $loan_voucher_no=str_ireplace("]",")",$vv);
          $suggestions = array();
       foreach ($itemss as $items) {
         $po_info = $this->Voucher_model->get_one($items->estimate_id); 
-           $suggestions[] = array("id" => $items->estimate_id, "text" => $po_info->voucher_no?$po_info->voucher_no:get_voucher_id($items->estimate_id)/*.'['.$items->title.']'*/);
+           $suggestions[] = array("id" => $items->estimate_id, "text" => $po_info->voucher_no?$po_info->voucher_no:get_voucher_id($items->estimate_id).'['.$items->title.']');
        }
         echo json_encode($suggestions);
     }
@@ -730,7 +718,7 @@ $loan_voucher_no=str_ireplace("]",")",$vv);
 
       foreach ($itemss as $items) {
         $po_info = $this->Voucher_model->get_one($items->estimate_id);
-           $suggestions[] = array("id" => $items->estimate_id, "text" => $po_info->voucher_no?$po_info->voucher_no:get_voucher_id($items->estimate_id)/*.'['.$items->title.']'*/);
+           $suggestions[] = array("id" => $items->estimate_id, "text" => $po_info->voucher_no?$po_info->voucher_no:get_voucher_id($items->estimate_id).'['.$items->title.']');
        }
         echo json_encode($suggestions);
     }
@@ -755,7 +743,7 @@ $loan_voucher_no=str_ireplace("]",")",$vv);
          $suggestions = array();
       foreach ($itemss as $items) {
         $po_info = $this->Voucher_model->get_one($items->estimate_id);
-           $suggestions[] = array("id" => $items->estimate_id, "text" => $po_info->voucher_no?$po_info->voucher_no:get_voucher_id($items->estimate_id)/*.'['.$items->title.']'*/);
+           $suggestions[] = array("id" => $items->estimate_id, "text" => $po_info->voucher_no?$po_info->voucher_no:get_voucher_id($items->estimate_id).'['.$items->title.']');
        }
         echo json_encode($suggestions);
     }
@@ -765,7 +753,7 @@ function get_client_contacts() {
         $itemss = $this->Loan_model->get_client_contacts($this->input->post("team_member"));
          $suggestions = array();
       foreach ($itemss as $items) {
-           $suggestions[] = array("id" => $items->id, "text" => $items->first_name." ".$items->last_name/*.'['.$items->title.']'*/);
+           $suggestions[] = array("id" => $items->id, "text" => $items->first_name." ".$items->last_name.'['.$items->title.']');
        }
         echo json_encode($suggestions);
     }
@@ -773,7 +761,7 @@ function get_client_contacts() {
         $itemss = $this->Loan_model->get_vendor_contacts($this->input->post("team_member"));
          $suggestions = array();
       foreach ($itemss as $items) {
-           $suggestions[] = array("id" => $items->id, "text" => $items->first_name." ".$items->last_name/*.'['.$items->title.']'*/);
+           $suggestions[] = array("id" => $items->id, "text" => $items->first_name." ".$items->last_name.'['.$items->title.']');
        }
         echo json_encode($suggestions);
     }

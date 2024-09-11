@@ -15,10 +15,8 @@ if($model_info->country){
         }else{
             $vat_name= 'VAT';
 
-        }
- } 
-
-        ?>
+        }} 
+?>
 <input type="hidden" name="id" value="<?php echo $model_info->id; ?>" />
 <input type="hidden" id="country_code_id" value="" />
 <input type="hidden" name="view" value="<?php echo isset($view) ? $view : ""; ?>" />
@@ -54,9 +52,7 @@ if($model_info->country){
 
     </div>
 </div>
-
-
-    <div class="form-group" id= "aa">
+<div class="form-group" id= "aa">
         <label for="country" class="<?php echo $label_column; ?>"><?php echo lang('country'); ?></label>
         <div class="<?php echo $field_column; ?>">
             <?php
@@ -74,7 +70,6 @@ if($model_info->country){
             
         </div>
     </div>
-    
     <div class="form-group" id= "state_mandatory_app" style="display:none;">
                 <label for="invoice_recurring" class="<?php echo $label_column; ?>"><?php echo lang('state_mandatory'); ?>  <span class="help" data-toggle="tooltip" title="<?php echo lang('state_mandatory'); ?>"><i class="fa fa-question-circle"></i></span></label>
                 <div class="<?php echo $field_column; ?>">
@@ -128,7 +123,6 @@ if($model_info->country){
         ?>
     </div>
 </div>
-
 <div class="form-group">
     <label for="zip" class="<?php echo $label_column; ?>"><?php echo lang('zip'); ?></label>
     <div class="<?php echo $field_column; ?>">
@@ -157,7 +151,6 @@ if($model_info->country){
         */?>
     </div>
 </div-->
-
 <div class="form-group">
     <label for="phone" class="<?php echo $label_column; ?>"><?php echo lang('phone'); ?></label>
     <div class="<?php echo $field_column; ?>">
@@ -189,21 +182,27 @@ if($model_info->country){
 </div>
 <div class="form-group">
     <label for="gst_number" class="<?php echo $label_column; ?>">
-        <span id="vat"><?php echo isset($vat_name) ? $vat_name : 'VAT'; ?></span> Number
+        <span id="vat">
+            <?php 
+            if(!$model_info->country){ 
+                echo "VAT"; 
+            }
+            echo isset($vat_name) ? $vat_name : "GST"; 
+            ?>
+        </span> Number
     </label>
     <div class="<?php echo $field_column; ?>">
         <?php
         echo form_input(array(
             "id" => "gst_number",
             "name" => "gst_number",
-            "value" => isset($model_info->gst_number) ? $model_info->gst_number : '',
+            "value" => $model_info->gst_number,
             "class" => "form-control",
             "placeholder" => lang('gst_number')
         ));
         ?>
     </div>
 </div>
-
 <!--div class="form-group">
         <label for="gstin_number_first_two_digits" class="<?php echo $label_column; ?>"></label>
         <div class="<?php echo $field_column; ?>">
@@ -212,14 +211,26 @@ if($model_info->country){
         </div-->
         <div class="form-group">
     <label for="gstin_number_first_two_digits" class="<?php echo $label_column; ?>">
-        <span id="vats"><?php echo (!$model_info->country) ? "VAT" : ""; ?> <?php echo isset($vat_name) ? $vat_name : ''; ?></span> <?php echo lang('gstinnumber_firsttwodigits'); ?>
+        <span id="vats">
+            <?php 
+            if (isset($model_info) && !$model_info->country) { 
+                echo "VAT"; 
+            } else {
+                echo isset($vat_name) ? $vat_name : "GST"; 
+            }
+            ?>
+        </span> 
+        <?php echo lang('gstinnumber_firsttwodigits'); ?>
     </label>
     <div class="<?php echo $field_column; ?>">
         <?php
+        // Check if $model_info is set and not null
+        $gstin_number_first_two_digits = isset($model_info) ? $model_info->gstin_number_first_two_digits : '';
+        
         echo form_input(array(
             "id" => "gstin_number_first_two_digits",
             "name" => "gstin_number_first_two_digits",
-            "value" => isset($model_info->gstin_number_first_two_digits) ? $model_info->gstin_number_first_two_digits : '',
+            "value" => $gstin_number_first_two_digits,
             "class" => "form-control",
             "readonly" => "true",
             "placeholder" => lang('gstinnumber_firsttwodigits'),

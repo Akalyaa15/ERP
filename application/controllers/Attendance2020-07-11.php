@@ -2,7 +2,6 @@
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
-
 class Attendance extends MY_Controller {
 
     function __construct() {
@@ -55,7 +54,7 @@ class Attendance extends MY_Controller {
     }
 
     //show add/edit attendance modal
-    function modal_form() {
+     function modal_form() {
         $user_id = 0;
 
         validate_submitted_data(array(
@@ -69,7 +68,6 @@ class Attendance extends MY_Controller {
 
             $this->access_only_allowed_members($user_id, true);
         }
-
         if ($user_id) {
             //edit mode. show user's info
             $view_data['team_members_info'] = $this->Users_model->get_one($user_id);
@@ -105,10 +103,6 @@ class Attendance extends MY_Controller {
       /* if (!$model_info-> $id) {
             show_404();
         } */
-    
-
-        
-       
         $view_data['todo_id'] = $todo_id;
         $view_data['project_id'] = 0;
         $projects = $this->Tasks_model->get_my_projects_dropdown_list($this->login_user->id)->result();

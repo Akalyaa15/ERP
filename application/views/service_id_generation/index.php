@@ -6,8 +6,7 @@
             $this->load->view("settings/tabs", $tab_view);
             */?>
         </div>
-
-        <div class="col-sm-9 col-lg-10"-->
+     <div class="col-sm-9 col-lg-10"-->
             <div class="panel panel-default">
             <a class="btn btn-primary" href="javascript:window.history.go(-1);">❮ Go Back</a>
             <div class="page-title clearfix">

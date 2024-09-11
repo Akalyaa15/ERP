@@ -13,7 +13,6 @@
                 </div>
             </div>
         </ul>
-
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade" id="monthly-clients_po_list">
                 <div class="table-responsive">

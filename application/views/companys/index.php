@@ -30,27 +30,37 @@
         // Convert the PHP value to a boolean
         showInvoiceInfo = (showInvoiceInfo === 'true');
 
+        // Define columns based on showInvoiceInfo
+        var columns = [
+            {title: "<?php echo lang('id') ?>", "class": "text-center w50"},
+            {title: "<?php echo lang('company_id') ?>", "class": "text-center w50"},
+            {title: "<?php echo lang('company_name') ?>"},
+            {title: "<?php echo lang('primary_contact') ?>"},
+            {title: "<?php echo lang('company_groups') ?>"}
+        ];
+
+        // Conditionally add invoice-related columns if showInvoiceInfo is true
+        if (showInvoiceInfo) {
+            columns.push({visible: true, searchable: true, title: "<?php echo lang('projects') ?>"});
+            columns.push({visible: true, searchable: true, title: "<?php echo lang('invoice_value') ?>"});
+            columns.push({visible: true, searchable: true, title: "<?php echo lang('payment_received') ?>"});
+            columns.push({visible: true, searchable: true, title: "<?php echo lang('due') ?>"});
+        }
+
+        // Always add the options column at the end
+        columns.push({title: '<i class="fa fa-bars"></i>', "class": "text-center option w100"});
+
+        // Initialize DataTable
         $("#company-table").appTable({
             source: '<?php echo_uri("companys/list_data") ?>',
             filterDropdown: [
                 {name: "group_id", class: "w200", options: <?php echo $groups_dropdown; ?>}
             ],
-            columns: [
-                {title: "<?php echo lang("id") ?>", "class": "text-center w50"},
-                {title: "<?php echo lang("company_id") ?>", "class": "text-center w50"},
-                {title: "<?php echo lang("company_name") ?>"},
-                {title: "<?php echo lang("primary_contact") ?>"},
-                {title: "<?php echo lang("company_groups") ?>"}
-                // Use the showInvoiceInfo variable to conditionally include columns
-                {visible: showInvoiceInfo, searchable: showInvoiceInfo, title: "<?php echo lang("projects") ?>"},
-                {visible: showInvoiceInfo, searchable: showInvoiceInfo, title: "<?php echo lang("invoice_value") ?>"},
-                {visible: showInvoiceInfo, searchable: showInvoiceInfo, title: "<?php echo lang("payment_received") ?>"},
-                {visible: showInvoiceInfo, searchable: showInvoiceInfo, title: "<?php echo lang("due") ?>"},
-                <?php echo $custom_field_headers; ?>,
-                {title: '<i class="fa fa-bars"></i>', "class": "text-center option w100"}
-            ],
-            printColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4, 5, 6], '<?php echo $custom_field_headers; ?>'),
-            xlsColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4, 5, 6], '<?php echo $custom_field_headers; ?>')
+            columns: columns,  // Use the dynamically defined columns
+            printColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4], '<?php echo $custom_field_headers; ?>'),
+            xlsColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4], '<?php echo $custom_field_headers; ?>')
         });
     });
 </script>
+
+    

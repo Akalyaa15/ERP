@@ -237,21 +237,20 @@ $make_dropdowns = $this->Manufacturer_model->get_all_where(array("deleted" => 0,
             "description" => $this->input->post('description'),
             "category" => $this->input->post('category'),
             "make" => $this->input->post('make'),
-"unit_type" => $this->input->post('unit_type'),
-"tool_location" => $this->input->post('tool_location'),
-"rate" => unformat_currency($this->input->post('item_rate')),
- "user_id" => $team_member,
- "member_type" => $member_type,
-"others_name"=>$phone,
-"company"=>$company,
-"vendor_company"=>$vendor_company,
- "last_activity_user"=>$this->login_user->id,
-"last_activity" => get_current_utc_time(),
+            "unit_type" => $this->input->post('unit_type'),
+            "tool_location" => $this->input->post('tool_location'),
+            "rate" => unformat_currency($this->input->post('item_rate')),
+            "user_id" => $team_member,
+            "member_type" => $member_type,
+            "others_name"=>$phone,
+            "company"=>$company,
+            "vendor_company"=>$vendor_company,
+            "last_activity_user"=>$this->login_user->id,
+            "last_activity" => get_current_utc_time(),
         );
 
         // check the make and vendors 
-
-$add_new_make_to_library = $this->input->post('add_new_make_to_library');
+        $add_new_make_to_library = $this->input->post('add_new_make_to_library');
             if ($add_new_make_to_library) {
 
 

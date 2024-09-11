@@ -1,4 +1,5 @@
 <?php
+
 $estimate_statuses_dropdown = array(
     array("id" => "", "text" => "- " . lang("status") . " -"),
     array("id" => "draft", "text" => lang("draft")),

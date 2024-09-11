@@ -14,17 +14,15 @@ if($model_info->country){
             $vat_name= $country_id_name->vat_name;
         }else{
             $vat_name= 'VAT';
-
         }
  } 
-
-        ?>
+?>
 <input type="hidden" name="id" value="<?php echo $model_info->id; ?>" />
 <input type="hidden" id="country_code_id" value="" />
 <input type="hidden" name="view" value="<?php echo isset($view) ? $view : ""; ?>" />
 <div class="form-group">
-    <label for="company_name" class="<?php echo $label_column; ?>"><?php echo lang('client_name'); ?></label>
-    <div class="<?php echo $field_column; ?>">
+<label for="company_name" class="<?php echo $label_column; ?>"><?php echo lang('client_name'); ?></label>
+<div class="<?php echo $field_column; ?>">
         <?php
         echo form_input(array(
             "id" => "company_name",
@@ -157,7 +155,7 @@ if($model_info->country){
                     <label for="without_gst" class=""><?php echo lang('without_gst'); ?></label>
                 </div>
             </div>
-<div class="form-group">
+    <div class="form-group">
     <label for="state" class="<?php echo $label_column; ?>"><?php echo lang('state'); ?></label>
     <div class="<?php echo $field_column; ?>">
         <?php

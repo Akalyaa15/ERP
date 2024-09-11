@@ -1,6 +1,7 @@
- <?php
+<?php
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
+
 class Company_groups extends MY_Controller {
 
     function __construct() {
@@ -93,6 +94,7 @@ class Company_groups extends MY_Controller {
             . js_anchor("<i class='fa fa-times fa-fw'></i>", array('title' => lang('delete_company_group'), "class" => "delete", "data-id" => $data->id, "data-action-url" => get_uri("company_groups/delete"), "data-action" => "delete-confirmation"))
         );
     }
+
 }
 
 /* End of file client_groups.php */

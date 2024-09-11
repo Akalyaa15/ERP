@@ -288,16 +288,7 @@
                             }
                            if (!$("#hsn_description").val()) {
                                 $("#hsn_description").val(response.item_info.hsn_description).attr('readonly',true);
-                            }
-
-                            
-
-                            
-                            
-                            
-                            
-                            
-                        }
+                            } }
                     }
                 });
             }
